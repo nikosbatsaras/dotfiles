@@ -19,6 +19,7 @@ Plugin 'derekwyatt/vim-scala'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
+Plugin 'rhysd/clever-f.vim'
 
 call vundle#end()
 filetype plugin indent on
