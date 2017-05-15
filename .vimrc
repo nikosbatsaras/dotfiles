@@ -18,6 +18,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
 
 call vundle#end()
 filetype plugin indent on
