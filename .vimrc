@@ -20,6 +20,7 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'rhysd/clever-f.vim'
+Plugin 'tomasiser/vim-code-dark'
 
 call vundle#end()
 filetype plugin indent on
@@ -36,3 +37,7 @@ let g:EasyMotion_smartcase = 1
 let g:EasyMotion_do_mapping = 0
 map <Leader>f <Plug>(easymotion-bd-f)
 nmap <Leader>f <Plug>(easymotion-overwin-f)
+
+set t_Co=256
+set t_ut=
+colorscheme codedark
