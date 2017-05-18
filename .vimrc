@@ -6,7 +6,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
-let mapleader = ","
+let mapleader = " "
 
 set rtp+=~/.dotfiles/bundle/Vundle.vim
 call vundle#begin()
@@ -19,7 +19,6 @@ Plugin 'derekwyatt/vim-scala'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
-Plugin 'rhysd/clever-f.vim'
 Plugin 'tomasiser/vim-code-dark'
 
 call vundle#end()
