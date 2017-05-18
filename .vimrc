@@ -40,3 +40,5 @@ nmap <Leader>f <Plug>(easymotion-overwin-f)
 set t_Co=256
 set t_ut=
 colorscheme codedark
+
+set laststatus=2
