@@ -8,7 +8,7 @@ set expandtab
 
 let mapleader = ","
 
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.dotfiles/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
