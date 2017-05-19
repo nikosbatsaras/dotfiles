@@ -13,7 +13,6 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'easymotion/vim-easymotion'
@@ -23,8 +22,6 @@ Plugin 'tomasiser/vim-code-dark'
 
 call vundle#end()
 filetype plugin indent on
-
-map <c-n> :NERDTreeToggle<CR>
 
 let g:NERDSpaceDelims = 1
 let g:NERDCompactSexyComs = 1
