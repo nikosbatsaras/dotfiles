@@ -23,6 +23,8 @@ Plugin 'tomasiser/vim-code-dark'
 call vundle#end()
 filetype plugin indent on
 
+let g:ctrlp_show_hidden = 1
+
 let g:NERDSpaceDelims = 1
 let g:NERDCompactSexyComs = 1
 let g:NERDDefaultAlign = 'left'
