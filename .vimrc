@@ -41,3 +41,5 @@ set t_ut=
 colorscheme codedark
 
 set laststatus=2
+
+let g:loaded_matchparen = 0
