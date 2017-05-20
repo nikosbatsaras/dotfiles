@@ -43,3 +43,6 @@ colorscheme codedark
 set laststatus=2
 
 let g:loaded_matchparen = 0
+
+vnoremap < <gv
+vnoremap > >gv
