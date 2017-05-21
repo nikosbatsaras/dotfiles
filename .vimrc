@@ -22,6 +22,7 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'tomasiser/vim-code-dark'
+Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
 filetype plugin indent on
