@@ -62,6 +62,7 @@ vnoremap > >gv
 " Statusline appearance
 set statusline=%t
 set statusline+=%m
+set statusline+=\ %{fugitive#statusline()}
 set statusline+=%=
 set statusline+=%15l
 set statusline+=:%v
