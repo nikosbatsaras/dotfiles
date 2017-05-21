@@ -65,3 +65,6 @@ set statusline+=%=
 set statusline+=%15l
 set statusline+=:%v
 set statusline+=%15P
+
+" Make search case-insensitive
+set ignorecase
