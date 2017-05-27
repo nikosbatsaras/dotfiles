@@ -15,14 +15,14 @@ set rtp+=~/.dotfiles/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'derekwyatt/vim-scala'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
-Plugin 'tomasiser/vim-code-dark'
-Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'derekwyatt/vim-scala'
+Plugin 'joshdick/onedark.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -44,16 +44,11 @@ let g:EasyMotion_do_mapping = 0
 map <Leader>f <Plug>(easymotion-bd-f)
 nmap <Leader>f <Plug>(easymotion-overwin-f)
 
-" Use the codedark theme
-set t_Co=256
-set t_ut=
-colorscheme codedark
+" Use the onedark theme
+colorscheme onedark
 
 " Show statusline even with one split
 set laststatus=2
-
-" Don't highlight matching parens
-let g:loaded_matchparen = 0
 
 " Better block identation
 vnoremap < <gv
