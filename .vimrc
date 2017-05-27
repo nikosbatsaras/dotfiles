@@ -7,6 +7,12 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 
+" Make search case-insensitive
+set ignorecase
+
+" Enable recursive search with :find
+set path+=**
+
 " Change <Leader> key to Space
 let mapleader = " "
 
@@ -57,6 +63,3 @@ set statusline+=%=
 set statusline+=%15l
 set statusline+=:%v
 set statusline+=%15P
-
-" Make search case-insensitive
-set ignorecase
