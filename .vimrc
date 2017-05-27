@@ -3,9 +3,9 @@ filetype off
 
 " Better identation
 set smartindent
+set expandtab
 set tabstop=4
 set shiftwidth=4
-set expandtab
 
 " Change <Leader> key to Space
 let mapleader = " "
@@ -20,15 +20,10 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'derekwyatt/vim-scala'
 Plugin 'joshdick/onedark.vim'
 
 call vundle#end()
 filetype plugin indent on
-
-" Find hidden files with ctrl-p
-let g:ctrlp_show_hidden = 1
 
 " Better behaviour with nerd-commenter
 let g:NERDSpaceDelims = 1
