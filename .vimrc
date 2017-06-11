@@ -1,5 +1,6 @@
 set nocompatible
 filetype off
+syntax on
 
 " Better identation
 set smartindent
@@ -26,7 +27,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'chriskempson/base16-vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -45,9 +45,6 @@ let g:EasyMotion_do_mapping = 0
 map <Leader>f <Plug>(easymotion-bd-f)
 nmap <Leader>f <Plug>(easymotion-overwin-f)
 
-" Use the base16 theme the terminal uses
-colorscheme base16-default-dark
-
 " Show statusline even with one split
 set laststatus=2
 
@@ -64,5 +61,4 @@ set statusline+=%15l
 set statusline+=:%v
 set statusline+=%15P
 
-hi visual ctermbg=darkgrey
-hi statusline ctermfg=grey ctermbg=NONE cterm=NONE
+hi statusline ctermfg=white ctermbg=NONE cterm=bold
