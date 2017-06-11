@@ -26,7 +26,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'romainl/vim-cool'
 Plugin 'chriskempson/base16-vim'
 
 call vundle#end()
@@ -65,5 +64,5 @@ set statusline+=%15l
 set statusline+=:%v
 set statusline+=%15P
 
-hi Visual ctermbg=darkgrey
+hi visual ctermbg=darkgrey
 hi statusline ctermfg=grey ctermbg=NONE cterm=NONE
