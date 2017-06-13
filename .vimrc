@@ -25,6 +25,7 @@ Plugin 'tpope/vim-surround'                " Add the surround text-object
 Plugin 'tpope/vim-repeat'                  " Enable surround commands to be repeated
 Plugin 'scrooloose/nerdcommenter'          " Comment line, regions, etc
 Plugin 'easymotion/vim-easymotion'         " Jump to char, word, line, in buffer
+Plugin 'christoomey/vim-tmux-navigator'    " Use the same navigation keys for vim/tmux splits
 
 call vundle#end()                          " Vundle end
 filetype plugin indent on                  " Needed for vundle
