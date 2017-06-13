@@ -7,13 +7,12 @@ set expandtab                              " Transform tabs into spaces
 set tabstop=4                              " Number of spaces for a tab
 set shiftwidth=4                           " Number of spaces when auto-indenting
 
-set ignorecase                             " Make search case-insensitive
-
 set path+=**                               " Enable recursive search for :find
-
-set scrolloff=2                            " Start scrolling two lines before top/bot
-
+set ignorecase                             " Make search case-insensitive
 set autoread                               " Reload file if changed outside of Vim
+set wildmenu                               " Enable command-line completion
+set nowrap                                 " Don't wrap lines
+set scrolloff=2                            " Start scrolling two lines before top/bot
 
 let mapleader = " "                        " Change <Leader> key to Space
 
@@ -22,8 +21,8 @@ call vundle#begin()                        " Vundle start
 
 Plugin 'VundleVim/Vundle.vim'              " Needed for Vundle
 Plugin 'tpope/vim-fugitive'                " Git integration
-Plugin 'tpope/vim-surround'                " Add the surround motion
-Plugin 'tpope/vim-repeat'                  " Enable surround motions to be repeated
+Plugin 'tpope/vim-surround'                " Add the surround text-object
+Plugin 'tpope/vim-repeat'                  " Enable surround commands to be repeated
 Plugin 'scrooloose/nerdcommenter'          " Comment line, regions, etc
 Plugin 'easymotion/vim-easymotion'         " Jump to char, word, line, in buffer
 
