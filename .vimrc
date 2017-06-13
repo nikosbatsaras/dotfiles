@@ -1,64 +1,54 @@
-set nocompatible
-filetype off
-syntax on
+set nocompatible                           " Make Vim no compatible with Vi
+filetype off                               " Disable file type detection
+syntax on                                  " Enable syntax highlighting
 
-" Better identation
-set smartindent
-set expandtab
-set tabstop=4
-set shiftwidth=4
+set smartindent                            " Enable smart auto-indentation
+set expandtab                              " Transform tabs into spaces
+set tabstop=4                              " Number of spaces for a tab
+set shiftwidth=4                           " Number of spaces when auto-indenting
 
-" Make search case-insensitive
-set ignorecase
+set ignorecase                             " Make search case-insensitive
 
-" Enable recursive search with :find
-set path+=**
+set path+=**                               " Enable recursive search for :find
 
-" Change <Leader> key to Space
-let mapleader = " "
+let mapleader = " "                        " Change <Leader> key to Space
 
-" Vundle bootstrap
-set rtp+=~/.dotfiles/bundle/Vundle.vim
-call vundle#begin()
+set rtp+=~/.dotfiles/bundle/Vundle.vim     " Vundle plugin path
+call vundle#begin()                        " Vundle start
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat'
-Plugin 'scrooloose/nerdcommenter'
+Plugin 'VundleVim/Vundle.vim'              " Needed for Vundle
+Plugin 'tpope/vim-fugitive'                " Git integration
+Plugin 'tpope/vim-surround'                " Add the surround motion
+Plugin 'tpope/vim-repeat'                  " Enable surround motions to be repeated
+Plugin 'scrooloose/nerdcommenter'          " Comment line, regions, etc
+Plugin 'easymotion/vim-easymotion'         " Jump to char, word, line, in buffer
 
-call vundle#end()
-filetype plugin indent on
+call vundle#end()                          " Vundle end
+filetype plugin indent on                  " Needed for vundle
 
-" Better behaviour with nerd-commenter
-let g:NERDSpaceDelims = 1
-let g:NERDCompactSexyComs = 1
-let g:NERDDefaultAlign = 'left'
-let g:NERDCommentEmptyLines = 1
-let g:NERDTrimTrailingWhitespace = 1
+let g:NERDSpaceDelims = 1                  " Add a space between comment symbols
+let g:NERDDefaultAlign = 'both'            " Align commnent symbols
+let g:NERDCommentEmptyLines = 1            " Comment empty lines
+let g:NERDTrimTrailingWhitespace = 1       " Trim trailing whitespace when uncommenting
 
-" Smart matches for easymotion
-let g:EasyMotion_smartcase = 1
-let g:EasyMotion_do_mapping = 0
-" Change keybind for easymotion to Space-f
+let g:EasyMotion_smartcase = 1             " Enable case-insensitive match
+let g:EasyMotion_do_mapping = 0            " Disable default mappings
+
+" Change keybind to Space-f
 map <Leader>f <Plug>(easymotion-bd-f)
-nmap <Leader>f <Plug>(easymotion-overwin-f)
 
-" Show statusline even with one split
-set laststatus=2
-
-" Better block identation
+" Better block indentation
 vnoremap < <gv
 vnoremap > >gv
 
-" Statusline appearance
-set statusline=%t
-set statusline+=%m
-set statusline+=\ %{fugitive#statusline()}
-set statusline+=%=
-set statusline+=%15l
-set statusline+=:%v
-set statusline+=%15P
+set laststatus=2                           " Show statusline in one split
 
-hi statusline ctermfg=white ctermbg=NONE cterm=bold
+                                           " Statusline customization start
+set statusline=%t                          " Show the name of the file
+set statusline+=%m                         " Show (a cross) when buffer is modified
+set statusline+=\ %{fugitive#statusline()} " Show git branch
+set statusline+=%=                         " Align right
+set statusline+=%15l                       " Show current line number
+set statusline+=:%v                        " Show current column number
+set statusline+=%15P                       " Show current position in buffer (in %)
+                                           " Statusline customization end
