@@ -44,6 +44,14 @@ map <Leader>f <Plug>(easymotion-bd-f)
 vnoremap < <gv
 vnoremap > >gv
 
+" Tab navigation commands
+nnoremap >   :tabnext<CR>
+nnoremap <   :tabprev<CR>
+nnoremap tf  :tabfirst<CR>
+nnoremap tl  :tablast<CR>
+nnoremap tn  :tabedit<Space>
+nnoremap tc  :tabclose<CR>
+
 set laststatus=2                           " Show statusline in one split
 
                                            " Statusline customization start
