@@ -11,6 +11,10 @@ set ignorecase                             " Make search case-insensitive
 
 set path+=**                               " Enable recursive search for :find
 
+set scrolloff=2                            " Start scrolling two lines before top/bot
+
+set autoread                               " Reload file if changed outside of Vim
+
 let mapleader = " "                        " Change <Leader> key to Space
 
 set rtp+=~/.dotfiles/bundle/Vundle.vim     " Vundle plugin path
