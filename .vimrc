@@ -26,6 +26,7 @@ Plugin 'tpope/vim-repeat'                  " Enable surround commands to be repe
 Plugin 'scrooloose/nerdcommenter'          " Comment line, regions, etc
 Plugin 'easymotion/vim-easymotion'         " Jump to char, word, line, in buffer
 Plugin 'christoomey/vim-tmux-navigator'    " Use the same navigation keys for vim/tmux splits
+Plugin 'nickbatsaras/onedark.vim'          " Use onedark color theme
 
 call vundle#end()                          " Vundle end
 filetype plugin indent on                  " Needed for vundle
@@ -38,12 +39,18 @@ let g:NERDTrimTrailingWhitespace = 1       " Trim trailing whitespace when uncom
 let g:EasyMotion_smartcase = 1             " Enable case-insensitive match
 let g:EasyMotion_do_mapping = 0            " Disable default mappings
 
+colorscheme onedark                        " Set colorscheme to onedark
+
 " Change keybind to Space-f
 map <Leader>f <Plug>(easymotion-bd-f)
 
 " Better block indentation
 vnoremap < <gv
 vnoremap > >gv
+
+" Easier split resizing
+map <c-n> <c-w><
+map <c-m> <c-w>>
 
 " Tab navigation commands
 nnoremap >   :tabnext<CR>
