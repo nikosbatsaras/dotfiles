@@ -6,6 +6,7 @@ set smartindent                            " Enable smart auto-indentation
 set expandtab                              " Transform tabs into spaces
 set tabstop=4                              " Number of spaces for a tab
 set shiftwidth=4                           " Number of spaces when auto-indenting
+set softtabstop=4                          " Make backspace delete 4 spaces, like a tab
 
 set path+=**                               " Enable recursive search for :find
 set ignorecase                             " Make search case-insensitive
