@@ -10,6 +10,10 @@ Then, we need to install vundle (a plugin manager for vim)
 ```bash
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.dotfiles/bundle/Vundle.vim
 ```
+and the tmux-plugin-manager
+```bash
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
 Finally, link to the cloned configs:
 ```bash
 ln -s ~/.dotfiles/.vimrc ~/.vimrc
