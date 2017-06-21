@@ -27,7 +27,6 @@ Plugin 'tpope/vim-repeat'                  " Enable surround commands to be repe
 Plugin 'scrooloose/nerdcommenter'          " Comment line, regions, etc
 Plugin 'easymotion/vim-easymotion'         " Jump to char, word, line, in buffer
 Plugin 'christoomey/vim-tmux-navigator'    " Use the same navigation keys for vim/tmux splits
-Plugin 'nickbatsaras/onedark.vim'          " Install onedark colorscheme
 Plugin 'vim-scripts/xoria256.vim'          " Install xoria256 colorscheme
 
 call vundle#end()                          " Vundle end
