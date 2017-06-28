@@ -42,6 +42,8 @@ let g:EasyMotion_do_mapping = 0            " Disable default mappings
 
 colorscheme xoria256                       " Set colorscheme
 
+set laststatus=2                           " Show statusline in one split
+
 " Change keybind to Space-f
 map <Leader>f <Plug>(easymotion-bd-f)
 
@@ -58,17 +60,5 @@ nnoremap >   :tabnext<CR>
 nnoremap <   :tabprev<CR>
 nnoremap tf  :tabfirst<CR>
 nnoremap tl  :tablast<CR>
-nnoremap tn  :tabedit<Space>
+nnoremap tn  :tabfind<Space>
 nnoremap tc  :tabclose<CR>
-
-set laststatus=2                           " Show statusline in one split
-
-                                           " Statusline customization start
-set statusline=%t                          " Show the name of the file
-set statusline+=%m                         " Show (a cross) when buffer is modified
-set statusline+=\ %{fugitive#statusline()} " Show git branch
-set statusline+=%=                         " Align right
-set statusline+=%15l                       " Show current line number
-set statusline+=:%v                        " Show current column number
-set statusline+=%15P                       " Show current position in buffer (in %)
-                                           " Statusline customization end
