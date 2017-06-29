@@ -21,21 +21,15 @@ set rtp+=~/.dotfiles/bundle/Vundle.vim     " Vundle plugin path
 call vundle#begin()                        " Vundle start
 
 Plugin 'VundleVim/Vundle.vim'              " Needed for Vundle
-Plugin 'tpope/vim-fugitive'                " Git integration
+Plugin 'tpope/vim-commentary'              " Comment stuff out
 Plugin 'tpope/vim-surround'                " Add the surround text-object
 Plugin 'tpope/vim-repeat'                  " Enable surround commands to be repeated
-Plugin 'scrooloose/nerdcommenter'          " Comment line, regions, etc
 Plugin 'easymotion/vim-easymotion'         " Jump to char, word, line, in buffer
 Plugin 'christoomey/vim-tmux-navigator'    " Use the same navigation keys for vim/tmux splits
 Plugin 'vim-scripts/xoria256.vim'          " Install xoria256 colorscheme
 
 call vundle#end()                          " Vundle end
 filetype plugin indent on                  " Needed for vundle
-
-let g:NERDSpaceDelims = 1                  " Add a space between comment symbols
-let g:NERDDefaultAlign = 'both'            " Align commnent symbols
-let g:NERDCommentEmptyLines = 1            " Comment empty lines
-let g:NERDTrimTrailingWhitespace = 1       " Trim trailing whitespace when uncommenting
 
 let g:EasyMotion_smartcase = 1             " Enable case-insensitive match
 let g:EasyMotion_do_mapping = 0            " Disable default mappings
