@@ -24,6 +24,7 @@ Plugin 'VundleVim/Vundle.vim'              " Needed for Vundle
 Plugin 'tpope/vim-commentary'              " Comment stuff out
 Plugin 'tpope/vim-surround'                " Add the surround text-object
 Plugin 'tpope/vim-repeat'                  " Enable surround commands to be repeated
+Plugin 'wesQ3/vim-windowswap'              " To swap splits easily
 Plugin 'easymotion/vim-easymotion'         " Jump to char, word, line, in buffer
 Plugin 'christoomey/vim-tmux-navigator'    " Use the same navigation keys for vim/tmux splits
 Plugin 'vim-scripts/xoria256.vim'          " Install xoria256 colorscheme
