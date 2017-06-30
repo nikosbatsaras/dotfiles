@@ -6,13 +6,13 @@ First, clone the repo to your home directory:
 ```bash
 git clone https://github.com/nickbatsaras/dotfiles.git ~/.dotfiles
 ```
-Then, we need to install vundle (a plugin manager for vim)
+Then, we need to install vundle (a plugin manager for vim):
 ```bash
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.dotfiles/bundle/Vundle.vim
 ```
-and the tmux-plugin-manager
-```bash
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+Then, install the plugins:
+```
+vim +PluginInstall +qall
 ```
 Finally, link to the cloned configs:
 ```bash
