@@ -27,6 +27,7 @@ Plugin 'tpope/vim-repeat'                  " Enable surround commands to be repe
 Plugin 'wesQ3/vim-windowswap'              " To swap splits easily
 Plugin 'easymotion/vim-easymotion'         " Jump to char, word, line, in buffer
 Plugin 'christoomey/vim-tmux-navigator'    " Use the same navigation keys for vim/tmux splits
+Plugin 'scrooloose/nerdtree'               " Display a directory structure
 Plugin 'vim-scripts/xoria256.vim'          " Install xoria256 colorscheme
 
 call vundle#end()                          " Vundle end
@@ -57,3 +58,6 @@ nnoremap tf  :tabfirst<CR>
 nnoremap tl  :tablast<CR>
 nnoremap tn  :tabfind<Space>
 nnoremap tc  :tabclose<CR>
+
+" Keybind for Nerttree
+map <f2> :NERDTreeToggle<CR>
