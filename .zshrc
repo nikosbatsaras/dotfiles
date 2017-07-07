@@ -91,5 +91,3 @@ alias python=python3
 alias zshrc="vim ~/.dotfiles/.zshrc"
 alias vimrc="vim ~/.dotfiles/.vimrc"
 alias tmuxconf="vim ~/.dotfiles/.tmux.conf"
-alias ssh-ite="ssh nikbats@galini.ics.forth.gr"
-alias ssh-csd="ssh -oHostKeyAlgorithms=+ssh-dss batsaras@gate1.csd.uoc.gr"

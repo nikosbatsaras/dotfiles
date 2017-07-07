@@ -1,5 +1,10 @@
 # General
-This a simple configuration for vim + tmux
+This a simple configuration for vim + tmux + zsh
+
+# Prerequisites
+```
+sudo apt-get install git vim tmux zsh
+```
 
 # Installation
 First, clone the repo to your home directory:
@@ -14,8 +19,15 @@ Then, install the plugins:
 ```
 vim +PluginInstall +qall
 ```
+Now that we're done with vim and tmux, let's install the oh-my-zsh repo:
+```
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+mv ~/.zshrc ~/.zshrc_old
+sudo chsh -s $(which zsh)
+```
 Finally, link to the cloned configs:
 ```bash
 ln -s ~/.dotfiles/.vimrc ~/.vimrc
+ln -s ~/.dotfiles/.zshrc ~/.zshrc
 ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
 ```
