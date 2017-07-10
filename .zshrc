@@ -88,6 +88,8 @@ export EDITOR='vim'
 
 alias vi=vim
 alias python=python3
+alias szsh="source ~/.zshrc"
+alias stmux="tmux source ~/.tmux.conf"
 alias zshrc="vim ~/.dotfiles/.zshrc"
 alias vimrc="vim ~/.dotfiles/.vimrc"
 alias tmuxconf="vim ~/.dotfiles/.tmux.conf"
