@@ -91,3 +91,4 @@ alias python=python3
 alias zshrc="vim ~/.dotfiles/.zshrc"
 alias vimrc="vim ~/.dotfiles/.vimrc"
 alias tmuxconf="vim ~/.dotfiles/.tmux.conf"
+alias time="/usr/bin/time --format='\n  -- Time in secs: %e'"
