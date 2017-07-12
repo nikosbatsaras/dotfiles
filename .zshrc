@@ -94,3 +94,10 @@ alias zshrc="vim ~/.dotfiles/.zshrc"
 alias vimrc="vim ~/.dotfiles/.vimrc"
 alias tmuxconf="vim ~/.dotfiles/.tmux.conf"
 alias time="/usr/bin/time --format='\n  -- Time in secs: %e'"
+
+# Add support for fuzzy matching
+# 0 -- vanilla completion    (abc => abc)
+# 1 -- smart case completion (abc => Abc)
+# 2 -- word flex completion  (abc => A-big-Car)
+# 3 -- full flex completion  (abc => ABraCadabra)
+zstyle ':completion:*' matcher-list '' 'r:|?=** m:{a-z\-}={A-Z\_}'
