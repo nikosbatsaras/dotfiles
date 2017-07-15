@@ -90,6 +90,7 @@ export EDITOR='vim'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias vi=vim
+alias pip=pip3
 alias python=python3
 alias szsh="source ~/.zshrc"
 alias stmux="tmux source ~/.tmux.conf"
