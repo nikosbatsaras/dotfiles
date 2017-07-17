@@ -49,7 +49,7 @@ filetype indent on                       " Enable filetype detection for indenta
 let g:EasyMotion_smartcase = 1           " Enable case-insensitive match
 let g:EasyMotion_do_mapping = 0          " Disable default mappings
 
-colorscheme xoria256                     " Set colorscheme
+silent! colorscheme xoria256             " Set colorscheme
 
 set laststatus=2                         " Show statusline in one split
 
