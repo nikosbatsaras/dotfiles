@@ -2,6 +2,8 @@
 PATH=$(getconf PATH)
 PATH+=:/usr/local/bin
 PATH+=:$HOME/bin
+PATH+=:/sbin
+
 export PATH
 
 # Path to your oh-my-zsh installation.
