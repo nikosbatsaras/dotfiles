@@ -1,11 +1,3 @@
-" -----------------------------------------------------------------
-"
-" URL: https://github.com/nickbatsaras/dotfiles/blob/master/.vimrc
-" Author: Nick Batsaras
-" Description: A minimal vim configuration
-"
-" -----------------------------------------------------------------
-
 set nocompatible                         " Make Vim no compatible with Vi
 syntax on                                " Enable syntax highlighting
 
@@ -39,7 +31,6 @@ Plugin 'tpope/vim-repeat'                " Enable surround commands to be repeat
 Plugin 'wesQ3/vim-windowswap'            " To swap splits easily
 Plugin 'easymotion/vim-easymotion'       " Jump to char, word, line, in buffer
 Plugin 'christoomey/vim-tmux-navigator'  " Use the same navigation keys for vim/tmux splits
-Plugin 'scrooloose/nerdtree'             " Display a directory structure
 Plugin 'vim-scripts/xoria256.vim'        " Install xoria256 colorscheme
 
 call vundle#end()                        " Vundle end
@@ -70,8 +61,3 @@ nnoremap <   :tabprev<CR>
 nnoremap te  :tabedit<Space>
 nnoremap tf  :tabfind<Space>
 nnoremap tc  :tabclose<CR>
-
-" Keybind for Nerdtree
-map <f2> :NERDTreeToggle<CR>
-
-" -----------------------------------------------------------------
