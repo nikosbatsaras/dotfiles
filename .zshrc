@@ -91,15 +91,29 @@ export EDITOR='vim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Vi = Vim
 alias vi=vim
+
+# Python
 alias pip=pip3
 alias python=python3
+
+# Tmux sessions
+alias home="tmux attach -t home"
+alias work="tmux attach -t work"
+
+# Source configs
 alias szsh="source ~/.zshrc"
 alias stmux="tmux source ~/.tmux.conf"
+
+# Open configs
 alias zshrc="vim ~/.dotfiles/.zshrc"
 alias vimrc="vim ~/.dotfiles/.vimrc"
 alias tmuxconf="vim ~/.dotfiles/.tmux.conf"
+
+# Shorten time command
 alias time="/usr/bin/time --format='\n  -- Time in secs: %e'"
+
 
 # Add support for fuzzy matching
 # 0 -- vanilla completion    (abc => abc)
