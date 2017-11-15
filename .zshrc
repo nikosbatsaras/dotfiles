@@ -114,6 +114,14 @@ alias tmuxconf="vim ~/.dotfiles/.tmux.conf"
 # Shorten time command
 alias time="/usr/bin/time --format='\n  -- Time in secs: %e'"
 
+# Some git functions
+gita()  { git add .;          }
+gitl()  { git log;            }
+gitc()  { git commit -m "$1"; }
+gits()  { git status;         }
+gitps() { git push;           }
+gitpl() { git pull;           }
+gitcl() { git clone "$1";     }
 
 # Add support for fuzzy matching
 # 0 -- vanilla completion    (abc => abc)
