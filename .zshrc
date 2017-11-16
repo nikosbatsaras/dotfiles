@@ -55,9 +55,22 @@ gita()  { git add .;          }
 gitl()  { git log;            }
 gitc()  { git commit -m "$1"; }
 gits()  { git status;         }
-gitps() { git push;           }
-gitpl() { git pull;           }
 gitcl() { git clone "$1";     }
+
+gitps() {
+    if [ $# -eq 0 ]; then
+        git push;
+    else
+        git push "$1";
+    fi
+}
+gitpl() {
+    if [ $# -eq 0 ]; then
+        git pull;
+    else
+        git pull "$1";
+    fi
+}
 
 # Add support for fuzzy matching
 # 0 -- vanilla completion    (abc => abc)
