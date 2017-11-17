@@ -61,3 +61,7 @@ nnoremap <   :tabprev<CR>
 nnoremap te  :tabedit<Space>
 nnoremap tf  :tabfind<Space>
 nnoremap tc  :tabclose<CR>
+
+let g:tex_flavor = "latex"               " Set default TEX syntax
+
+source ~/.dotfiles/.vimrc_snips          " Source various snippets
