@@ -1,3 +1,4 @@
+" LaTeX snippets
 autocmd FileType plaintex,tex,latex noremap ;ar i
             \\documentclass{article}<Return>
             \<Return>
@@ -83,23 +84,47 @@ autocmd FileType plaintex,tex,latex noremap ;pr i
 
 autocmd FileType plaintex,tex,latex noremap ;l i
             \\begin{itemize}<Return>
-            \\end{itemize}<Esc>O\item 
+            \\end{itemize}<Esc>=ko\item 
 
 autocmd FileType plaintex,tex,latex noremap ;en i
             \\begin{enumerate}<Return>
-            \\end{enumerate}<Esc>O\item 
+            \\end{enumerate}<Esc>=ko\item 
 
 autocmd FileType plaintex,tex,latex noremap ;fr i
             \\begin{frame}{}<Return>
-            \\end{frame}<Esc>k$i
+            \\end{frame}<Esc>=kf};i
 
 autocmd FileType plaintex,tex,latex noremap ;fg i
             \\begin{figure}<Return>
             \\centering<Return>
             \\includegraphics[width=0.7\textwidth]{}<Return>
             \\caption{}<Return>
-            \\end{figure}<Esc>kk$i
+            \\end{figure}<Esc>=4k2j$i
 
 autocmd FileType plaintex,tex,latex noremap ;bf i\textbf{}<Esc>i
 autocmd FileType plaintex,tex,latex noremap ;it i\textit{}<Esc>i
 autocmd FileType plaintex,tex,latex noremap ;un i\underline{}<Esc>i
+
+
+" C snippets
+autocmd FileType c noremap ;main i
+            \#include <stdio.h><Return>
+            \<Return>
+            \int main (int argc, char *argv[])<Return>
+            \{<Return>
+            \}<Esc>=koreturn 0;<Esc>O
+
+autocmd FileType c noremap ;if i
+            \if () {<Return>
+            \}<Esc>=kf)i
+
+autocmd FileType c noremap ;for i
+            \for (i=0; i<N; i++) {<Return>
+            \}<Esc>=kfNxi
+
+autocmd FileType c noremap ;wh i
+            \while () {<Return>
+            \}<Esc>=kf)i
+
+autocmd FileType c noremap ;pr i
+            \printf("\n");<Esc>==f\i
