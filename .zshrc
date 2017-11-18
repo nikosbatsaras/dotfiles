@@ -35,8 +35,8 @@ alias pip=pip3
 alias python=python3
 
 # Tmux sessions
-alias home="tmux attach -t home"
-alias work="tmux attach -t work"
+alias attach="tmux attach -t"
+alias session="tmux new -s"
 
 # Source configs
 alias szsh="source ~/.zshrc"
@@ -47,30 +47,14 @@ alias zshrc="vim ~/.dotfiles/.zshrc"
 alias vimrc="vim ~/.dotfiles/.vimrc"
 alias tmuxconf="vim ~/.dotfiles/.tmux.conf"
 
-# Shorten time command
-alias time="/usr/bin/time --format='\n  -- Time in secs: %e'"
-
 # Some git functions
-gita()  { git add .;          }
-gitl()  { git log;            }
-gitc()  { git commit -m "$1"; }
-gits()  { git status;         }
-gitcl() { git clone "$1";     }
-
-gitps() {
-    if [ $# -eq 0 ]; then
-        git push;
-    else
-        git push "$1";
-    fi
-}
-gitpl() {
-    if [ $# -eq 0 ]; then
-        git pull;
-    else
-        git pull "$1";
-    fi
-}
+alias gita="git add ."
+alias gitl="git log"
+alias gitc="git commit -m"
+alias gits="git status"
+alias gitcl="git clone"
+alias gitps="git push"
+alias gitpl="git pull"
 
 # Add support for fuzzy matching
 # 0 -- vanilla completion    (abc => abc)
