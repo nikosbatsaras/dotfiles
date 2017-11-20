@@ -47,15 +47,6 @@ alias zshrc="vim ~/.dotfiles/.zshrc"
 alias vimrc="vim ~/.dotfiles/.vimrc"
 alias tmuxconf="vim ~/.dotfiles/.tmux.conf"
 
-# Some git functions
-alias gita="git add ."
-alias gitl="git log"
-alias gitc="git commit -m"
-alias gits="git status"
-alias gitcl="git clone"
-alias gitps="git push"
-alias gitpl="git pull"
-
 # Add support for fuzzy matching
 # 0 -- vanilla completion    (abc => abc)
 # 1 -- smart case completion (abc => Abc)
