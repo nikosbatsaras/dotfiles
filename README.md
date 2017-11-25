@@ -4,6 +4,7 @@
 - vim          The text editor
 - urxvt        The terminal
 - tmux         The terminal multiplexer
+- ranger       The file manager
 - mpd          The music player daemon
 - ncmpcpp      The mpd client
 
@@ -44,7 +45,7 @@ sudo make install
 
 ## Install the rest
 ```bash
-sudo apt-get install i3blocks zsh vim urxvt tmux mpd ncmpcpp mpc scrot
+sudo apt-get install i3blocks zsh vim urxvt tmux mpd ncmpcpp mpc scrot feh ranger
 ```
 
 
