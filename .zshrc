@@ -47,6 +47,13 @@ alias zshrc="vim ~/.dotfiles/.zshrc"
 alias vimrc="vim ~/.dotfiles/.vimrc"
 alias tmuxconf="vim ~/.dotfiles/.tmux.conf"
 
+# Set desktop background
+# Need feh: sudo apt install feh
+alias setbg="feh --bg-scale"
+
+# Start-up mpd client
+alias music="ncmpcpp"
+
 # Add support for fuzzy matching
 # 0 -- vanilla completion    (abc => abc)
 # 1 -- smart case completion (abc => Abc)

@@ -30,17 +30,17 @@ Plugin 'tpope/vim-surround'              " Add the surround text-object
 Plugin 'tpope/vim-repeat'                " Enable surround commands to be repeated
 Plugin 'wesQ3/vim-windowswap'            " To swap splits easily
 Plugin 'easymotion/vim-easymotion'       " Jump to char, word, line, in buffer
-Plugin 'christoomey/vim-tmux-navigator'  " Use the same navigation keys for vim/tmux splits
-Plugin 'vim-scripts/xoria256.vim'        " Install xoria256 colorscheme
+Plugin 'xuhdev/vim-latex-live-preview'   " Live LaTeX preview
 
 call vundle#end()                        " Vundle end
 filetype plugin on                       " Enable filetype detection for plugins
 filetype indent on                       " Enable filetype detection for indentation
 
-let g:EasyMotion_smartcase = 1           " Enable case-insensitive match
+let g:EasyMotion_smartcase  = 1          " Enable case-insensitive match
 let g:EasyMotion_do_mapping = 0          " Disable default mappings
 
-silent! colorscheme xoria256             " Set colorscheme
+let g:livepreview_previewer = 'evince'   " PDF viewer to use
+let g:livepreview_engine =  'pdflatex'   " LaTeX compiler to use
 
 set laststatus=2                         " Show statusline in one split
 
@@ -56,11 +56,23 @@ map <c-n> <c-w><
 map <c-m> <c-w>>
 
 " Tab navigation commands
-nnoremap >   :tabnext<CR>
-nnoremap <   :tabprev<CR>
-nnoremap te  :tabedit<Space>
-nnoremap tf  :tabfind<Space>
-nnoremap tc  :tabclose<CR>
+nnoremap >  :tabnext<CR>
+nnoremap <  :tabprev<CR>
+nnoremap te :tabedit<Space>
+nnoremap tf :tabfind<Space>
+nnoremap tc :tabclose<CR>
+
+" Set colorscheme, statusline, visual selection
+colorscheme peachpuff
+
+hi StatusLine   ctermbg=none cterm=bold
+hi StatusLineNC ctermbg=none cterm=bold
+
+hi TabLine     ctermfg=white ctermbg=NONE     cterm=bold
+hi TabLineSel  ctermfg=white ctermbg=DarkGrey cterm=bold
+hi TabLineFill ctermfg=NONE  ctermbg=NONE     cterm=bold
+
+hi Visual cterm=bold ctermbg=DarkGrey ctermfg=NONE
 
 let g:tex_flavor = "latex"               " Set default TEX syntax
 

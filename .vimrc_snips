@@ -101,6 +101,7 @@ autocmd FileType plaintex,tex,latex noremap ;fg i
             \\caption{}<Return>
             \\end{figure}<Esc>=4k2j$i
 
+autocmd FileType plaintex,tex,latex noremap ;tl i\textlatin{}<Esc>i
 autocmd FileType plaintex,tex,latex noremap ;bf i\textbf{}<Esc>i
 autocmd FileType plaintex,tex,latex noremap ;it i\textit{}<Esc>i
 autocmd FileType plaintex,tex,latex noremap ;un i\underline{}<Esc>i

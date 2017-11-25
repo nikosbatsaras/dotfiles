@@ -5,9 +5,6 @@ URxvt.scrollBar: false
 URxvt.keysym.C-S-Left:  string:\033[1;6D
 URxvt.keysym.C-S-Right:	string:\033[1;6C
 
-URxvt*background: #000000
-URxvt*foreground: #CCCCCC
-
 URxvt*color0:  #000000
 URxvt*color1:  #CC0000
 URxvt*color2:  #4E9A06
@@ -24,3 +21,8 @@ URxvt*color12: #729FCF
 URxvt*color13: #AD7FA8
 URxvt*color14: #34E2E2
 URxvt*color15: #EEEEEC
+
+URxvt*foreground: #CCCCCC
+
+urxvt*transparent: true
+urxvt*shading: 30
