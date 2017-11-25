@@ -9,6 +9,8 @@ ln -s ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
 
 ln -s ~/.dotfiles/i3/config ~/.config/i3/config
 ln -s ~/.dotfiles/i3/i3blocks.conf ~/.config/i3/i3blocks.conf
+ln -s ~/.dotfiles/i3/lock.sh ~/.config/i3/lock.sh
+ln -s ~/.dotfiles/i3/music.sh ~/.config/i3/music.sh
 
 ln -s ~/.dotfiles/mpd/mpd.conf ~/.config/mpd/mpd.conf
 ln -s ~/.dotfiles/ncmpcpp/bindings ~/.ncmpcpp/bindings
