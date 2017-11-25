@@ -76,4 +76,4 @@ hi Visual cterm=bold ctermbg=DarkGrey ctermfg=NONE
 
 let g:tex_flavor = "latex"               " Set default TEX syntax
 
-source ~/.dotfiles/.vimrc_snips          " Source various snippets
+source ~/.dotfiles/vim/.vimrc_snips      " Source various snippets
