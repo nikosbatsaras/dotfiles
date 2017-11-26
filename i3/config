@@ -73,7 +73,7 @@ bindsym $mod+s split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $mod+Shift+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 # bindsym $mod+s layout stacked
@@ -178,5 +178,3 @@ exec_always setxkbmap -option ctrl:swapcaps
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always setxkbmap -option grp:switch,grp:alt_shift_toggle us,el
 exec_always feh --bg-scale ~/Pictures/Wallpapers/highland_sunrise-wallpaper-1366x768.jpg
-
-assign [class="Google-chrome"] $workspace1

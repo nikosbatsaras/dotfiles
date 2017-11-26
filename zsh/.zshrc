@@ -43,9 +43,9 @@ alias szsh="source ~/.zshrc"
 alias stmux="tmux source ~/.tmux.conf"
 
 # Open configs
-alias zshrc="vim ~/.dotfiles/.zshrc"
-alias vimrc="vim ~/.dotfiles/.vimrc"
-alias tmuxconf="vim ~/.dotfiles/.tmux.conf"
+alias zshrc="vim ~/.dotfiles/zsh/.zshrc"
+alias vimrc="vim ~/.dotfiles/vim/.vimrc"
+alias tmuxconf="vim ~/.dotfiles/tmux/.tmux.conf"
 
 # Set desktop background
 # Need feh: sudo apt install feh
@@ -60,3 +60,6 @@ alias music="ncmpcpp"
 # 2 -- word flex completion  (abc => A-big-Car)
 # 3 -- full flex completion  (abc => ABraCadabra)
 zstyle ':completion:*' matcher-list '' 'r:|?=** m:{a-z\-}={A-Z\_}'
+
+# Run neofetch at start
+neofetch 2> /dev/null

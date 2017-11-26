@@ -8,14 +8,13 @@ ln -s ~/.dotfiles/vim/.vimrc ~/.vimrc
 ln -s ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
 ln -s ~/.dotfiles/urxvt/.Xresources ~/.Xresources
 
-source ~/.zshrc
 xrdb ~/.Xresources
 
 ln -s ~/.dotfiles/i3/config ~/.config/i3/config
 ln -s ~/.dotfiles/i3/lock.sh ~/.config/i3/lock.sh
 
-touch "~/.config/mpd/database"
-touch "~/.config/mpd/log"
+touch ~/.config/mpd/database
+touch ~/.config/mpd/log
 ln -s ~/.dotfiles/mpd/mpd.conf ~/.config/mpd/mpd.conf
 ln -s ~/.dotfiles/ncmpcpp/bindings ~/.ncmpcpp/bindings
 
