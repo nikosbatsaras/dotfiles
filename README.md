@@ -43,9 +43,23 @@ make
 sudo make install
 ```
 
+## Install polybar
+First the dependencies
+```bash
+sudo apt install cmake cmake-data libcairo2-dev libxcb1-dev libxcb-ewmh-dev libxcb-icccm4-dev libxcb-image0-dev libxcb-randr0-dev libxcb-util0-dev libxcb-xkb-dev pkg-config python-xcbgen xcb-proto libxcb-xrm-dev i3-wm libasound2-dev libmpdclient-dev libiw-dev libcurl4-openssl-dev
+```
+Polybar installation
+```bash
+git clone --recursive https://github.com/jaagr/polybar
+mkdir polybar/build
+cd polybar/build
+cmake ..
+sudo make install
+```
+
 ## Install the rest
 ```bash
-sudo apt-get install i3blocks zsh vim urxvt tmux mpd ncmpcpp mpc scrot feh ranger
+sudo apt-get install zsh vim urxvt tmux mpd ncmpcpp mpc scrot feh ranger
 ```
 
 
