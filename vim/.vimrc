@@ -30,6 +30,7 @@ Plugin 'tpope/vim-surround'              " Add the surround text-object
 Plugin 'tpope/vim-repeat'                " Enable surround commands to be repeated
 Plugin 'wesQ3/vim-windowswap'            " To swap splits easily
 Plugin 'easymotion/vim-easymotion'       " Jump to char, word, line, in buffer
+Plugin 'christoomey/vim-tmux-navigator'  " Use the same navigation keys for vim/tmux splits
 Plugin 'xuhdev/vim-latex-live-preview'   " Live LaTeX preview
 
 call vundle#end()                        " Vundle end
