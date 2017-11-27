@@ -44,12 +44,12 @@ module-margin-right = 2
 
 font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
+font-2 = FontAwesome:pixelsize=10;0
 
 modules-left = bspwm i3
 modules-center = mpd
 ; modules-right = filesystem xbacklight volume xkeyboard memory cpu wlan eth battery temperature date time powermenu
-modules-right = xbacklight volume xkeyboard memory cpu wlan eth battery temperature date time powermenu
+modules-right = xbacklight volume xkeyboard memory cpu wlan eth battery time date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -78,8 +78,8 @@ label = %title:0:30:...%
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
+format-prefix = " "
+format-prefix-foreground = ${colors.secondary}
 format-prefix-underline = ${colors.secondary}
 
 label-layout = %layout%
@@ -157,13 +157,13 @@ label-urgent-padding = ${module/bspwm.label-urgent-padding}
 type = internal/mpd
 format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
 
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
+icon-prev  = 
+icon-stop  = 
+icon-play  = 
+icon-pause = 
+icon-next  = 
 
-label-song-maxlen = 25
+label-song-maxlen = 40
 label-song-ellipsis = true
 
 [module/xbacklight]
@@ -191,17 +191,17 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #f90000
+format-prefix = " "
+format-prefix-foreground = #e6b800
+format-underline = #e6b800
 label = %percentage:2%%
 
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #4bffdc
+format-prefix = " "
+format-prefix-foreground = #0040ff
+format-underline = #0040ff
 label = %percentage_used%%
 
 [module/wlan]
@@ -210,7 +210,7 @@ interface = wlp3s0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
-format-connected-underline = #9f78e1
+format-connected-underline = #cc00cc
 label-connected = %essid%
 
 format-disconnected =
@@ -219,12 +219,12 @@ format-disconnected =
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
-ramp-signal-foreground = ${colors.foreground-alt}
+ramp-signal-0 =  
+; ramp-signal-1 = 
+; ramp-signal-2 = 
+; ramp-signal-3 = 
+; ramp-signal-4 = 
+ramp-signal-foreground = #cc00cc
 
 [module/eth]
 type = internal/network
@@ -249,9 +249,9 @@ interval = 5
 time = %H:%M
 time-alt = %H:%M:%S
 
-format-prefix = 
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
+format-prefix = " "
+format-prefix-foreground = #ff6600
+format-underline = #ff6600
 
 label = %time%
 
@@ -262,9 +262,9 @@ interval = 5
 date = " %d-%m-%Y"
 date-alt = " %Y-%m-%d"
 
-format-prefix = 
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
+format-prefix = " "
+format-prefix-foreground = #2eb82e
+format-underline = #2eb82e
 
 label = %date%
 
@@ -308,19 +308,19 @@ format-charging-underline = #ffb52a
 format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
-format-full-prefix = " "
+format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-foreground = ${colors.foreground-alt}
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-foreground = ${self.format-charging-underline}
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-foreground = ${colors.foreground-alt}
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-foreground = ${self.format-charging-underline}
 animation-charging-framerate = 750
 
 [module/temperature]
