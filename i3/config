@@ -137,10 +137,10 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
-        bindsym h resize shrink width  10 px or 10 ppt
-        bindsym j resize grow   height 10 px or 10 ppt
-        bindsym k resize shrink height 10 px or 10 ppt
-        bindsym l resize grow   width  10 px or 10 ppt
+        bindsym h resize shrink width  5 px or 5 ppt
+        bindsym j resize grow   height 5 px or 5 ppt
+        bindsym k resize shrink height 5 px or 5 ppt
+        bindsym l resize grow   width  5 px or 5 ppt
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
@@ -168,13 +168,12 @@ bindsym $mod+Control+l exec --no-startup-id ~/.config/i3/lock.sh
 #     position top
 # }
 
-new_window none
-
-
-gaps inner 8
-gaps outer 8
-
 exec_always setxkbmap -option ctrl:swapcaps
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always setxkbmap -option grp:switch,grp:alt_shift_toggle us,el
-exec_always feh --bg-scale ~/Pictures/Wallpapers/highland_sunrise-wallpaper-1366x768.jpg
+exec_always feh --bg-scale ~/Pictures/myWallpapers/atlantis_on_fire-wallpaper-1366x768.jpg
+
+bindsym $mod+Tab       workspace next
+bindsym $mod+Shift+Tab workspace prev
+
+bindsym $mod+q exec --no-startup-id qutebrowser/.venv/bin/python3 -m qutebrowser "$@"

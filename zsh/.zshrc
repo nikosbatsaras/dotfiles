@@ -30,11 +30,15 @@ export EDITOR='vim'
 # Vi = Vim
 alias vi=vim
 
+# Clear
+alias cls="clear"
+
 # Python
 alias pip=pip3
 alias python=python3
 
-# Tmux sessions
+# Tmux
+alias tls="tmux ls"
 alias attach="tmux attach -t"
 alias session="tmux new -s"
 
@@ -60,6 +64,3 @@ alias music="ncmpcpp"
 # 2 -- word flex completion  (abc => A-big-Car)
 # 3 -- full flex completion  (abc => ABraCadabra)
 zstyle ':completion:*' matcher-list '' 'r:|?=** m:{a-z\-}={A-Z\_}'
-
-# Run neofetch at start
-neofetch 2> /dev/null
