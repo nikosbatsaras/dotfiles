@@ -1,3 +1,6 @@
 bundle
 *.swp
 *.swo
+qutebrowser/quickmarks
+qutebrowser/qsettings
+qutebrowser/bookmarks

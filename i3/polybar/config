@@ -17,6 +17,7 @@ foreground-alt = #555
 primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
+custom = #8c8c8c
 
 [bar/example]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -48,7 +49,6 @@ font-2 = FontAwesome:pixelsize=10;0
 
 modules-left = bspwm i3
 modules-center = mpd
-; modules-right = filesystem xbacklight volume xkeyboard memory cpu wlan eth battery temperature date time powermenu
 modules-right = xbacklight volume xkeyboard memory cpu wlan eth battery time date powermenu
 
 tray-position = right
@@ -79,16 +79,16 @@ type = internal/xkeyboard
 blacklist-0 = num lock
 
 format-prefix = " "
-format-prefix-foreground = ${colors.secondary}
-format-prefix-underline = ${colors.secondary}
+format-prefix-foreground = ${colors.custom}
+format-prefix-underline = ${colors.custom}
 
 label-layout = %layout%
-label-layout-underline = ${colors.secondary}
+label-layout-underline = ${colors.custom}
 
 label-indicator-padding = 2
 label-indicator-margin = 1
-label-indicator-background = ${colors.secondary}
-label-indicator-underline = ${colors.secondary}
+label-indicator-background = ${colors.custom}
+label-indicator-underline = ${colors.custom}
 
 [module/filesystem]
 type = internal/fs
@@ -175,12 +175,12 @@ label = BL
 bar-width = 10
 bar-indicator = |
 bar-indicator-foreground = #ff
-bar-indicator-font = 2
+bar-indicator-font = 4
 bar-fill = ─
-bar-fill-font = 2
-bar-fill-foreground = #9f78e1
+bar-fill-font = 4
+bar-fill-foreground = ${colors.custom}
 bar-empty = ─
-bar-empty-font = 2
+bar-empty-font = 4
 bar-empty-foreground = ${colors.foreground-alt}
 
 [module/backlight-acpi]
@@ -192,16 +192,16 @@ card = intel_backlight
 type = internal/cpu
 interval = 2
 format-prefix = " "
-format-prefix-foreground = #e6b800
-format-underline = #e6b800
+format-prefix-foreground = ${colors.custom}
+format-underline = ${colors.custom}
 label = %percentage:2%%
 
 [module/memory]
 type = internal/memory
 interval = 2
 format-prefix = " "
-format-prefix-foreground = #0040ff
-format-underline = #0040ff
+format-prefix-foreground = ${colors.custom}
+format-underline = ${colors.custom}
 label = %percentage_used%%
 
 [module/wlan]
@@ -210,7 +210,7 @@ interface = wlp3s0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
-format-connected-underline = #cc00cc
+format-connected-underline = ${colors.custom}
 label-connected = %essid%
 
 format-disconnected =
@@ -224,7 +224,7 @@ ramp-signal-0 = 
 ; ramp-signal-2 = 
 ; ramp-signal-3 = 
 ; ramp-signal-4 = 
-ramp-signal-foreground = #cc00cc
+ramp-signal-foreground = ${colors.custom}
 
 [module/eth]
 type = internal/network
@@ -233,7 +233,7 @@ interval = 3.0
 
 format-connected-underline = #55aa55
 format-connected-prefix = " "
-format-connected-prefix-foreground = ${colors.foreground-alt}
+format-connected-prefix-foreground = ${colors.custom}
 label-connected = %local_ip%
 
 format-disconnected =
@@ -250,8 +250,8 @@ time = %H:%M
 time-alt = %H:%M:%S
 
 format-prefix = " "
-format-prefix-foreground = #ff6600
-format-underline = #ff6600
+format-prefix-foreground = ${colors.custom}
+format-underline = ${colors.custom}
 
 label = %time%
 
@@ -263,8 +263,8 @@ date = " %d-%m-%Y"
 date-alt = " %Y-%m-%d"
 
 format-prefix = " "
-format-prefix-foreground = #2eb82e
-format-underline = #2eb82e
+format-prefix-foreground = ${colors.custom}
+format-underline = ${colors.custom}
 
 label = %date%
 
@@ -280,20 +280,20 @@ format-muted-foreground = ${colors.foreground-alt}
 label-muted = sound muted
 
 bar-volume-width = 10
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
+bar-volume-foreground-0 = ${colors.custom}
+bar-volume-foreground-1 = ${colors.custom}
+bar-volume-foreground-2 = ${colors.custom}
+bar-volume-foreground-3 = ${colors.custom}
+bar-volume-foreground-4 = ${colors.custom}
+bar-volume-foreground-5 = ${colors.custom}
+bar-volume-foreground-6 = ${colors.custom}
 bar-volume-gradient = false
 bar-volume-indicator = |
-bar-volume-indicator-font = 2
+bar-volume-indicator-font = 4
 bar-volume-fill = ─
-bar-volume-fill-font = 2
+bar-volume-fill-font = 4
 bar-volume-empty = ─
-bar-volume-empty-font = 2
+bar-volume-empty-font = 4
 bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/battery]
@@ -303,13 +303,13 @@ adapter = AC0
 full-at = 98
 
 format-charging = <animation-charging> <label-charging>
-format-charging-underline = #ffb52a
+format-charging-underline = ${colors.custom}
 
 format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
 format-full-prefix = " "
-format-full-prefix-foreground = ${colors.foreground-alt}
+format-full-prefix-foreground = ${colors.custom}
 format-full-underline = ${self.format-charging-underline}
 
 ramp-capacity-0 = 

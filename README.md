@@ -29,6 +29,14 @@ cmake ..
 sudo make install
 ```
 
+## Install Qutebrowser
+```bash
+sudo apt-get install tox
+git clone https://github.com/qutebrowser/qutebrowser.git
+cd qutebrowser
+tox -e mkvenv-pypi
+```
+
 ## Install the rest
 ```bash
 sudo apt-get install zsh vim urxvt tmux mpd ncmpcpp mpc scrot feh ranger

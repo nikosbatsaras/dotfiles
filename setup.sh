@@ -22,3 +22,5 @@ cp ~/.dotfiles/fonts/* ~/.fonts/
 
 ln -s ~/.dotfiles/i3/polybar/launch.sh ~/.config/polybar/launch.sh
 ln -s ~/.dotfiles/i3/polybar/config ~/.config/polybar/config
+
+ln -s ~/.dotfiles/qutebrowser ~/.config/qutebrowser
