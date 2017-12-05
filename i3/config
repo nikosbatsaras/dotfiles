@@ -173,7 +173,7 @@ new_window 1pixel
 exec_always setxkbmap -option ctrl:swapcaps
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always setxkbmap -option grp:switch,grp:alt_shift_toggle us,el
-exec_always feh --bg-scale ~/Pictures/myWallpapers/atlantis_on_fire-wallpaper-1366x768.jpg
+# exec_always feh --bg-scale ~/Pictures/myWallpapers/atlantis_on_fire-wallpaper-1366x768.jpg
 
 bindsym $mod+Tab       workspace next
 bindsym $mod+Shift+Tab workspace prev

@@ -18,7 +18,7 @@ sudo apt-get install i3
 ## Install polybar
 First the dependencies
 ```bash
-sudo apt-get install cmake cmake-data libcairo2-dev libxcb1-dev libxcb-ewmh-dev libxcb-icccm4-dev libxcb-image0-dev libxcb-randr0-dev libxcb-util0-dev libxcb-xkb-dev pkg-config python-xcbgen xcb-proto libxcb-xrm-dev i3-wm libasound2-dev libmpdclient-dev libiw-dev libcurl4-openssl-dev
+sudo apt-get install cmake cmake-data libcairo2-dev libxcb1-dev libxcb-ewmh-dev libxcb-icccm4-dev libxcb-image0-dev libxcb-randr0-dev libxcb-util0-dev libxcb-xkb-dev pkg-config python-xcbgen xcb-proto i3-wm libasound2-dev libmpdclient-dev libiw-dev libcurl4-openssl-dev
 ```
 Polybar installation
 ```bash
@@ -39,7 +39,7 @@ tox -e mkvenv-pypi
 
 ## Install the rest
 ```bash
-sudo apt-get install zsh vim urxvt tmux mpd ncmpcpp mpc scrot feh ranger
+sudo apt-get install zsh vim rxvt-unicode tmux mpd ncmpcpp mpc scrot feh ranger
 ```
 
 
