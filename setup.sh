@@ -1,7 +1,112 @@
 #!/bin/bash
 
-# TODO: Backup first !
-exit 1
+##
+#
+# @auth  Nick Batsaras (nickbatsaras@gmail.com)
+# @date  05/12/2017
+# @desc  Script to clone my entire setup on a new Debian machine
+#
+#        The goal is to automate the process of setting up on a
+#        fresh machine. All the user needs to do, is to download
+#        and execute the script. To do that, run:
+#
+# $ bash -c "$(wget https://raw.githubusercontent.com/nickbatsaras/dotfiles/master/setup.sh -O -)"
+#
+#        All existing user configs, will be backed-up.
+#
+##
+
+
+
+#*****************************************************************************
+#            Function to install packages needed for the setup               *
+#*****************************************************************************
+install() {
+    sudo apt-get install "$1"
+}
+#*****************************************************************************
+
+
+
+#*****************************************************************************
+#       Function to backup user configs before installing the new ones       *
+#*****************************************************************************
+backup() {
+    if [ -f "$1" ] || [ -d "$1" ]
+    then
+        echo "Backing-up: $1 -> $1_bak"
+        mv "$1" "$1_bak"
+    fi
+}
+#*****************************************************************************
+
+
+
+#*****************************************************************************
+#                  Install applications used by this setup                   *
+#*****************************************************************************
+# Install i3 window manager
+install i3
+
+# Install polybar dependencies
+install cmake cmake-data libcairo2-dev libxcb1-dev libxcb-ewmh-dev 
+install libxcb-icccm4-dev libxcb-image0-dev libxcb-randr0-dev libxcb-util0-dev
+install libxcb-xkb-dev pkg-config python-xcbgen xcb-proto i3-wm libasound2-dev
+install libmpdclient-dev libiw-dev libcurl4-openssl-dev
+
+# Install polybar
+backup ~/polybar
+
+git clone --recursive https://github.com/jaagr/polybar ~/polybar
+mkdir polybar/build
+cd polybar/build
+cmake ..
+sudo make install
+
+# Install Qutebrowser
+backup ~/qutebrowser
+
+install tox
+git clone https://github.com/qutebrowser/qutebrowser.git ~/qutebrowser
+cd qutebrowser
+tox -e mkvenv-pypi
+
+# Install applications
+install zsh
+install vim
+install rxvt-unicode
+install tmux
+install mpd
+install ncmpcpp
+install mpc
+install scrot
+install feh
+install ranger
+
+# Download dotfiles from github
+backup ~/.dotfiles
+
+git clone https://github.com/nickbatsaras/dotfiles.git ~/.dotfiles
+
+# Download Vundle, a plugin manager for Vim
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.dotfiles/bundle/Vundle.vim
+
+# Download and install oh-my-zsh
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+
+# Set zsh as default shell
+chsh -s $(which zsh)
+#*****************************************************************************
+
+
+
+#*****************************************************************************
+#                     Zsh, Vim, Tmux and RXVT configs                        *
+#*****************************************************************************
+backup ~/.zshrc
+backup ~/.vimrc
+backup ~/.tmux.conf
+backup ~/.Xresources
 
 ln -s ~/.dotfiles/zsh/.zshrc            ~/.zshrc
 ln -s ~/.dotfiles/vim/.vimrc            ~/.vimrc
@@ -10,28 +115,70 @@ ln -s ~/.dotfiles/urxvt/.Xresources     ~/.Xresources
 
 xrdb ~/.Xresources
 vim +PluginInstall +qall
+#*****************************************************************************
 
+
+
+#*****************************************************************************
+#                                 i3 config                                  *
+#*****************************************************************************
+backup ~/.config/i3
 
 mkdir ~/.config/i3
+
 ln -s ~/.dotfiles/i3/config             ~/.config/i3/config
 ln -s ~/.dotfiles/i3/lock.sh            ~/.config/i3/lock.sh
+#*****************************************************************************
 
+
+
+#*****************************************************************************
+#                       Music: MPD and NCMPCPP configs                       *
+#*****************************************************************************
+backup ~/.ncmpcpp
+backup ~/.config/mpd
 
 mkdir ~/.ncmpcpp
 mkdir ~/.config/mpd
+
 touch ~/.config/mpd/database
 touch ~/.config/mpd/log
+
 ln -s ~/.dotfiles/mpd/mpd.conf          ~/.config/mpd/mpd.conf
 ln -s ~/.dotfiles/ncmpcpp/bindings      ~/.ncmpcpp/bindings
+#*****************************************************************************
 
 
-cp -r ~/.dotfiles/fonts ~/.fonts
 
+#*****************************************************************************
+#                                    Fonts                                   *
+#*****************************************************************************
+backup ~/.fonts
+
+cp -r ~/.dotfiles/fonts                 ~/.fonts
+#*****************************************************************************
+
+
+
+#*****************************************************************************
+#                               Polybar config                               *
+#*****************************************************************************
+backup ~/.config/polybar
 
 mkdir ~/.config/polybar
+
 ln -s ~/.dotfiles/i3/polybar/config     ~/.config/polybar/config
 ln -s ~/.dotfiles/i3/polybar/launch.sh  ~/.config/polybar/launch.sh
+#*****************************************************************************
 
+
+
+#*****************************************************************************
+#                             Qutebrowser config                             *
+#*****************************************************************************
+backup ~/.config/qutebrowser
 
 mkdir ~/.config/qutebrowser
+
 ln -s ~/.dotfiles/qutebrowser/config.py ~/.config/qutebrowser/config.py
+#*****************************************************************************

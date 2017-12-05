@@ -1,69 +1,23 @@
 # General
-- i3      The desktop environment
-- zsh     The shell
-- vim     The text editor
-- urxvt   The terminal
-- tmux    The terminal multiplexer
-- ranger  The file manager
-- mpd     The music player daemon
-- ncmpcpp The mpd client
+```
+- i3          The desktop environment
+- zsh         The shell
+- vim         The text editor
+- urxvt       The terminal
+- tmux        The terminal multiplexer
+- ranger      The file manager
+- mpd         The music player daemon
+- ncmpcpp     The mpd client
+- qutebrowser The web browser
+```
 
-
-# Dependencies
-## Install i3
+# Installation
+Run:
 ```bash
-sudo apt-get install i3
+bash -c "$(wget https://raw.githubusercontent.com/nickbatsaras/dotfiles/master/setup.sh -O -)"
 ```
-
-## Install polybar
-First the dependencies
-```bash
-sudo apt-get install cmake cmake-data libcairo2-dev libxcb1-dev libxcb-ewmh-dev libxcb-icccm4-dev libxcb-image0-dev libxcb-randr0-dev libxcb-util0-dev libxcb-xkb-dev pkg-config python-xcbgen xcb-proto i3-wm libasound2-dev libmpdclient-dev libiw-dev libcurl4-openssl-dev
-```
-Polybar installation
-```bash
-git clone --recursive https://github.com/jaagr/polybar
-mkdir polybar/build
-cd polybar/build
-cmake ..
-sudo make install
-```
-
-## Install Qutebrowser
-```bash
-sudo apt-get install tox
-git clone https://github.com/qutebrowser/qutebrowser.git
-cd qutebrowser
-tox -e mkvenv-pypi
-```
-
-## Install the rest
-```bash
-sudo apt-get install zsh vim rxvt-unicode tmux mpd ncmpcpp mpc scrot feh ranger
-```
+and reboot selecting i3 at login.
 
 
-# Setup Installation
-Clone the repo to your home directory:
-```bash
-git clone https://github.com/nickbatsaras/dotfiles.git ~/.dotfiles
-```
-Install vundle (a plugin manager for vim):
-```bash
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.dotfiles/bundle/Vundle.vim
-```
-Install oh-my-zsh:
-```
-sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-```
-Make zsh default shell:
-```
-chsh -s $(which zsh)
-```
-
-
-# Finally, setup configs
-```bash
-chmod +x ~/.dotfiles/setup.sh
-~/.dotfiles/setup.sh
-```
+# Screenshot
+![2017-12-05-180035_1366x768_scrot](https://user-images.githubusercontent.com/23704715/33617371-2dca9b34-d9e8-11e7-9e06-5713bdc1ad84.png)
