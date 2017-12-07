@@ -58,8 +58,8 @@ install libmpdclient-dev libiw-dev libcurl4-openssl-dev
 backup ~/polybar
 
 git clone --recursive https://github.com/jaagr/polybar ~/polybar
-mkdir polybar/build
-cd polybar/build
+mkdir ~/polybar/build
+cd ~/polybar/build
 cmake ..
 sudo make install
 
@@ -68,7 +68,7 @@ backup ~/qutebrowser
 
 install tox
 git clone https://github.com/qutebrowser/qutebrowser.git ~/qutebrowser
-cd qutebrowser
+cd ~/qutebrowser
 tox -e mkvenv-pypi
 
 # Install applications
@@ -179,6 +179,7 @@ ln -s ~/.dotfiles/i3/polybar/launch.sh  ~/.config/polybar/launch.sh
 backup ~/.config/qutebrowser
 
 mkdir ~/.config/qutebrowser
+mkdir ~/.config/qutebrowser/bookmarks
 
 ln -s ~/.dotfiles/qutebrowser/config.py ~/.config/qutebrowser/config.py
 #*****************************************************************************

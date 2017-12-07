@@ -31,6 +31,7 @@ Plugin 'tpope/vim-repeat'                " Enable surround commands to be repeat
 Plugin 'wesQ3/vim-windowswap'            " To swap splits easily
 Plugin 'easymotion/vim-easymotion'       " Jump to char, word, line, in buffer
 Plugin 'christoomey/vim-tmux-navigator'  " Use the same navigation keys for vim/tmux splits
+Plugin 'vim-scripts/xoria256.vim'        " Use xoria256 colorscheme
 Plugin 'xuhdev/vim-latex-live-preview'   " Live LaTeX preview
 
 call vundle#end()                        " Vundle end
@@ -39,6 +40,8 @@ filetype indent on                       " Enable filetype detection for indenta
 
 let g:EasyMotion_smartcase  = 1          " Enable case-insensitive match
 let g:EasyMotion_do_mapping = 0          " Disable default mappings
+
+silent! colorscheme xoria256             " Set colorscheme
 
 let g:livepreview_previewer = 'evince'   " PDF viewer to use
 let g:livepreview_engine =  'pdflatex'   " LaTeX compiler to use
@@ -64,8 +67,6 @@ nnoremap tf :tabfind<Space>
 nnoremap tc :tabclose<CR>
 
 " Set colorscheme, statusline, visual selection
-colorscheme peachpuff
-
 hi StatusLine   ctermbg=none cterm=bold
 hi StatusLineNC ctermbg=none cterm=bold
 
