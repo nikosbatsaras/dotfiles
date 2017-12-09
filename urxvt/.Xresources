@@ -25,4 +25,4 @@ URxvt*color15: #EEEEEC
 URxvt*foreground: #CCCCCC
 URxvt*background: 000/000/000
 
-URxvt.fading: 20
+/* URxvt.fading: 20 */

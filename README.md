@@ -20,4 +20,4 @@ and reboot selecting i3 at login.
 
 
 # Screenshot
-![2017-12-05-180035_1366x768_scrot](https://user-images.githubusercontent.com/23704715/33617371-2dca9b34-d9e8-11e7-9e06-5713bdc1ad84.png)
+![2017-12-09-133116_1366x768_scrot](https://user-images.githubusercontent.com/23704715/33795414-725cc50c-dce9-11e7-99d7-18b0303b796b.png)

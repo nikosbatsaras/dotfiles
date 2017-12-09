@@ -64,3 +64,6 @@ alias music="ncmpcpp"
 # 2 -- word flex completion  (abc => A-big-Car)
 # 3 -- full flex completion  (abc => ABraCadabra)
 zstyle ':completion:*' matcher-list '' 'r:|?=** m:{a-z\-}={A-Z\_}'
+
+# Do not load default ranger config
+export RANGER_LOAD_DEFAULT_RC=FALSE

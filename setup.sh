@@ -4,13 +4,8 @@
 #
 # @auth  Nick Batsaras (nickbatsaras@gmail.com)
 # @date  05/12/2017
-# @desc  Script to clone my entire setup on a new Debian machine
+# @desc  Script to install the entire setup on a new Debian machine
 #
-#        The goal is to automate the process of setting up on a
-#        fresh machine. All the user needs to do, is to download
-#        and execute the script. To do that, run:
-#
-# $ bash -c "$(wget https://raw.githubusercontent.com/nickbatsaras/dotfiles/master/setup.sh -O -)"
 #
 #        All existing user configs, will be backed-up.
 #
@@ -182,4 +177,16 @@ mkdir ~/.config/qutebrowser
 mkdir ~/.config/qutebrowser/bookmarks
 
 ln -s ~/.dotfiles/qutebrowser/config.py ~/.config/qutebrowser/config.py
+#*****************************************************************************
+
+#*****************************************************************************
+#                                Ranger config                               *
+#*****************************************************************************
+backup ~/.config/ranger
+
+ranger --copy-config=all
+
+rm ~/.config/ranger/rc.conf
+
+ln -s ~/.dotfiles/ranger/rc.conf        ~/.config/ranger/rc.conf
 #*****************************************************************************
