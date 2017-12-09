@@ -74,7 +74,7 @@ tox -e mkvenv-pypi
 # Install applications
 install zsh
 install vim
-install rxvt-unicode
+install rxvt-unicode rxvt-unicode-256color
 install tmux
 install mpd
 install ncmpcpp

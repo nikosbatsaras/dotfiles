@@ -13,6 +13,7 @@
 c.aliases = {
         'q'  : 'quit',
         'cs' : 'config-source',
+        'dc' : 'download-clear',
 
         'gg' : 'open -t https://www.9gag.com',
         'fb' : 'open -t https://www.facebook.com',

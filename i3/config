@@ -30,7 +30,8 @@ font pango:Ubuntu Mono 9, FontAwesome 9
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+set $term urxvt
+bindsym $mod+Return exec $term
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -159,15 +160,6 @@ bindsym $mod+Shift+p exec --no-startup-id scrot
 # Lock screen
 bindsym $mod+Control+l exec --no-startup-id ~/.config/i3/lock.sh
 
-
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-# bar {
-#     status_command i3blocks -c ~/.config/i3/i3blocks.conf
-#     tray_output primary
-#     position top
-# }
-
 new_window 1pixel
 
 exec_always setxkbmap -option ctrl:swapcaps
@@ -179,3 +171,11 @@ bindsym $mod+Tab       workspace next
 bindsym $mod+Shift+Tab workspace prev
 
 bindsym $mod+q exec --no-startup-id qutebrowser/.venv/bin/python3 -m qutebrowser "$@"
+
+for_window [instance="dropdown"] floating enable
+for_window [instance="dropdown"] resize set 625 400
+for_window [instance="dropdown"] move position center
+for_window [instance="dropdown"] move scratchpad
+exec_always $term -name "dropdown"
+
+bindsym $mod+u scratchpad show
