@@ -1,6 +1,6 @@
 # General
 ```
-- i3          The desktop environment
+- i3          The window manager
 - zsh         The shell
 - vim         The text editor
 - urxvt       The terminal
@@ -9,6 +9,7 @@
 - mpd         The music player daemon
 - ncmpcpp     The mpd client
 - qutebrowser The web browser
+- zathura     The pdf viewer
 ```
 
 # Installation

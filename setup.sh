@@ -77,6 +77,7 @@ install mpc
 install scrot
 install feh
 install ranger
+install zathura
 
 # Download dotfiles from github
 backup ~/.dotfiles
