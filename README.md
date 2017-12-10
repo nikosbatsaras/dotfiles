@@ -7,7 +7,8 @@
 - tmux        The terminal multiplexer
 - ranger      The file manager
 - mpd         The music player daemon
-- ncmpcpp     The mpd client
+- ncmpcpp     The ncurses mpd client
+- mpc         The command line mpd client
 - qutebrowser The web browser
 - zathura     The pdf viewer
 - youtube-dl  The media downloader
