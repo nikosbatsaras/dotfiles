@@ -173,7 +173,7 @@ bindsym $mod+Shift+Tab workspace prev
 bindsym $mod+q exec --no-startup-id qutebrowser/.venv/bin/python3 -m qutebrowser "$@"
 
 for_window [instance="dropdown"] floating enable
-for_window [instance="dropdown"] resize set 625 400
+for_window [instance="dropdown"] resize set 825 500
 for_window [instance="dropdown"] move position center
 for_window [instance="dropdown"] move scratchpad
 exec_always $term -name "dropdown"
@@ -182,3 +182,5 @@ bindsym $mod+u scratchpad show
 
 bindsym $mod+m exec --no-startup-id "udisksctl mount -b /dev/sdb1 && urxvt -e ranger /media/$USER/"
 bindsym $mod+Shift+m exec --no-startup-id "udisksctl unmount -b /dev/sdb1"
+
+bindsym $mod+y exec --no-startup-id youtube-dl -o "/home/$USER/Music/%(title)s.%(ext)s" --extract-audio --audio-format mp3 "$(xclip -selection clipboard -o)"

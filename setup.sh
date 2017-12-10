@@ -78,6 +78,7 @@ install scrot
 install feh
 install ranger
 install zathura
+install youtube-dl
 
 # Download dotfiles from github
 backup ~/.dotfiles
