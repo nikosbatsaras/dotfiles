@@ -10,6 +10,8 @@
 - ncmpcpp     The mpd client
 - qutebrowser The web browser
 - zathura     The pdf viewer
+- youtube-dl  The media downloader
+- sxiv        The image viewer
 ```
 
 # Installation

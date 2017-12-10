@@ -79,6 +79,7 @@ install feh
 install ranger
 install zathura
 install youtube-dl
+install sxiv
 
 # Download dotfiles from github
 backup ~/.dotfiles
