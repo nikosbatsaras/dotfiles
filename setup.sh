@@ -80,6 +80,7 @@ install ranger
 install zathura
 install youtube-dl
 install sxiv
+install mutt
 
 # Download dotfiles from github
 backup ~/.dotfiles
@@ -182,6 +183,8 @@ mkdir ~/.config/qutebrowser/bookmarks
 ln -s ~/.dotfiles/qutebrowser/config.py ~/.config/qutebrowser/config.py
 #*****************************************************************************
 
+
+
 #*****************************************************************************
 #                                Ranger config                               *
 #*****************************************************************************
@@ -192,4 +195,18 @@ ranger --copy-config=all
 rm ~/.config/ranger/rc.conf
 
 ln -s ~/.dotfiles/ranger/rc.conf        ~/.config/ranger/rc.conf
+#*****************************************************************************
+
+
+
+#*****************************************************************************
+#                                 Mutt config                                *
+#*****************************************************************************
+backup ~/.mutt
+backup ~/.muttrc
+
+mkdir ~/.mutt
+
+ln -s ~/.dotfiles/mutt/.muttrc                         ~/.muttrc
+ln -s ~/.dotfiles/mutt/account.com.gmail.batsarasnikos ~/.mutt/account.com.gmail.batsarasnikos
 #*****************************************************************************
