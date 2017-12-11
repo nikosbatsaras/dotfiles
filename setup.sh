@@ -206,6 +206,9 @@ backup ~/.mutt
 backup ~/.muttrc
 
 mkdir ~/.mutt
+mkdir ~/.mutt/cache
+mkdir ~/.mutt/cache/bodies
+mkdir ~/.mutt/cache/headers
 
 ln -s ~/.dotfiles/mutt/.muttrc                         ~/.muttrc
 ln -s ~/.dotfiles/mutt/account.gr.uoc.csd.batsaras     ~/.mutt/account.gr.uoc.csd.batsaras

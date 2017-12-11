@@ -1,19 +1,19 @@
 unmailboxes *
-set imap_user = "batsarasnikos@gmail.com"
-set smtp_url = "smtp://batsarasnikos@smtp.gmail.com:587/"
 
-set my_pw1 = "`gpg2 -d ~/.mutt/acc1pw.gpg 2> /dev/null`"
+set my_pw1    = "`gpg2 -d ~/.mutt/acc1pw.gpg 2> /dev/null`"
+
+set imap_user = "batsarasnikos@gmail.com"
 set imap_pass = "$my_pw1"
+
+set smtp_url  = "smtp://batsarasnikos@smtp.gmail.com:587/"
 set smtp_pass = "$my_pw1"
 
-set from = "batsarasnikos@gmail.com"
-set realname = "Nick Batsaras"
-set folder = "imaps://imap.gmail.com:993"
-set spoolfile = "+INBOX"
-set postponed = "+[Gmail]/Drafts"
-#set header_cache = ~/.mutt/com.gmail.batsarasnikos/cache/headers
-#set message_cachedir = ~/.mutt/com.gmail.batsarasnikos/cache/bodies
+set from             = "batsarasnikos@gmail.com"
+set realname         = "Nick Batsaras"
+set folder           = "imaps://imap.gmail.com:993"
+set spoolfile        = "+INBOX"
+set record           = "+[Gmail]/Sent Mail"
+set ssl_starttls     =  yes
+set ssl_force_tls    =  yes
 set certificate_file = ~/.mutt/com.gmail.batsarasnikos/certificates
-set ssl_starttls = yes
-set ssl_force_tls = yes
-set status_format = "$from -%r-Mutt: %f [Msgs:%?M?%M/?%m%?n? New:%n?%?o? Old:%o?%?d? Del:%d?%?F? Flag:%F?%?t? Tag:%t?%?p? Post:%p?%?b? Inc:%b?%?l? %l?]---(%s/%S)-%>-(%P)---"
+set status_format    = "$from -%r-Mutt: %f [Msgs:%?M?%M/?%m%?n? New:%n?%?o? Old:%o?%?d? Del:%d?%?F? Flag:%F?%?t? Tag:%t?%?p? Post:%p?%?b? Inc:%b?%?l? %l?]---(%s/%S)-%>-(%P)---"

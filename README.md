@@ -36,7 +36,7 @@ First, we need to create a key-pair:
 gpg --gen-key
 ```
 Then create a file to hold your password in plain text (e.g acc1pw),
-then encrypt it and lastly make sure you delete it:
+encrypt it and make sure you delete it afterwards:
 ```bash
 gpg --encrypt -r "Nick Batsaras" ~/.mutt/acc1pw
 rm ~/.mutt/acc1pw

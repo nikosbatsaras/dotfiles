@@ -1,52 +1,53 @@
 # Folder hooks
 folder-hook 'account.com.gmail.batsarasnikos' 'source ~/.mutt/account.com.gmail.batsarasnikos'
-folder-hook 'account.gr.uoc.csd.batsaras' 'source ~/.mutt/account.gr.uoc.csd.batsaras'
-# folder-hook 'account.com.live.gotbletu' 'source ~/.mutt/account.com.live.gotbletu'
-# folder-hook 'account.com.hotmail.gotbletu' 'source ~/.mutt/account.com.hotmail.gotbletu'
+folder-hook 'account.gr.uoc.csd.batsaras'     'source ~/.mutt/account.gr.uoc.csd.batsaras'
 
 # Default account
 source ~/.mutt/account.com.gmail.batsarasnikos
-#source ~/.mutt/account.gr.uoc.csd.batsaras
 
 # Macros for switching accounts
 macro index <F12> '<sync-mailbox><enter-command>source ~/.mutt/account.com.gmail.batsarasnikos<enter><change-folder>!<enter>'
 macro index <F11> '<sync-mailbox><enter-command>source ~/.mutt/account.gr.uoc.csd.batsaras<enter><change-folder>!<enter>'
-# macro index <F10> '<sync-mailbox><enter-command>source ~/.mutt/account.com.live.gotbletu<enter><change-folder>!<enter>'
-# macro index <F9> '<sync-mailbox><enter-command>source ~/.mutt/account.com.hotmail.gotbletu<enter><change-folder>!<enter>'
+
+# Macros for switching mailboxes
+macro index gi "<F12><change-folder>=INBOX<enter>" "Go to inbox"
+macro index gs "<F12><change-folder>=[Gmail]/Sent Mail<enter>" "Go to sent"
+
+macro index ci "<F11><change-folder>=INBOX<enter>" "Go to inbox"
+macro index cs "<F11><change-folder>=Sent<enter>" "Go to sent"
 
 # Set default text editor
 set editor = "$EDITOR"
 
-#-------- Basic Config {{{
-#------------------------------------------------------
-set ssl_starttls = yes
-set ssl_force_tls = yes
-set imap_check_subscribed
-# set hostname = gmail.com
-set mail_check = 120
-set timeout = 300
+
+set move           = no
+set auto_tag       = yes
+set ssl_starttls   = yes
+set ssl_force_tls  = yes
+set timeout        = 300
+set mail_check     = 120
 set imap_keepalive = 300
-# set record = "+[GMail]/Sent Mail"
-set move = no
 set include
-set sort = 'threads'
+set imap_check_subscribed
+set sort     = 'threads'
 set sort_aux = 'reverse-last-date-received'
-set auto_tag = yes
+
 ignore "Authentication-Results:"
 ignore "DomainKey-Signature:"
 ignore "DKIM-Signature:"
+
 hdr_order Date From To Cc
+
 alternative_order text/plain text/html *
 auto_view text/html
+
 bind editor <Tab> complete-query
 bind editor ^T complete
 bind editor <space> noop
  
-set header_cache=~/.mutt/cache/headers
-set message_cachedir=~/.mutt/cache/bodies
-# }}}
-#-------- Color Theme {{{
-#------------------------------------------------------
+set header_cache     =~/.mutt/cache/headers
+set message_cachedir =~/.mutt/cache/bodies
+
 
 color hdrdefault cyan default
 color attachment yellow default
@@ -55,10 +56,10 @@ color header brightyellow default "From: "
 color header brightyellow default "Subject: "
 color header brightyellow default "Date: "
 
-color quoted green default
-color quoted1 cyan default
+color quoted  green default
+color quoted1 cyan  default
 color quoted2 green default
-color quoted3 cyan default
+color quoted3 cyan  default
 
 color error     red             default         # error messages
 color message   white           default         # message  informational messages
@@ -72,4 +73,3 @@ color index     yellow default  '~O'
 color index     yellow default  '~N'
 color index     brightred       default '~F'    # Flagged Messages are important!
 color index     blue default    '~D'            # Deleted Mails - use dark color as these are already "dealt with"
-# }}}
