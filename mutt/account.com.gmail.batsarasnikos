@@ -2,7 +2,7 @@ unmailboxes *
 set imap_user = "batsarasnikos@gmail.com"
 set smtp_url = "smtp://batsarasnikos@smtp.gmail.com:587/"
 
-set my_pw1 = "`gpg --decrypt ~/.mutt/acc1pw.gpg`"
+set my_pw1 = "`gpg --batch --passphrase PASSPHRASE -d ~/.mutt/acc1pw.gpg 2> /dev/null`"
 set imap_pass = "$my_pw1"
 set smtp_pass = "$my_pw1"
 
@@ -11,8 +11,8 @@ set realname = "Nick Batsaras"
 set folder = "imaps://imap.gmail.com:993"
 set spoolfile = "+INBOX"
 set postponed = "+[Gmail]/Drafts"
-set header_cache = ~/.mutt/com.gmail.batsarasnikos/cache/headers
-set message_cachedir = ~/.mutt/com.gmail.batsarasnikos/cache/bodies
+#set header_cache = ~/.mutt/com.gmail.batsarasnikos/cache/headers
+#set message_cachedir = ~/.mutt/com.gmail.batsarasnikos/cache/bodies
 set certificate_file = ~/.mutt/com.gmail.batsarasnikos/certificates
 set ssl_starttls = yes
 set ssl_force_tls = yes

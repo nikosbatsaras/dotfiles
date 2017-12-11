@@ -1,16 +1,16 @@
 # Folder hooks
 folder-hook 'account.com.gmail.batsarasnikos' 'source ~/.mutt/account.com.gmail.batsarasnikos'
-# folder-hook 'account.com.yahoo.gotbletu' 'source ~/.mutt/account.com.yahoo.gotbletu'
+folder-hook 'account.gr.uoc.csd.batsaras' 'source ~/.mutt/account.gr.uoc.csd.batsaras'
 # folder-hook 'account.com.live.gotbletu' 'source ~/.mutt/account.com.live.gotbletu'
 # folder-hook 'account.com.hotmail.gotbletu' 'source ~/.mutt/account.com.hotmail.gotbletu'
 
 # Default account
 source ~/.mutt/account.com.gmail.batsarasnikos
+#source ~/.mutt/account.gr.uoc.csd.batsaras
 
 # Macros for switching accounts
-
 macro index <F12> '<sync-mailbox><enter-command>source ~/.mutt/account.com.gmail.batsarasnikos<enter><change-folder>!<enter>'
-# macro index <F11> '<sync-mailbox><enter-command>source ~/.mutt/account.com.yahoo.gotbletu<enter><change-folder>!<enter>'
+macro index <F11> '<sync-mailbox><enter-command>source ~/.mutt/account.gr.uoc.csd.batsaras<enter><change-folder>!<enter>'
 # macro index <F10> '<sync-mailbox><enter-command>source ~/.mutt/account.com.live.gotbletu<enter><change-folder>!<enter>'
 # macro index <F9> '<sync-mailbox><enter-command>source ~/.mutt/account.com.hotmail.gotbletu<enter><change-folder>!<enter>'
 
@@ -41,6 +41,9 @@ auto_view text/html
 bind editor <Tab> complete-query
 bind editor ^T complete
 bind editor <space> noop
+ 
+set header_cache=~/.mutt/cache/headers
+set message_cachedir=~/.mutt/cache/bodies
 # }}}
 #-------- Color Theme {{{
 #------------------------------------------------------

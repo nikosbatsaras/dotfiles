@@ -208,5 +208,6 @@ backup ~/.muttrc
 mkdir ~/.mutt
 
 ln -s ~/.dotfiles/mutt/.muttrc                         ~/.muttrc
+ln -s ~/.dotfiles/mutt/account.gr.uoc.csd.batsaras     ~/.mutt/account.gr.uoc.csd.batsaras
 ln -s ~/.dotfiles/mutt/account.com.gmail.batsarasnikos ~/.mutt/account.com.gmail.batsarasnikos
 #*****************************************************************************
