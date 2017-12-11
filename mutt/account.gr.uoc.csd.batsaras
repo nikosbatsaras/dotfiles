@@ -2,7 +2,7 @@ unmailboxes *
 set imap_user = "batsaras"
 set smtp_url = "smtp://batsaras@mailhost.csd.uoc.gr:465/"
 
-set my_pw2 = "`gpg --batch --passphrase PASSPHRASE -d ~/.mutt/acc2pw.gpg 2> /dev/null`"
+set my_pw2 = "`gpg2 -d ~/.mutt/acc2pw.gpg 2> /dev/null`"
 set imap_pass = "$my_pw2"
 set smtp_pass = "$my_pw2"
 
