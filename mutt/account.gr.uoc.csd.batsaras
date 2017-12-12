@@ -5,7 +5,7 @@ set my_pw2    = "`gpg2 -d ~/.mutt/acc2pw.gpg 2> /dev/null`"
 set imap_user = "batsaras"
 set imap_pass = "$my_pw2"
 
-set smtp_url  = "smtp://batsaras@mailhost.csd.uoc.gr:465/"
+set smtp_url  = "smtp://batsaras@mailhost.csd.uoc.gr:587/"
 set smtp_pass = "$my_pw2"
 
 set from             = "batsaras@csd.uoc.gr"

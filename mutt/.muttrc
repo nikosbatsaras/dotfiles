@@ -41,9 +41,25 @@ hdr_order Date From To Cc
 alternative_order text/plain text/html *
 auto_view text/html
 
-bind editor <Tab> complete-query
-bind editor ^T complete
 bind editor <space> noop
+bind editor <Tab>   complete-query
+bind editor ^T      complete
+
+# Index keybinds
+bind index \cd   half-down
+bind index \cu   half-up
+bind index G     last-entry
+bind index gg    first-entry
+bind index /     search
+
+# Pager keybinds
+bind pager k     previous-line
+bind pager j     next-line
+bind pager K     previous-undeleted
+bind pager J     next-undeleted
+bind pager \cu   half-up
+bind pager \cd   half-down
+bind pager /     search
  
 set header_cache     =~/.mutt/cache/headers
 set message_cachedir =~/.mutt/cache/bodies
