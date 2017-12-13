@@ -30,15 +30,15 @@ and reboot selecting i3 at login.
 
 # To setup Mutt:
 The way mutt is setup right now, is to read the passwords from encrypted files
-in the users filesystem. We use GnuPG to encrypt/decrypt.
-First, we need to create a key-pair:
+in the filesystem. We use GnuPG to encrypt/decrypt.
+First, create a key-pair:
 ```bash
 gpg --gen-key
 ```
-Then create a file to hold your password in plain text (e.g acc1pw),
+Then create a file to hold the password in plain text (e.g acc1pw),
 encrypt it and make sure you delete it afterwards:
 ```bash
-gpg --encrypt -r "Nick Batsaras" ~/.mutt/acc1pw
+gpg --encrypt ~/.mutt/acc1pw
 rm ~/.mutt/acc1pw
 ```
 If you name the password file differently, make sure you change the

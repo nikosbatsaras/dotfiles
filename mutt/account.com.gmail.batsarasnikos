@@ -1,7 +1,5 @@
 unmailboxes *
 
-set my_pw1    = "`gpg2 -d ~/.mutt/acc1pw.gpg 2> /dev/null`"
-
 set imap_user = "batsarasnikos@gmail.com"
 set imap_pass = "$my_pw1"
 

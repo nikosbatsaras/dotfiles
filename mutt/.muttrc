@@ -1,3 +1,7 @@
+# Set passwords
+set my_pw1 = "`gpg2 -d ~/.mutt/acc1pw.gpg`"
+set my_pw2 = "`gpg2 -d ~/.mutt/acc2pw.gpg`"
+
 # Folder hooks
 folder-hook 'account.com.gmail.batsarasnikos' 'source ~/.mutt/account.com.gmail.batsarasnikos'
 folder-hook 'account.gr.uoc.csd.batsaras'     'source ~/.mutt/account.gr.uoc.csd.batsaras'
