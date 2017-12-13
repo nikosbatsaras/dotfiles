@@ -43,7 +43,7 @@ let g:EasyMotion_do_mapping = 0          " Disable default mappings
 
 silent! colorscheme xoria256             " Set colorscheme
 
-let g:livepreview_previewer = 'evince'   " PDF viewer to use
+let g:livepreview_previewer = 'zathura'  " PDF viewer to use
 let g:livepreview_engine =  'pdflatex'   " LaTeX compiler to use
 
 set laststatus=2                         " Show statusline in one split
@@ -77,5 +77,8 @@ hi TabLineFill ctermfg=NONE  ctermbg=NONE     cterm=bold
 hi Visual cterm=bold ctermbg=DarkGrey ctermfg=NONE
 
 let g:tex_flavor = "latex"               " Set default TEX syntax
+
+set splitright                           " Open new vertical split to the right
+set splitbelow                           " Open new horizontal split below
 
 source ~/.dotfiles/vim/.vimrc_snips      " Source various snippets

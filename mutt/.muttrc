@@ -32,6 +32,9 @@ set timeout        = 300
 set mail_check     = 120
 set imap_keepalive = 300
 set include
+set sidebar_visible
+set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
+set mail_check_stats
 set imap_check_subscribed
 set sort     = 'threads'
 set sort_aux = 'reverse-last-date-received'
@@ -55,6 +58,10 @@ bind index \cu   half-up
 bind index G     last-entry
 bind index gg    first-entry
 bind index /     search
+bind index O     sidebar-open
+bind index T     sidebar-toggle-visible
+bind index J     sidebar-next
+bind index K     sidebar-prev
 
 # Pager keybinds
 bind pager k     previous-line

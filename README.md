@@ -29,6 +29,20 @@ and reboot selecting i3 at login.
 
 
 # To setup Mutt:
+## Dependencies
+Some dependencies to install:
+```bash
+sudo apt-get install libssl-dev libncurses-dev libsasl2-dev libtokyocabinet-dev
+```
+## Installation
+Download a recent tarball from the official site and build it:
+```bash
+./configure --enable-pgp --enable-pop --enable-smtp --enable-imap --enable-sidebar --enable-hcache --with-sasl --with-ssl
+make
+sudo make install
+```
+
+## Configuration
 The way mutt is setup right now, is to read the passwords from encrypted files
 in the filesystem. We use GnuPG to encrypt/decrypt.
 First, create a key-pair:
@@ -41,5 +55,3 @@ encrypt it and make sure you delete it afterwards:
 gpg --encrypt ~/.mutt/acc1pw
 rm ~/.mutt/acc1pw
 ```
-If you name the password file differently, make sure you change the
-~/mutt/account file accordingly. Aaaand we are done!

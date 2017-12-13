@@ -80,7 +80,6 @@ install ranger
 install zathura
 install youtube-dl
 install sxiv
-install mutt
 
 # Download dotfiles from github
 backup ~/.dotfiles
