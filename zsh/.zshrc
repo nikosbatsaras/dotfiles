@@ -30,6 +30,9 @@ export EDITOR='vim'
 # Vi = Vim
 alias vi=vim
 
+# Mutt = NeoMutt
+alias mutt=neomutt
+
 # Clear
 alias cls="clear"
 

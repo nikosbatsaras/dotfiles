@@ -1,0 +1,34 @@
+# Unbind some keys
+bind index g noop
+bind index c noop
+bind editor <space> noop
+
+# Editor keybinds
+bind editor <Tab>   complete-query
+bind editor ^T      complete
+
+# Index keybinds
+bind index G  last-entry
+bind index gg first-entry
+bind index O  sidebar-open
+bind index T  sidebar-toggle-visible
+bind index J  sidebar-next
+bind index K  sidebar-prev
+
+# Pager keybinds
+bind pager k previous-line
+bind pager j next-line
+bind pager K previous-undeleted
+bind pager J next-undeleted
+
+# Index + Pager keybinds
+bind index,pager \cd half-down
+bind index,pager \cu half-up
+bind index,pager /   search
+
+# Macros for switching mailboxes
+macro index gi "<enter-command>source $my_gmail<enter><change-folder>=INBOX<enter>
+macro index gs "<enter-command>source $my_gmail<enter><change-folder>=[Gmail]/Sent Mail<enter>
+
+macro index ci "<enter-command>source $my_csd<enter><change-folder>=INBOX<enter>
+macro index cs "<enter-command>source $my_csd<enter><change-folder>=Sent<enter>

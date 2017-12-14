@@ -1,102 +1,30 @@
-# Set passwords
-set my_pw1 = "`gpg2 -d ~/.mutt/acc1pw.gpg`"
-set my_pw2 = "`gpg2 -d ~/.mutt/acc2pw.gpg`"
+set editor = "$EDITOR"                                 # Set text editor
 
-# Folder hooks
-folder-hook 'account.com.gmail.batsarasnikos' 'source ~/.mutt/account.com.gmail.batsarasnikos'
-folder-hook 'account.gr.uoc.csd.batsaras'     'source ~/.mutt/account.gr.uoc.csd.batsaras'
+set ssl_starttls = yes                                 # Use TLS if available
+set ssl_force_tls = yes                                # Force a secure connection
 
-# Default account
-source ~/.mutt/account.com.gmail.batsarasnikos
+set timeout = 120                                      # Set timeout period
+set mail_check = 60                                    # Mail check interval
+set imap_keepalive = 120                               # Send keepalive messages to server
 
-# Macros for switching accounts
-macro index <F12> '<sync-mailbox><enter-command>source ~/.mutt/account.com.gmail.batsarasnikos<enter><change-folder>!<enter>'
-macro index <F11> '<sync-mailbox><enter-command>source ~/.mutt/account.gr.uoc.csd.batsaras<enter><change-folder>!<enter>'
+set sort = 'threads'                                   # Sort messages by thread
+set sort_aux = 'reverse-last-date-received'            # Put new messages up-top
 
-# Macros for switching mailboxes
-macro index gi "<F12><change-folder>=INBOX<enter>" "Go to inbox"
-macro index gs "<F12><change-folder>=[Gmail]/Sent Mail<enter>" "Go to sent"
+hdr_order Date From To Cc                              # Set header format
 
-macro index ci "<F11><change-folder>=INBOX<enter>" "Go to inbox"
-macro index cs "<F11><change-folder>=Sent<enter>" "Go to sent"
-
-# Set default text editor
-set editor = "$EDITOR"
-
-
-set move           = no
-set auto_tag       = yes
-set ssl_starttls   = yes
-set ssl_force_tls  = yes
-set timeout        = 300
-set mail_check     = 120
-set imap_keepalive = 300
-set include
-set sidebar_visible
-set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
-set mail_check_stats
-set imap_check_subscribed
-set sort     = 'threads'
-set sort_aux = 'reverse-last-date-received'
-
-ignore "Authentication-Results:"
-ignore "DomainKey-Signature:"
-ignore "DKIM-Signature:"
-
-hdr_order Date From To Cc
-
-alternative_order text/plain text/html *
-auto_view text/html
-
-bind editor <space> noop
-bind editor <Tab>   complete-query
-bind editor ^T      complete
-
-# Index keybinds
-bind index \cd   half-down
-bind index \cu   half-up
-bind index G     last-entry
-bind index gg    first-entry
-bind index /     search
-bind index O     sidebar-open
-bind index T     sidebar-toggle-visible
-bind index J     sidebar-next
-bind index K     sidebar-prev
-
-# Pager keybinds
-bind pager k     previous-line
-bind pager j     next-line
-bind pager K     previous-undeleted
-bind pager J     next-undeleted
-bind pager \cu   half-up
-bind pager \cd   half-down
-bind pager /     search
+alternative_order text/plain text/html *               # Prefer plain-text part when rendering a multi-part message
+auto_view text/html                                    # Pass html-text message parts to the command defined in mailcap file
  
-set header_cache     =~/.mutt/cache/headers
-set message_cachedir =~/.mutt/cache/bodies
+set header_cache     =~/.mutt/cache/headers            # Set cache folder for headers
+set message_cachedir =~/.mutt/cache/bodies             # Set cache folder for bodies
 
+set my_gmail = ~/.mutt/account.com.gmail.batsarasnikos # Gmail account config
+set my_csd   = ~/.mutt/account.gr.uoc.csd.batsaras     # Uni account config
 
-color hdrdefault cyan default
-color attachment yellow default
+set my_pw1 = "`gpg -d ~/.mutt/acc1pw.gpg`"             # Gmail account password
+set my_pw2 = "`gpg -d ~/.mutt/acc2pw.gpg`"             # Uni account password
 
-color header brightyellow default "From: "
-color header brightyellow default "Subject: "
-color header brightyellow default "Date: "
+source "$my_gmail"                                     # Default account at startup
 
-color quoted  green default
-color quoted1 cyan  default
-color quoted2 green default
-color quoted3 cyan  default
-
-color error     red             default         # error messages
-color message   white           default         # message  informational messages
-color indicator white           red             # indicator for the "current message"
-color status    white           blue            # status lines in the folder index sed for the mini-help line
-color tree      red             default         # the "tree" display of threads within the folder index
-color search    white           blue            # search matches found with search within the internal pager
-color markers   red             default         # The markers indicate a wrapped line hen showing messages with looong lines
-
-color index     yellow default  '~O'
-color index     yellow default  '~N'
-color index     brightred       default '~F'    # Flagged Messages are important!
-color index     blue default    '~D'            # Deleted Mails - use dark color as these are already "dealt with"
+source ~/.dotfiles/mutt/keybinds.mutt                  # Keybindings
+source ~/.dotfiles/mutt/colors.mutt                    # Colors

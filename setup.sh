@@ -66,10 +66,23 @@ git clone https://github.com/qutebrowser/qutebrowser.git ~/qutebrowser
 cd ~/qutebrowser
 tox -e mkvenv-pypi
 
+# Install NeoMutt dependencies
+install libssl-dev libsasl2-dev libncurses-dev libtokyocabinet-dev
+
+# Install NeoMutt
+backup ~/neomutt
+
+git clone https://github.com/neomutt/neomutt.git ~/neomutt
+cd ~/neomutt
+./configure --ssl --sasl --tokyocabinet
+make
+sudo make install
+
 # Install applications
 install zsh
 install vim
-install rxvt-unicode rxvt-unicode-256color
+install rxvt-unicode
+install rxvt-unicode-256color
 install tmux
 install mpd
 install ncmpcpp

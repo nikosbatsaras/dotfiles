@@ -1,0 +1,21 @@
+color index_author    yellow    default '.*'        # Author column
+color index_subject   default   default '.*'        # Subject column
+
+color index_date      green     default             # Date column
+color index_number    red       default             # Message number
+color index_size      cyan      default             # Message size
+
+color indicator       white     color239            # Current line indicator
+color status          white     blue                # Status line
+
+color hdrdefault      cyan      default             # Header line
+color attachment      yellow    default             # Attachment line
+
+color header          yellow    default "From: "    # 'From: '    part
+color header          yellow    default "Subject: " # 'Subject: ' part
+color header          yellow    default "Date: "    # 'Date: '    part
+
+color quoted          green     default             # Level-0 quoted text
+color quoted1         blue      default             # Level-1 quoted text
+color quoted2         green     default             # Level-2 quoted text
+color quoted3         blue      default             # Level-3 quoted text

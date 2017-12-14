@@ -28,21 +28,7 @@ and reboot selecting i3 at login.
 ![2017-12-10-024210_1366x768_scrot](https://user-images.githubusercontent.com/23704715/33800931-e8cc1552-dd53-11e7-82b3-5acaac9e6f37.png)
 
 
-# To setup Mutt:
-## Dependencies
-Some dependencies to install:
-```bash
-sudo apt-get install libssl-dev libncurses-dev libsasl2-dev libtokyocabinet-dev
-```
-## Installation
-Download a recent tarball from the official site and build it:
-```bash
-./configure --enable-pgp --enable-pop --enable-smtp --enable-imap --enable-sidebar --enable-hcache --with-sasl --with-ssl
-make
-sudo make install
-```
-
-## Configuration
+# To setup Mutt (NeoMutt):
 The way mutt is setup right now, is to read the passwords from encrypted files
 in the filesystem. We use GnuPG to encrypt/decrypt.
 First, create a key-pair:
