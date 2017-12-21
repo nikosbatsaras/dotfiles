@@ -48,7 +48,7 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = FontAwesome:pixelsize=10;0
 
 modules-left = bspwm i3
-modules-center = mpd
+; modules-center = mpd
 modules-right = xbacklight volume xkeyboard memory cpu wlan eth battery time date powermenu
 
 tray-position = right

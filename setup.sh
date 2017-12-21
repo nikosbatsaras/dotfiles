@@ -43,6 +43,27 @@ backup() {
 # Install i3 window manager
 install i3
 
+# Install i3-gaps dependencies
+sudo add-apt-repository ppa:aguignard/ppa
+sudo apt-get update
+install libxcb-xrm-dev
+install libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev
+install libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev
+install libxcb-randr0-dev libev-dev libxcb-cursor-dev libxcb-xinerama0-dev
+install libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev autoconf libxcb-xrm-dev
+
+# Install i3-gaps
+git clone https://www.github.com/Airblader/i3 ~/i3-gaps
+cd ~/i3-gaps
+
+autoreconf --force --install
+rm -rf build/
+mkdir -p build && cd build/
+
+../configure --prefix=/usr --sysconfdir=/etc --disable-sanitizers
+make
+sudo make install
+
 # Install polybar dependencies
 install cmake cmake-data libcairo2-dev libxcb1-dev libxcb-ewmh-dev 
 install libxcb-icccm4-dev libxcb-image0-dev libxcb-randr0-dev libxcb-util0-dev

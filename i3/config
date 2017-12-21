@@ -186,3 +186,6 @@ bindsym $mod+Shift+m exec --no-startup-id "udisksctl unmount -b /dev/sdb1"
 bindsym $mod+p exec --no-startup-id "mpc toggle"
 bindsym $mod+f exec --no-startup-id "mpc next"
 bindsym $mod+b exec --no-startup-id "mpc prev"
+
+gaps inner 8
+gaps outer 8
