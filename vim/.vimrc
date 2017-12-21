@@ -26,30 +26,19 @@ call vundle#begin()                      " Vundle start
 
 Plugin 'VundleVim/Vundle.vim'            " Needed for Vundle
 Plugin 'tpope/vim-commentary'            " Comment stuff out
-Plugin 'tpope/vim-surround'              " Add the surround text-object
-Plugin 'tpope/vim-repeat'                " Enable surround commands to be repeated
 Plugin 'wesQ3/vim-windowswap'            " To swap splits easily
 Plugin 'easymotion/vim-easymotion'       " Jump to char, word, line, in buffer
-Plugin 'christoomey/vim-tmux-navigator'  " Use the same navigation keys for vim/tmux splits
-Plugin 'vim-scripts/xoria256.vim'        " Use xoria256 colorscheme
+Plugin 'vim-scripts/xoria256.vim'        " xoria256 colorscheme
 Plugin 'xuhdev/vim-latex-live-preview'   " Live LaTeX preview
+Plugin 'christoomey/vim-tmux-navigator'  " Use same navigation keys for vim/tmux splits
 
 call vundle#end()                        " Vundle end
 filetype plugin on                       " Enable filetype detection for plugins
 filetype indent on                       " Enable filetype detection for indentation
 
-let g:EasyMotion_smartcase  = 1          " Enable case-insensitive match
-let g:EasyMotion_do_mapping = 0          " Disable default mappings
-
 silent! colorscheme xoria256             " Set colorscheme
 
-let g:livepreview_previewer = 'zathura'  " PDF viewer to use
-let g:livepreview_engine =  'pdflatex'   " LaTeX compiler to use
-
 set laststatus=2                         " Show statusline in one split
-
-" Change keybind to Space-f
-map <Leader>f <Plug>(easymotion-bd-f)
 
 " Better block indentation
 vnoremap < <gv
@@ -66,6 +55,10 @@ nnoremap te :tabedit<Space>
 nnoremap tf :tabfind<Space>
 nnoremap tc :tabclose<CR>
 
+" Jump to characters
+nmap s <Plug>(easymotion-bd-f)
+nmap s <Plug>(easymotion-overwin-f)
+
 " Set colorscheme, statusline, visual selection
 hi StatusLine   ctermbg=none cterm=bold
 hi StatusLineNC ctermbg=none cterm=bold
@@ -76,7 +69,15 @@ hi TabLineFill ctermfg=NONE  ctermbg=NONE     cterm=bold
 
 hi Visual cterm=bold ctermbg=DarkGrey ctermfg=NONE
 
-let g:tex_flavor = "latex"               " Set default TEX syntax
+let g:EasyMotion_do_mapping = 0          " Disable default easymotion mappings
+let g:EasyMotion_smartcase  = 1          " Enable case-insensitive match
+
+let g:windowswap_map_keys   = 0          " Prevent default windowswap bindings
+
+let g:livepreview_previewer = 'zathura'  " PDF viewer to use
+let g:livepreview_engine    = 'pdflatex' " LaTeX compiler to use
+
+let g:tex_flavor            = 'latex'    " Set default TEX syntax
 
 set splitright                           " Open new vertical split to the right
 set splitbelow                           " Open new horizontal split below
