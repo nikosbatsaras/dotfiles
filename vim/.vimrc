@@ -40,35 +40,6 @@ silent! colorscheme xoria256             " Set colorscheme
 
 set laststatus=2                         " Show statusline in one split
 
-" Better block indentation
-vnoremap < <gv
-vnoremap > >gv
-
-" Easier split resizing
-map <c-n> <c-w><
-map <c-m> <c-w>>
-
-" Tab navigation commands
-nnoremap >  :tabnext<CR>
-nnoremap <  :tabprev<CR>
-nnoremap te :tabedit<Space>
-nnoremap tf :tabfind<Space>
-nnoremap tc :tabclose<CR>
-
-" Jump to characters
-nmap s <Plug>(easymotion-bd-f)
-nmap s <Plug>(easymotion-overwin-f)
-
-" Set colorscheme, statusline, visual selection
-hi StatusLine   ctermbg=none cterm=bold
-hi StatusLineNC ctermbg=none cterm=bold
-
-hi TabLine     ctermfg=white ctermbg=NONE     cterm=bold
-hi TabLineSel  ctermfg=white ctermbg=DarkGrey cterm=bold
-hi TabLineFill ctermfg=NONE  ctermbg=NONE     cterm=bold
-
-hi Visual cterm=bold ctermbg=DarkGrey ctermfg=NONE
-
 let g:EasyMotion_do_mapping = 0          " Disable default easymotion mappings
 let g:EasyMotion_smartcase  = 1          " Enable case-insensitive match
 
@@ -82,4 +53,6 @@ let g:tex_flavor            = 'latex'    " Set default TEX syntax
 set splitright                           " Open new vertical split to the right
 set splitbelow                           " Open new horizontal split below
 
+source ~/.dotfiles/vim/maps.vim          " Source various keymaps
+source ~/.dotfiles/vim/colors.vim        " Source various colors
 source ~/.dotfiles/vim/.vimrc_snips      " Source various snippets
