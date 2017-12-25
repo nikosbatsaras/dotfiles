@@ -17,7 +17,7 @@
 #            Function to install packages needed for the setup               *
 #*****************************************************************************
 install() {
-    sudo apt-get install "$1"
+    sudo pacman -S "$1"
 }
 #*****************************************************************************
 
@@ -38,76 +38,26 @@ backup() {
 
 
 #*****************************************************************************
+#                            Install auxiliary apps                          *
+#*****************************************************************************
+
+install firefox
+install pulseaudio
+install pamixer
+
+
+#*****************************************************************************
 #                  Install applications used by this setup                   *
 #*****************************************************************************
-# Install i3 window manager
-install i3
-
-# Install i3-gaps dependencies
-sudo add-apt-repository ppa:aguignard/ppa
-sudo apt-get update
-install libxcb-xrm-dev
-install libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev
-install libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev
-install libxcb-randr0-dev libev-dev libxcb-cursor-dev libxcb-xinerama0-dev
-install libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev autoconf libxcb-xrm-dev
-
-# Install i3-gaps
-git clone https://www.github.com/Airblader/i3 ~/i3-gaps
-cd ~/i3-gaps
-
-autoreconf --force --install
-rm -rf build/
-mkdir -p build && cd build/
-
-../configure --prefix=/usr --sysconfdir=/etc --disable-sanitizers
-make
-sudo make install
-
-# Install polybar dependencies
-install cmake cmake-data libcairo2-dev libxcb1-dev libxcb-ewmh-dev 
-install libxcb-icccm4-dev libxcb-image0-dev libxcb-randr0-dev libxcb-util0-dev
-install libxcb-xkb-dev pkg-config python-xcbgen xcb-proto i3-wm libasound2-dev
-install libmpdclient-dev libiw-dev libcurl4-openssl-dev
-
-# Install polybar
-backup ~/polybar
-
-git clone --recursive https://github.com/jaagr/polybar ~/polybar
-mkdir ~/polybar/build
-cd ~/polybar/build
-cmake ..
-sudo make install
-
-# Install Qutebrowser
-backup ~/qutebrowser
-
-install tox
-git clone https://github.com/qutebrowser/qutebrowser.git ~/qutebrowser
-cd ~/qutebrowser
-tox -e mkvenv-pypi
-
-# Install NeoMutt dependencies
-install libssl-dev libsasl2-dev libncurses-dev libtokyocabinet-dev
-
-# Install NeoMutt
-backup ~/neomutt
-
-git clone https://github.com/neomutt/neomutt.git ~/neomutt
-cd ~/neomutt
-./configure --ssl --sasl --tokyocabinet
-make
-sudo make install
 
 # Install applications
-install zsh
+install git
 install vim
 install rxvt-unicode
-install rxvt-unicode-256color
 install tmux
 install mpd
-install ncmpcpp
 install mpc
+install ncmpcpp
 install scrot
 install feh
 install ranger
@@ -116,50 +66,46 @@ install youtube-dl
 install sxiv
 
 # Download dotfiles from github
-backup ~/.dotfiles
+# backup ~/.dotfiles
 
-git clone https://github.com/nickbatsaras/dotfiles.git ~/.dotfiles
+# git clone https://github.com/nickbatsaras/dotfiles.git ~/.dotfiles
 
 # Download Vundle, a plugin manager for Vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.dotfiles/bundle/Vundle.vim
 
-# Download and install oh-my-zsh
-sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-
-# Set zsh as default shell
-chsh -s $(which zsh)
 #*****************************************************************************
 
 
 
 #*****************************************************************************
-#                     Zsh, Vim, Tmux and RXVT configs                        *
+#                     Bash, Vim, Tmux and RXVT configs                       *
 #*****************************************************************************
-backup ~/.zshrc
+backup ~/.bashrc
+backup ~/.bash_profile
 backup ~/.vimrc
 backup ~/.tmux.conf
 backup ~/.Xresources
+backup ~/.Xdefaults
 
-ln -s ~/.dotfiles/zsh/.zshrc            ~/.zshrc
+ln -s ~/.dotfiles/bash/.bashrc          ~/.bashrc
+ln -s ~/.dotfiles/bash/.bash_profile    ~/.bash_profile
 ln -s ~/.dotfiles/vim/.vimrc            ~/.vimrc
 ln -s ~/.dotfiles/tmux/.tmux.conf       ~/.tmux.conf
-ln -s ~/.dotfiles/urxvt/.Xresources     ~/.Xresources
+ln -s ~/.dotfiles/urxvt/.Xresources     ~/.Xdefaults
 
-xrdb ~/.Xresources
 vim +PluginInstall +qall
 #*****************************************************************************
 
 
 
 #*****************************************************************************
-#                                 i3 config                                  *
+#                                    Sway                                    *
 #*****************************************************************************
-backup ~/.config/i3
+backup ~/.config/sway
 
-mkdir ~/.config/i3
+mkdir ~/.config/sway
 
-ln -s ~/.dotfiles/i3/config             ~/.config/i3/config
-ln -s ~/.dotfiles/i3/lock.sh            ~/.config/i3/lock.sh
+ln -s ~/.dotfiles/sway/config           ~/.config/sway/config
 #*****************************************************************************
 
 
@@ -188,33 +134,9 @@ ln -s ~/.dotfiles/ncmpcpp/bindings      ~/.ncmpcpp/bindings
 #*****************************************************************************
 backup ~/.fonts
 
+install ttf-ubuntu-font-family
+
 cp -r ~/.dotfiles/fonts                 ~/.fonts
-#*****************************************************************************
-
-
-
-#*****************************************************************************
-#                               Polybar config                               *
-#*****************************************************************************
-backup ~/.config/polybar
-
-mkdir ~/.config/polybar
-
-ln -s ~/.dotfiles/i3/polybar/config     ~/.config/polybar/config
-ln -s ~/.dotfiles/i3/polybar/launch.sh  ~/.config/polybar/launch.sh
-#*****************************************************************************
-
-
-
-#*****************************************************************************
-#                             Qutebrowser config                             *
-#*****************************************************************************
-backup ~/.config/qutebrowser
-
-mkdir ~/.config/qutebrowser
-mkdir ~/.config/qutebrowser/bookmarks
-
-ln -s ~/.dotfiles/qutebrowser/config.py ~/.config/qutebrowser/config.py
 #*****************************************************************************
 
 
