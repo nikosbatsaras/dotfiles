@@ -27,5 +27,8 @@ nnoremap <M-k> <C-W><C-K>
 nnoremap <M-h> <C-W><C-H>
 nnoremap <M-l> <C-W><C-L>
 
+" Autocorrent last misspelled word.
+imap <c-l> <c-g>u<Esc>[s1z=`]a<c-g>u
+
 " Swap windows
 nnoremap <silent> <leader>ww :call WindowSwap#EasyWindowSwap()<CR>

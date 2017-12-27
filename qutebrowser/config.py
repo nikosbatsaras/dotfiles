@@ -1558,8 +1558,8 @@ config.bind('<Ctrl-c>', 'leave-mode', mode='command')
 # config.bind('<Shift-Delete>', 'completion-item-del', mode='command')
 # config.bind('<Shift-Tab>', 'completion-item-focus prev', mode='command')
 # config.bind('<Tab>', 'completion-item-focus next', mode='command')
-config.bind('<Ctrl-p>', 'completion-item-focus --history prev', mode='command')
-config.bind('<Ctrl-n>', 'completion-item-focus --history next', mode='command')
+config.bind('<Ctrl-p>', 'completion-item-focus prev', mode='command')
+config.bind('<Ctrl-n>', 'completion-item-focus next', mode='command')
 
 ## Bindings for hint mode
 # config.bind('<Ctrl-B>', 'hint all tab-bg', mode='hint')

@@ -9,19 +9,22 @@
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
 # Home row direction keys, like vim
-set $left h
-set $down j
-set $up k
+set $left  h
+set $down  j
+set $up    k
 set $right l
 # Your preferred terminal emulator
 set $term urxvt
 # Your preferred application launcher
 set $menu dmenu_run
 
+set $wallpaper ~/Pictures/VxWE382-dark-anime-wallpapers.jpg
+set $lockpic   ~/Pictures/arch_background_1366x768.jpg
+
 ### Output configuration
 #
 # Wallpaper
-# output * bg ~/Pictures/WALLPAPER.jpg fill
+output * bg $wallpaper fill
 #
 # Example configuration:
 #
@@ -73,29 +76,32 @@ set $menu dmenu_run
     bindsym $mod+minus   exec pamixer --decrease 10
     bindsym $mod+equal   exec pamixer --increase 10
     bindsym $mod+Shift+m exec pamixer --toggle-mute
+
+    # screenlock
+    bindsym $mod+Control+l exec swaylock -i $lockpic
 #
 # Moving around:
 #
     # Move your focus around
-    bindsym $mod+$left focus left
-    bindsym $mod+$down focus down
-    bindsym $mod+$up focus up
+    bindsym $mod+$left  focus left
+    bindsym $mod+$down  focus down
+    bindsym $mod+$up    focus up
     bindsym $mod+$right focus right
     # or use $mod+[up|down|left|right]
-    bindsym $mod+Left focus left
-    bindsym $mod+Down focus down
-    bindsym $mod+Up focus up
+    bindsym $mod+Left  focus left
+    bindsym $mod+Down  focus down
+    bindsym $mod+Up    focus up
     bindsym $mod+Right focus right
 
     # _move_ the focused window with the same, but add Shift
-    bindsym $mod+Shift+$left move left
-    bindsym $mod+Shift+$down move down
-    bindsym $mod+Shift+$up move up
+    bindsym $mod+Shift+$left  move left
+    bindsym $mod+Shift+$down  move down
+    bindsym $mod+Shift+$up    move up
     bindsym $mod+Shift+$right move right
     # ditto, with arrow keys
-    bindsym $mod+Shift+Left move left
-    bindsym $mod+Shift+Down move down
-    bindsym $mod+Shift+Up move up
+    bindsym $mod+Shift+Left  move left
+    bindsym $mod+Shift+Down  move down
+    bindsym $mod+Shift+Up    move up
     bindsym $mod+Shift+Right move right
 #
 # Workspaces:
@@ -156,7 +162,7 @@ set $menu dmenu_run
     # You can send windows there and get them back later.
 
     # Move the currently focused window to the scratchpad
-    bindsym $mod+Shift+minus move scratchpad
+    bindsym $mod+Shift+u move scratchpad
 
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
@@ -169,16 +175,16 @@ mode "resize" {
     # right will grow the containers width
     # up will shrink the containers height
     # down will grow the containers height
-    bindsym $left resize shrink width 10 px or 10 ppt
-    bindsym $down resize grow height 10 px or 10 ppt
-    bindsym $up resize shrink height 10 px or 10 ppt
-    bindsym $right resize grow width 10 px or 10 ppt
+    bindsym $left  resize shrink width  10 px or 10 ppt
+    bindsym $down  resize grow   height 10 px or 10 ppt
+    bindsym $up    resize shrink height 10 px or 10 ppt
+    bindsym $right resize grow   width  10 px or 10 ppt
 
     # ditto, with arrow keys
-    bindsym Left resize shrink width 10 px or 10 ppt
-    bindsym Down resize grow height 10 px or 10 ppt
-    bindsym Up resize shrink height 10 px or 10 ppt
-    bindsym Right resize grow width 10 px or 10 ppt
+    bindsym Left  resize shrink width  10 px or 10 ppt
+    bindsym Down  resize grow   height 10 px or 10 ppt
+    bindsym Up    resize shrink height 10 px or 10 ppt
+    bindsym Right resize grow   width  10 px or 10 ppt
 
     # return to default mode
     bindsym Return mode "default"
@@ -203,5 +209,8 @@ new_window pixel 2
 
 gaps outer 8
 gaps inner 8
+
+bindsym $mod+Tab       workspace next
+bindsym $mod+Shift+Tab workspace prev
 
 include /etc/sway/config.d/*

@@ -42,6 +42,9 @@ backup() {
 #*****************************************************************************
 
 install firefox
+install dmenu
+install keepass
+install texlive-most
 install pulseaudio
 install pamixer
 
@@ -58,10 +61,9 @@ install tmux
 install mpd
 install mpc
 install ncmpcpp
-install scrot
-install feh
+install qutebrowser
 install ranger
-install zathura
+install zathura zathura-pdf-poppler
 install youtube-dl
 install sxiv
 
@@ -151,6 +153,19 @@ ranger --copy-config=all
 rm ~/.config/ranger/rc.conf
 
 ln -s ~/.dotfiles/ranger/rc.conf        ~/.config/ranger/rc.conf
+#*****************************************************************************
+
+
+
+#*****************************************************************************
+#                             Qutebrowser config                             *
+#*****************************************************************************
+backup ~/.config/qutebrowser
+
+mkdir ~/.config/qutebrowser
+mkdir ~/.config/qutebrowser/bookmarks
+
+ln -s ~/.dotfiles/qutebrowser/config.py ~/.config/qutebrowser/config.py
 #*****************************************************************************
 
 
