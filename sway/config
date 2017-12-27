@@ -8,6 +8,9 @@
 #
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
+# Font
+font ttf:Ubuntu Mono 10
+
 # Home row direction keys, like vim
 set $left  h
 set $down  j
@@ -77,6 +80,11 @@ output * bg $wallpaper fill
     bindsym $mod+equal   exec pamixer --increase 10
     bindsym $mod+Shift+m exec pamixer --toggle-mute
 
+    # music shortcuts
+    bindsym $mod+Shift+p exec mpc toggle
+    bindsym $mod+n       exec mpc next
+    bindsym $mod+p       exec mpc prev
+
     # screenlock
     bindsym $mod+Control+l exec swaylock -i $lockpic
 #
@@ -145,7 +153,7 @@ output * bg $wallpaper fill
     bindsym $mod+e layout toggle split
 
     # Make the current focus fullscreen
-    bindsym $mod+f fullscreen
+    bindsym $mod+Shift+f fullscreen
 
     # Toggle the current focus between tiling and floating mode
     bindsym $mod+Shift+space floating toggle

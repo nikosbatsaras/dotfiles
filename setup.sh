@@ -66,6 +66,7 @@ install ranger
 install zathura zathura-pdf-poppler
 install youtube-dl
 install sxiv
+install neomutt
 
 # Download dotfiles from github
 # backup ~/.dotfiles
