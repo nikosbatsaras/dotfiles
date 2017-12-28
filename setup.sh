@@ -47,6 +47,7 @@ install keepass
 install texlive-most
 install pulseaudio
 install pamixer
+install imagemagick
 
 
 #*****************************************************************************
@@ -58,6 +59,7 @@ install git
 install vim
 install rxvt-unicode
 install tmux
+install mpv
 install mpd
 install mpc
 install ncmpcpp

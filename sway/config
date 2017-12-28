@@ -21,7 +21,7 @@ set $term urxvt
 # Your preferred application launcher
 set $menu dmenu_run
 
-set $wallpaper ~/Pictures/VxWE382-dark-anime-wallpapers.jpg
+set $wallpaper ~/wallpaper
 set $lockpic   ~/Pictures/arch_background_1366x768.jpg
 
 ### Output configuration
@@ -87,6 +87,9 @@ output * bg $wallpaper fill
 
     # screenlock
     bindsym $mod+Control+l exec swaylock -i $lockpic
+
+    # screenshot
+    bindsym $mod+Control+p exec cd ~/Pictures && swaygrab
 #
 # Moving around:
 #
