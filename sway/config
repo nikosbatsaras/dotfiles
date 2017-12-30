@@ -208,10 +208,12 @@ bindsym $mod+r mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
+    font ttf:Ubuntu Mono Bold 10
     position top
     colors {
         statusline #ffffff
-        background #323232
+        background #1C1C1C
+        focused_workspace #906ef7 #906ef7 #000000
         # inactive_workspace #32323200 #32323200 #5c5c5c
     }
 }

@@ -3,8 +3,8 @@
 ##
 #
 # @auth  Nick Batsaras (nickbatsaras@gmail.com)
-# @date  05/12/2017
-# @desc  Script to install the entire setup on a new Debian machine
+# @date  30/12/2017
+# @desc  Script to install the entire setup on a new Arch machine
 #
 #
 #        All existing user configs, will be backed-up.
@@ -34,6 +34,14 @@ backup() {
     fi
 }
 #*****************************************************************************
+
+
+
+#*****************************************************************************
+#                                Preparation                                 *
+#*****************************************************************************
+# TODO: Create all default folders needed (e.g. Music, Pictures, etc)
+# TODO: Update pacman before starting installation
 
 
 
@@ -69,11 +77,12 @@ install zathura zathura-pdf-poppler
 install youtube-dl
 install sxiv
 install neomutt
+install rtorrent
 
 # Download dotfiles from github
-# backup ~/.dotfiles
+backup ~/.dotfiles
 
-# git clone https://github.com/nickbatsaras/dotfiles.git ~/.dotfiles
+git clone https://github.com/nickbatsaras/dotfiles.git ~/.dotfiles
 
 # Download Vundle, a plugin manager for Vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.dotfiles/bundle/Vundle.vim
@@ -137,11 +146,7 @@ ln -s ~/.dotfiles/ncmpcpp/bindings      ~/.ncmpcpp/bindings
 #*****************************************************************************
 #                                    Fonts                                   *
 #*****************************************************************************
-backup ~/.fonts
-
 install ttf-ubuntu-font-family
-
-cp -r ~/.dotfiles/fonts                 ~/.fonts
 #*****************************************************************************
 
 
