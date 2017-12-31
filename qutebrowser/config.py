@@ -1498,7 +1498,7 @@ config.bind('d', 'tab-close')
 # config.bind('yy', 'yank')
 # config.bind('{{', 'navigate prev -t')
 # config.bind('}}', 'navigate next -t')
-config.bind('YY', 'spawn youtube-dl -o /home/$USER/Music/%(title)s.%(ext)s --extract-audio --audio-format mp3 {url:pretty}')
+config.bind('YY', 'spawn youtube-dl -o /home/$USER/Music/%(title)s.%(ext)s --extract-audio --audio-format mp3 {url}')
 
 ## Bindings for caret mode
 # config.bind('$', 'move-to-end-of-line', mode='caret')

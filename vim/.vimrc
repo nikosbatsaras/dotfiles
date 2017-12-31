@@ -26,11 +26,12 @@ call vundle#begin()                      " Vundle start
 
 Plugin 'VundleVim/Vundle.vim'            " Needed for Vundle
 Plugin 'tpope/vim-commentary'            " Comment stuff out
-Plugin 'wesQ3/vim-windowswap'            " To swap splits easily
+Plugin 'wesQ3/vim-windowswap'            " Swap splits easily
 Plugin 'easymotion/vim-easymotion'       " Jump to char, word, line, in buffer
 Plugin 'vim-scripts/xoria256.vim'        " xoria256 colorscheme
-Plugin 'xuhdev/vim-latex-live-preview'   " Live LaTeX preview
+Plugin 'xuhdev/vim-latex-live-preview'   " Live preview of LaTeX's pdf
 Plugin 'christoomey/vim-tmux-navigator'  " Use same navigation keys for vim/tmux splits
+Plugin 'itchyny/calendar.vim'            " Calendar application
 
 call vundle#end()                        " Vundle end
 filetype plugin on                       " Enable filetype detection for plugins
@@ -43,12 +44,16 @@ set laststatus=2                         " Show statusline in one split
 let g:EasyMotion_do_mapping = 0          " Disable default easymotion mappings
 let g:EasyMotion_smartcase  = 1          " Enable case-insensitive match
 
-let g:windowswap_map_keys   = 0          " Prevent default windowswap bindings
+let g:windowswap_map_keys = 0            " Prevent default windowswap bindings
 
 let g:livepreview_previewer = 'zathura'  " PDF viewer to use
-let g:livepreview_engine    = 'pdflatex' " LaTeX compiler to use
+let g:livepreview_engine = 'pdflatex'    " LaTeX compiler to use
 
-let g:tex_flavor            = 'latex'    " Set default TEX syntax
+let g:tex_flavor = 'latex'               " Set default TEX syntax
+
+let g:calendar_google_calendar = 1       " Connect with google-calendar
+let g:calendar_google_task = 1           " Pull tasks from google-calendar
+let g:calendar_first_day = 'monday'      " Make Monday appear first
 
 set splitright                           " Open new vertical split to the right
 set splitbelow                           " Open new horizontal split below

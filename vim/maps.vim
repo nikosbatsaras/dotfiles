@@ -34,5 +34,8 @@ map <F7> :setlocal spell! spelllang=el<CR>
 " Auto-correct last misspelled word.
 imap <c-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
+" Reload config
+map <leader>s :source ~/.dotfiles/vim/.vimrc<CR>
+
 " Swap windows
 nnoremap <silent> <leader>ww :call WindowSwap#EasyWindowSwap()<CR>
