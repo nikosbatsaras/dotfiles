@@ -32,6 +32,7 @@ Plugin 'vim-scripts/xoria256.vim'        " xoria256 colorscheme
 Plugin 'xuhdev/vim-latex-live-preview'   " Live preview of LaTeX's pdf
 Plugin 'christoomey/vim-tmux-navigator'  " Use same navigation keys for vim/tmux splits
 Plugin 'itchyny/calendar.vim'            " Calendar application
+Plugin 'itchyny/lightline.vim'           " Status line config
 
 call vundle#end()                        " Vundle end
 filetype plugin on                       " Enable filetype detection for plugins
@@ -54,6 +55,8 @@ let g:tex_flavor = 'latex'               " Set default TEX syntax
 let g:calendar_google_calendar = 1       " Connect with google-calendar
 let g:calendar_google_task = 1           " Pull tasks from google-calendar
 let g:calendar_first_day = 'monday'      " Make Monday appear first
+
+let g:lightline = {'colorscheme': 'jellybeans'}
 
 set splitright                           " Open new vertical split to the right
 set splitbelow                           " Open new horizontal split below

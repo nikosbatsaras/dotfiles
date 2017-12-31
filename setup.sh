@@ -56,6 +56,7 @@ install texlive-most
 install pulseaudio
 install pamixer
 install imagemagick
+install openssh
 
 
 #*****************************************************************************
