@@ -90,9 +90,6 @@ output * bg $wallpaper fill
 
     # screenshot
     bindsym $mod+Control+p exec cd ~/Pictures && swaygrab
-
-    # calendar
-    bindsym $mod+c exec $term -e vim +Calendar
 #
 # Moving around:
 #

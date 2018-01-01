@@ -57,6 +57,7 @@ install pulseaudio
 install pamixer
 install imagemagick
 install openssh
+install gdb
 
 
 #*****************************************************************************
@@ -88,6 +89,18 @@ git clone https://github.com/nickbatsaras/dotfiles.git ~/.dotfiles
 # Download Vundle, a plugin manager for Vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.dotfiles/bundle/Vundle.vim
 
+#*****************************************************************************
+
+
+
+#*****************************************************************************
+#                                   Scripts                                  *
+#*****************************************************************************
+backup ~/bin
+
+mkdir ~/bin
+
+ln -s ~/.dotfiles/bin/*                 ~/bin
 #*****************************************************************************
 
 
