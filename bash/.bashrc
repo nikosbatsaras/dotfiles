@@ -14,8 +14,11 @@ EDITOR=vim
 RANGER_LOAD_DEFAULT_RC=FALSE
 
 alias ls='ls --color=auto'
+alias ll='ls -l'
+alias la='ls -I . -I .. -a'
 
-alias vi='vim'
+alias vi='vim -p'
+alias vim='vim -p'
 alias music='ncmpcpp'
 alias visualizer='ncmpcpp -s visualizer'
 alias email='neomutt'

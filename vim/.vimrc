@@ -21,6 +21,11 @@ set autoread                             " Reload file if changed outside of Vim
 set wildmenu                             " Enable command-line completion
 set scrolloff=2                          " Start scrolling two lines before top/bot
 
+set splitright                           " Open new vertical split to the right
+set splitbelow                           " Open new horizontal split below
+
+set laststatus=2                         " Show statusline in one split
+
 set rtp+=~/.dotfiles/bundle/Vundle.vim   " Vundle plugin path
 call vundle#begin()                      " Vundle start
 
@@ -39,8 +44,6 @@ filetype indent on                       " Enable filetype detection for indenta
 
 silent! colorscheme xoria256             " Set colorscheme
 
-set laststatus=2                         " Show statusline in one split
-
 let g:EasyMotion_do_mapping = 0          " Disable default easymotion mappings
 let g:EasyMotion_smartcase  = 1          " Enable case-insensitive match
 
@@ -53,9 +56,7 @@ let g:tex_flavor = 'latex'               " Set default TEX syntax
 
 let g:lightline = {'colorscheme': 'jellybeans'}
 
-set splitright                           " Open new vertical split to the right
-set splitbelow                           " Open new horizontal split below
+hi Visual cterm=bold ctermbg=DarkGrey ctermfg=NONE
 
 source ~/.dotfiles/vim/maps.vim          " Source various keymaps
-source ~/.dotfiles/vim/colors.vim        " Source various colors
 source ~/.dotfiles/vim/.vimrc_snips      " Source various snippets

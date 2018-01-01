@@ -100,7 +100,7 @@ backup ~/bin
 
 mkdir ~/bin
 
-ln -s ~/.dotfiles/bin/*                 ~/bin
+ln -s ~/.dotfiles/bin/*                 ~/bin/
 #*****************************************************************************
 
 
@@ -206,4 +206,14 @@ mkdir ~/.mutt/cache/headers
 ln -s ~/.dotfiles/mutt/.muttrc                         ~/.muttrc
 ln -s ~/.dotfiles/mutt/account.gr.uoc.csd.batsaras     ~/.mutt/account.gr.uoc.csd.batsaras
 ln -s ~/.dotfiles/mutt/account.com.gmail.batsarasnikos ~/.mutt/account.com.gmail.batsarasnikos
+#*****************************************************************************
+
+
+
+#*****************************************************************************
+#                                  Git config                                *
+#*****************************************************************************
+backup ~/.gitconfig
+
+ln -s ~/.dotfiles/git/.gitconfig        ~/
 #*****************************************************************************

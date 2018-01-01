@@ -9,7 +9,7 @@
 usage() {
     echo
     echo "Usage:"
-    echo "      ytmp3.sh -u <url> -g <genre> [-h]"
+    echo "      ytmp3.sh -u <url> [-g <genre>] [-h]"
     echo
     echo "Options:"
     echo "      -u   Youtube url"
@@ -36,11 +36,16 @@ do
     esac
 done
 
-if [ -z "$url" ] || [ -z "$genre" ]; then usage; fi
+if [ -z "$url" ]; then usage; fi
 
 if [ ! -d ~/Music ]; then mkdir ~/Music; fi
-if [ ! -d ~/Music/"$genre" ]; then mkdir ~/Music/"$genre"; fi
 
-destination="/home/$USER/Music/$genre/%(title)s.%(ext)s"
+if [ ! -z "$genre" ]
+then
+    if [ ! -d ~/Music/"$genre" ]; then mkdir ~/Music/"$genre"; fi
+    destination="/home/$USER/Music/$genre/%(title)s.%(ext)s"
+else
+    destination="/home/$USER/Music/%(title)s.%(ext)s"
+fi
 
 youtube-dl -o "$destination" --extract-audio --audio-format mp3 "$url"
