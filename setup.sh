@@ -66,6 +66,7 @@ install gdb
 
 # Install applications
 install git
+install sway
 install vim
 install rxvt-unicode
 install tmux

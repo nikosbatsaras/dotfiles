@@ -18,6 +18,9 @@
 - rtorrent    The BitTorrent client
 ```
 
+# Screenshot
+![2017-12-28-004738_swaygrab](https://user-images.githubusercontent.com/23704715/34501417-92f6afbc-f017-11e7-8328-156b30ae02b8.png)
+
 # Installation
 Run:
 ```bash
@@ -27,12 +30,12 @@ bash -c "$(wget https://raw.githubusercontent.com/nickbatsaras/dotfiles/arch/set
 # To setup NeoMutt:
 The way neomutt is setup right now, is to read the passwords from encrypted
 files in the filesystem. We use GnuPG to encrypt/decrypt.
-First, create a key-pair:
+First, create a key-pair (if you don't have one already):
 ```bash
 gpg --gen-key
 ```
-Then create a file to hold the password in plain text (e.g acc1pw),
-encrypt it and make sure you delete it afterwards:
+Then, create a file (for each of the accounts) to hold the password in plain
+text (e.g acc1pw), encrypt it and make sure you delete it afterwards:
 ```bash
 gpg -r "<recipient>" --encrypt ~/.mutt/acc1pw
 rm ~/.mutt/acc1pw
