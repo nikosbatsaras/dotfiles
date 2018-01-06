@@ -3,7 +3,7 @@
 ##
 #
 # @auth  Nick Batsaras (nickbatsaras@gmail.com)
-# @date  30/12/2017
+# @date  06/01/2017
 # @desc  Script to install the entire setup on a new Arch machine
 #
 #
@@ -46,9 +46,10 @@ backup() {
 
 
 #*****************************************************************************
-#                            Install auxiliary apps                          *
+#                  Install applications with no config files                 *
 #*****************************************************************************
 
+install sddm
 install firefox
 install dmenu
 install keepass
@@ -58,29 +59,23 @@ install pamixer
 install imagemagick
 install openssh
 install gdb
-
-
-#*****************************************************************************
-#                  Install applications used by this setup                   *
-#*****************************************************************************
-
-# Install applications
-install git
-install sway
-install vim
-install rxvt-unicode
-install tmux
 install mpv
-install mpd
 install mpc
-install ncmpcpp
-install qutebrowser
-install ranger
 install zathura zathura-pdf-poppler
 install youtube-dl
 install sxiv
-install neomutt
 install rtorrent
+
+#*****************************************************************************
+
+
+
+#*****************************************************************************
+#                     Install applications with their configs                *
+#*****************************************************************************
+
+# We need it to download configs
+install git
 
 # Download dotfiles from github
 backup ~/.dotfiles
@@ -90,131 +85,29 @@ git clone https://github.com/nickbatsaras/dotfiles.git ~/.dotfiles
 # Download Vundle, a plugin manager for Vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.dotfiles/bundle/Vundle.vim
 
-#*****************************************************************************
-
-
-
-#*****************************************************************************
-#                                   Scripts                                  *
-#*****************************************************************************
-backup ~/bin
-
-mkdir ~/bin
-
-ln -s ~/.dotfiles/bin/*                 ~/bin/
-#*****************************************************************************
-
-
-
-#*****************************************************************************
-#                     Bash, Vim, Tmux and RXVT configs                       *
-#*****************************************************************************
-backup ~/.bashrc
-backup ~/.bash_profile
-backup ~/.vimrc
-backup ~/.tmux.conf
-backup ~/.Xresources
-backup ~/.Xdefaults
-
-ln -s ~/.dotfiles/bash/.bashrc          ~/.bashrc
-ln -s ~/.dotfiles/bash/.bash_profile    ~/.bash_profile
-ln -s ~/.dotfiles/vim/.vimrc            ~/.vimrc
-ln -s ~/.dotfiles/tmux/.tmux.conf       ~/.tmux.conf
-ln -s ~/.dotfiles/urxvt/.Xresources     ~/.Xdefaults
-
-vim +PluginInstall +qall
-#*****************************************************************************
-
-
-
-#*****************************************************************************
-#                                    Sway                                    *
-#*****************************************************************************
-backup ~/.config/sway
-
-mkdir ~/.config/sway
-
-ln -s ~/.dotfiles/sway/config           ~/.config/sway/config
-#*****************************************************************************
-
-
-
-#*****************************************************************************
-#                       Music: MPD and NCMPCPP configs                       *
-#*****************************************************************************
-backup ~/.ncmpcpp
-backup ~/.config/mpd
-
-mkdir ~/.ncmpcpp
-mkdir ~/.config/mpd
-mkdir ~/.config/mpd/playlists
-
-touch ~/.config/mpd/log
-touch ~/.config/mpd/database
-
-ln -s ~/.dotfiles/mpd/mpd.conf          ~/.config/mpd/mpd.conf
-ln -s ~/.dotfiles/ncmpcpp/bindings      ~/.ncmpcpp/bindings
-#*****************************************************************************
-
-
-
-#*****************************************************************************
-#                                    Fonts                                   *
-#*****************************************************************************
+# Install some fonts
 install ttf-ubuntu-font-family
-#*****************************************************************************
 
 
 
-#*****************************************************************************
-#                                Ranger config                               *
-#*****************************************************************************
-backup ~/.config/ranger
+export -f install
+export -f backup
 
-ranger --copy-config=all
-
-rm ~/.config/ranger/rc.conf
-
-ln -s ~/.dotfiles/ranger/rc.conf        ~/.config/ranger/rc.conf
-#*****************************************************************************
-
-
-
-#*****************************************************************************
-#                             Qutebrowser config                             *
-#*****************************************************************************
-backup ~/.config/qutebrowser
-
-mkdir ~/.config/qutebrowser
-mkdir ~/.config/qutebrowser/bookmarks
-
-ln -s ~/.dotfiles/qutebrowser/config.py ~/.config/qutebrowser/config.py
-#*****************************************************************************
+~/.dotfiles/bin/install.sh
+~/.dotfiles/git/install.sh
+~/.dotfiles/sway/install.sh
+~/.dotfiles/bash/install.sh
+~/.dotfiles/vim/install.sh
+~/.dotfiles/urxvt/install.sh
+~/.dotfiles/tmux/install.sh
+~/.dotfiles/ranger/install.sh
+~/.dotfiles/mpd/install.sh
+~/.dotfiles/ncmpcpp/install.sh
+~/.dotfiles/qutebrowser/install.sh
+~/.dotfiles/mutt/install.sh
 
 
+# Install vim plugins
+vim +PluginInstall +qall
 
-#*****************************************************************************
-#                                 Mutt config                                *
-#*****************************************************************************
-backup ~/.mutt
-backup ~/.muttrc
-
-mkdir ~/.mutt
-mkdir ~/.mutt/cache
-mkdir ~/.mutt/cache/bodies
-mkdir ~/.mutt/cache/headers
-
-ln -s ~/.dotfiles/mutt/.muttrc                         ~/.muttrc
-ln -s ~/.dotfiles/mutt/account.gr.uoc.csd.batsaras     ~/.mutt/account.gr.uoc.csd.batsaras
-ln -s ~/.dotfiles/mutt/account.com.gmail.batsarasnikos ~/.mutt/account.com.gmail.batsarasnikos
-#*****************************************************************************
-
-
-
-#*****************************************************************************
-#                                  Git config                                *
-#*****************************************************************************
-backup ~/.gitconfig
-
-ln -s ~/.dotfiles/git/.gitconfig        ~/
 #*****************************************************************************

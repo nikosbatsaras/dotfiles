@@ -1,30 +1,30 @@
-set editor = "$EDITOR"                                 # Set text editor
+set editor = "$EDITOR"                        # Set text editor
 
-set ssl_starttls = yes                                 # Use TLS if available
-set ssl_force_tls = yes                                # Force a secure connection
+set ssl_starttls = yes                        # Use TLS if available
+set ssl_force_tls = yes                       # Force a secure connection
 
-set timeout = 120                                      # Set timeout period
-set mail_check = 60                                    # Mail check interval
-set imap_keepalive = 120                               # Send keepalive messages to server
+set timeout = 120                             # Set timeout period
+set mail_check = 60                           # Mail check interval
+set imap_keepalive = 120                      # Send keepalive messages to server
 
-set sort = 'threads'                                   # Sort messages by thread
-set sort_aux = 'reverse-last-date-received'            # Put new messages up-top
+set sort = 'threads'                          # Sort messages by thread
+set sort_aux = 'reverse-last-date-received'   # Put new messages up-top
 
-hdr_order Date From To Cc                              # Set header format
+hdr_order Date From To Cc                     # Set header format
 
-alternative_order text/plain text/html *               # Prefer plain-text part when rendering a multi-part message
-auto_view text/html                                    # Pass html-text message parts to the command defined in mailcap file
+alternative_order text/plain text/html *      # Prefer plain-text part when rendering a multi-part message
+auto_view text/html                           # Pass html-text message parts to the command defined in mailcap file
  
-set header_cache     =~/.mutt/cache/headers            # Set cache folder for headers
-set message_cachedir =~/.mutt/cache/bodies             # Set cache folder for bodies
+set header_cache     =~/.mutt/cache/headers   # Set cache folder for headers
+set message_cachedir =~/.mutt/cache/bodies    # Set cache folder for bodies
 
-set my_gmail = ~/.mutt/account.com.gmail.batsarasnikos # Gmail account config
-set my_csd   = ~/.mutt/account.gr.uoc.csd.batsaras     # Uni account config
+set my_gmail = ~/.mutt/gmail.conf             # Gmail account config
+set my_csd   = ~/.mutt/csd.uoc.conf           # Uni account config
 
-set my_pw1 = "`gpg -d ~/.mutt/acc1pw.gpg`"             # Gmail account password
-set my_pw2 = "`gpg -d ~/.mutt/acc2pw.gpg`"             # Uni account password
+set my_pw1 = "`gpg -d ~/.mutt/acc1pw.gpg`"    # Gmail account password
+set my_pw2 = "`gpg -d ~/.mutt/acc2pw.gpg`"    # Uni account password
 
-source "$my_gmail"                                     # Default account at startup
+source "$my_gmail"                            # Default account at startup
 
-source ~/.dotfiles/mutt/keybinds.mutt                  # Keybindings
-source ~/.dotfiles/mutt/colors.mutt                    # Colors
+source ~/.dotfiles/mutt/colors.mutt           # Colors
+source ~/.dotfiles/mutt/keybinds.mutt         # Keybindings
