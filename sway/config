@@ -216,6 +216,8 @@ bar {
         focused_workspace #906ef7 #906ef7 #000000
         # inactive_workspace #32323200 #32323200 #5c5c5c
     }
+
+    status_command /home/nbs/bin/statusbar.sh
 }
 
 new_window pixel 2
