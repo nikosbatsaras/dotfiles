@@ -11,6 +11,7 @@ backup() {
 }
 
 install rxvt-unicode
+install ttf-ubuntu-font-family
 
 backup ~/.Xdefaults
 backup ~/.Xresources
