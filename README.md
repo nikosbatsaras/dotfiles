@@ -18,15 +18,6 @@
 - rtorrent    The BitTorrent client
 ```
 
-# Screenshot
-![2017-12-28-004738_swaygrab](https://user-images.githubusercontent.com/23704715/34501417-92f6afbc-f017-11e7-8328-156b30ae02b8.png)
-
-# Installation
-Run:
-```bash
-bash -c "$(wget https://raw.githubusercontent.com/nickbatsaras/dotfiles/arch/setup.sh -O -)"
-```
-
 # To setup NeoMutt:
 The way neomutt is setup right now, is to read the passwords from encrypted
 files in the filesystem. We use GnuPG to encrypt/decrypt.
