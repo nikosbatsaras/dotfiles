@@ -5,9 +5,10 @@ fi
 
 source ~/.dotfiles/install.sh
 
-install rxvt-unicode
+install i3
 
-backup ~/.Xdefaults
-backup ~/.Xresources
+backup ~/.config/i3
 
-ln -s ~/.dotfiles/urxvt/.Xresources ~/.Xdefaults
+mkdir ~/.config/i3
+
+ln -s ~/.dotfiles/i3/config ~/.config/i3/config

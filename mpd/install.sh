@@ -1,14 +1,9 @@
-install() {
-    sudo apt install "$1"
-}
+if [ ! -d ~/.dotfiles ]
+then
+	git clone https://github.com/nickbatsaras/dotfiles.git ~/.dotfiles
+fi
 
-backup() {
-    if [ -f "$1" ] || [ -d "$1" ]
-    then
-        echo "Backing-up: $1 -> $1_bak"
-        mv "$1" "$1_bak"
-    fi
-}
+source ~/.dotfiles/install.sh
 
 install mpd
 install mpc
@@ -22,11 +17,6 @@ mkdir ~/.config/mpd/playlists
 
 touch ~/.config/mpd/log
 touch ~/.config/mpd/database
-
-if [ ! -d ~/.dotfiles ]
-then
-	git clone https://github.com/nickbatsaras/dotfiles.git ~/.dotfiles
-fi
 
 ln -s ~/.dotfiles/mpd/mpd.conf ~/.config/mpd/mpd.conf
 

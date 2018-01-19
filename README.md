@@ -1,6 +1,6 @@
 # Applications in use
 ```
-- sway        The (i3-compatible) window manager
+- i3          The window manager
 - bash        The shell
 - vim         The text editor
 - urxvt       The terminal
@@ -14,7 +14,7 @@
 - zathura     The pdf viewer
 - youtube-dl  The media downloader
 - sxiv        The image viewer
-- neomutt     The email client
+- mutt        The email client
 - rtorrent    The BitTorrent client
 ```
 
