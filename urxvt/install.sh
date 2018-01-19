@@ -1,5 +1,5 @@
 install() {
-    sudo pacman -S "$1"
+    sudo apt install "$1"
 }
 
 backup() {
@@ -11,7 +11,6 @@ backup() {
 }
 
 install rxvt-unicode
-install ttf-ubuntu-font-family
 
 backup ~/.Xdefaults
 backup ~/.Xresources
