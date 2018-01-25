@@ -3,8 +3,11 @@ vnoremap < <gv
 vnoremap > >gv
 
 " Easier split resizing
-map <c-n> <c-w><
-map <c-m> <c-w>>
+map <C-n> <c-w><
+map <C-m> <c-w>>
+
+map <M-n> <c-w>-
+map <M-m> <c-w>+
 
 " Tab navigation commands
 nnoremap >  :tabnext<CR>
