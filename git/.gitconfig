@@ -2,4 +2,4 @@
 	email = batsarasnikos@gmail.com
 	name = Nick Batsaras
 [core]
-	editor = nvim
+	editor = vim

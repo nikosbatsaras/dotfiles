@@ -5,20 +5,20 @@ fi
 
 source ~/.dotfiles/install.sh
 
-install neovim
+install vim
 
-backup ~/.config/nvim
+backup ~/.vim
+backup ~/.vimrc
 
-mkdir ~/.config/nvim
-mkdir ~/.config/nvim/bundle
-mkdir ~/.config/nvim/autoload
+mkdir ~/.vim
+mkdir ~/.vim/bundle
+mkdir ~/.vim/autoload
 
-cd ~/.config/nvim/autoload
+cd ~/.vim/autoload
 wget ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
-cd ~/.config/nvim/bundle
+cd ~/.vim/bundle
 git clone https://github.com/tpope/vim-commentary.git
-git clone https://github.com/christoomey/vim-tmux-navigator.git
 
-ln -s ~/.dotfiles/vim/init.vim ~/.config/nvim/init.vim
-ln -s ~/.dotfiles/vim/maps.vim ~/.config/nvim/maps.vim
+ln -s ~/.dotfiles/vim/.vimrc   ~/.vimrc
+ln -s ~/.dotfiles/vim/maps.vim ~/.vim/maps.vim

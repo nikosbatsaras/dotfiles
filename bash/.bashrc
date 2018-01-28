@@ -9,7 +9,7 @@ PATH+=:"$HOME/bin"
 
 PS1='[\u@\h \W]\$ '
 
-EDITOR=nvim
+EDITOR=vim
 
 RANGER_LOAD_DEFAULT_RC=FALSE
 
@@ -17,8 +17,6 @@ alias ls='ls --color=auto'
 alias ll='ls -l'
 alias la='ls -I . -I .. -a'
 
-alias vi='nvim -p'
-alias vim='nvim -p'
 alias music='ncmpcpp'
 alias email='neomutt'
 

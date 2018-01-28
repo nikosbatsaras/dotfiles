@@ -29,4 +29,4 @@ hi Search
             \ ctermfg=NONE
             \ ctermbg=DarkGrey
 
-source ~/.config/nvim/maps.vim           " Source various keymaps
+source ~/.dotfiles/vim/maps.vim          " Source various keymaps
