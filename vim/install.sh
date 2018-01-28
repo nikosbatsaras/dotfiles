@@ -11,13 +11,12 @@ backup ~/.vim
 backup ~/.vimrc
 
 mkdir ~/.vim
-mkdir ~/.vim/bundle
-mkdir ~/.vim/autoload
+mkdir ~/.vim/pack
+mkdir ~/.vim/pack/plugins
+mkdir ~/.vim/pack/plugins/opt
+mkdir ~/.vim/pack/plugins/start
 
-cd ~/.vim/autoload
-wget ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-
-cd ~/.vim/bundle
+cd ~/.vim/pack/plugins/start
 git clone https://github.com/tpope/vim-commentary.git
 
 ln -s ~/.dotfiles/vim/.vimrc   ~/.vimrc

@@ -15,7 +15,6 @@ set splitbelow                           " Open new horizontal split below
 
 set laststatus=2                         " Show statusline in one split
 
-execute pathogen#infect()
 filetype plugin indent on                " Load plugin/indent file
 syntax on                                " Enable syntax highlighting
 
