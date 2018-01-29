@@ -24,6 +24,4 @@ URxvt.color14: #34E2E2
 URxvt.color15: #EEEEEC
 
 URxvt.foreground: #CCCCCC
-/* URxvt.background: #1C1C1C */
-URxvt.depth: 32
-URxvt.background: [80]#1C1C1C
+URxvt.background: #000000

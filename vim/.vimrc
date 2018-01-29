@@ -1,31 +1,43 @@
-let mapleader = " "                      " Change <Leader> key to Space
+let mapleader = " "           " Change <Leader> key to Space
 
-set path+=**                             " Enable recursive search for :find
+syntax on                     " Enable syntax highlighting
 
-set autoindent                           " Enable auto-indentation
+filetype plugin on            " Enable language-specific settings
+filetype indent on            " Enable language-dependent indenting
 
-set ignorecase                           " Make search case-insensitive
-set incsearch                            " Start searching before pressing Enter
+set path+=**                  " Enable recursive search for :find
+set autoindent                " Enable auto-indentation
+set number                    " Show line numbers
+set relativenumber            " Enable relative numbering
+set ignorecase                " Make search case-insensitive
+set incsearch                 " Start searching before pressing Enter
+set nowrap                    " Don't wrap lines
+set wildmenu                  " Enable command-line completion
+set splitright                " Open new vertical split to the right
+set splitbelow                " Open new horizontal split below
+set laststatus=2              " Always show statusline
 
-set nowrap                               " Don't wrap lines
-set wildmenu                             " Enable command-line completion
+silent! colorscheme xoria256  " Set colorscheme
 
-set splitright                           " Open new vertical split to the right
-set splitbelow                           " Open new horizontal split below
+" Easier split resizing
+map <C-n> <c-w><
+map <C-m> <c-w>>
 
-set laststatus=2                         " Show statusline in one split
+" Tab navigation commands
+nnoremap >  :tabnext<CR>
+nnoremap <  :tabprev<CR>
+nnoremap te :tabedit<Space>
+nnoremap tf :tabfind<Space>
+nnoremap tc :tabclose<CR>
 
-filetype plugin indent on                " Load plugin/indent file
-syntax on                                " Enable syntax highlighting
+" Starts auto-correction
+map <F6> :setlocal spell! spelllang=en<CR>
+map <F7> :setlocal spell! spelllang=el<CR>
 
-hi Visual
-            \ cterm  =bold
-            \ ctermfg=NONE
-            \ ctermbg=DarkGrey
+" Auto-correct last misspelled word.
+imap <c-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
-hi Search
-            \ cterm  =bold
-            \ ctermfg=NONE
-            \ ctermbg=DarkGrey
+" Reload config
+map <leader>s :source ~/.vimrc<CR>
 
-source ~/.dotfiles/vim/maps.vim          " Source various keymaps
+hi Visual cterm=bold ctermfg=NONE ctermbg=DarkGrey
