@@ -16,8 +16,4 @@ mkdir ~/.vim/pack/plugins
 mkdir ~/.vim/pack/plugins/opt
 mkdir ~/.vim/pack/plugins/start
 
-cd ~/.vim/pack/plugins/start
-git clone https://github.com/tpope/vim-commentary.git
-
-ln -s ~/.dotfiles/vim/.vimrc   ~/.vimrc
-ln -s ~/.dotfiles/vim/maps.vim ~/.vim/maps.vim
+ln -s ~/.dotfiles/vim/.vimrc ~/.vimrc

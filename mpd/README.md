@@ -1,4 +1,4 @@
 # Installation
 ```bash
-bash -c "$(wget https://raw.githubusercontent.com/nickbatsaras/dotfiles/arch/mpd/install.sh -O -)"
+bash -c "$(wget https://raw.githubusercontent.com/nickbatsaras/dotfiles/master/mpd/install.sh -O -)"
 ```
