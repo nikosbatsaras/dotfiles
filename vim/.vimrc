@@ -39,5 +39,3 @@ imap <c-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
 " Reload config
 map <leader>s :source ~/.vimrc<CR>
-
-hi Visual cterm=bold ctermfg=NONE ctermbg=DarkGrey
