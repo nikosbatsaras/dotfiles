@@ -7,8 +7,6 @@ filetype indent on            " Enable language-dependent indenting
 
 set path+=**                  " Enable recursive search for :find
 set autoindent                " Enable auto-indentation
-set number                    " Show line numbers
-set relativenumber            " Enable relative numbering
 set ignorecase                " Make search case-insensitive
 set incsearch                 " Start searching before pressing Enter
 set nowrap                    " Don't wrap lines
@@ -36,6 +34,7 @@ map <F7> :setlocal spell! spelllang=el<CR>
 
 " Auto-correct last misspelled word.
 imap <c-l> <c-g>u<Esc>[s1z=`]a<c-g>u
+nmap <c-l> i<c-g>u<Esc>[s1z=`]a<c-g>u<Esc>
 
 " Reload config
 map <leader>s :source ~/.vimrc<CR>
