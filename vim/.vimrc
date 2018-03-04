@@ -19,8 +19,8 @@ set nocompatible              " Not compatible with Vi
 silent! colorscheme xoria256  " Set colorscheme
 
 " Easier split resizing
-map <C-n> <c-w><
-map <C-m> <c-w>>
+map <C-n> <C-w><
+map <C-m> <C-w>>
 
 " Tab navigation commands
 nnoremap >  :tabnext<CR>
@@ -29,13 +29,16 @@ nnoremap te :tabedit<Space>
 nnoremap tf :tabfind<Space>
 nnoremap tc :tabclose<CR>
 
+nnoremap <M-Right> :+tabmove<CR>
+nnoremap <M-Left>  :-tabmove<CR>
+
 " Starts auto-correction
 map <F6> :setlocal spell! spelllang=en<CR>
 map <F7> :setlocal spell! spelllang=el<CR>
 
 " Auto-correct last misspelled word.
-imap <c-l> <c-g>u<Esc>[s1z=`]a<c-g>u
-nmap <c-l> i<c-g>u<Esc>[s1z=`]a<c-g>u<Esc>
+imap <C-l> <C-g>u<Esc>[s1z=`]a<c-g>u
+nmap <C-l> i<C-g>u<Esc>[s1z=`]a<c-g>u<Esc>
 
 " Reload config
 map <leader>s :source ~/.vimrc<CR>
