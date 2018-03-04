@@ -14,6 +14,7 @@ set wildmenu                  " Enable command-line completion
 set splitright                " Open new vertical split to the right
 set splitbelow                " Open new horizontal split below
 set laststatus=2              " Always show statusline
+set nocompatible              " Not compatible with Vi
 
 silent! colorscheme xoria256  " Set colorscheme
 
