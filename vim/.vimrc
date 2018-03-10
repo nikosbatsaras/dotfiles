@@ -29,8 +29,8 @@ nnoremap te :tabedit<Space>
 nnoremap tf :tabfind<Space>
 nnoremap tc :tabclose<CR>
 
-nnoremap <M-Right> :+tabmove<CR>
-nnoremap <M-Left>  :-tabmove<CR>
+nnoremap <Right> :+tabmove<CR>
+nnoremap <Left>  :-tabmove<CR>
 
 " Starts auto-correction
 map <F6> :setlocal spell! spelllang=en<CR>
