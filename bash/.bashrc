@@ -11,8 +11,6 @@ PS1='[\u@\h \W]\$ '
 
 EDITOR=vim
 
-RANGER_LOAD_DEFAULT_RC=FALSE
-
 alias ls='ls --color=auto'
 alias ll='ls -l'
 alias la='ls -I . -I .. -a'
@@ -26,7 +24,6 @@ alias attach="tmux attach -t"
 
 export PATH
 export EDITOR
-export RANGER_LOAD_DEFAULT_RC
 
 # enable programmable completion features
 if ! shopt -oq posix; then

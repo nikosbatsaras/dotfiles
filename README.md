@@ -3,19 +3,14 @@
 - i3          The window manager
 - bash        The shell
 - vim         The text editor
-- urxvt       The terminal
 - tmux        The terminal multiplexer
-- ranger      The file manager
 - mpv         The video player
 - mpd         The music player daemon
 - mpc         The command line mpd client
 - ncmpcpp     The ncurses mpd client
-- qutebrowser The web browser
 - zathura     The pdf viewer
-- youtube-dl  The media downloader
 - sxiv        The image viewer
 - mutt        The email client
-- rtorrent    The BitTorrent client
 ```
 
 # To setup NeoMutt:

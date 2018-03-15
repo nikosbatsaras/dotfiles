@@ -144,6 +144,8 @@ bar {
         status_command i3status
 }
 
+new_window 1pixel
+
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
 
