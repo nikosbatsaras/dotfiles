@@ -5,12 +5,18 @@ dist=`lsb_release -is`
 if [ "$dist" = Ubuntu ]
 then
 	function install {
-		sudo apt install "$1"
+		if [ "$(which $1)" = "" ]
+		then
+			sudo apt install "$1"
+		fi
 	}
 elif [ "$dist" = Arch ]
 then
 	function install {
-		sudo pacman -S "$1"
+		if [ "$(which $1)" = "" ]
+		then
+			sudo pacman -S "$1"
+		fi
 	}
 fi
 
