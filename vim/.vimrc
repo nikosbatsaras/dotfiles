@@ -20,6 +20,10 @@ set nocompatible              " Not compatible with Vi
 map <C-n> <C-w><
 map <C-m> <C-w>>
 
+" Split commands
+nnoremap s  :split<Space>
+nnoremap vs :vsplit<Space>
+
 " Tab navigation commands
 nnoremap >  :tabnext<CR>
 nnoremap <  :tabprev<CR>
@@ -29,6 +33,12 @@ nnoremap tc :tabclose<CR>
 
 nnoremap <Right> :+tabmove<CR>
 nnoremap <Left>  :-tabmove<CR>
+
+" Search all files
+nnoremap gr :grep -r ./* -e ''<left>
+nnoremap <C-n> :cn<CR>
+nnoremap <C-p> :cp<CR>
+nnoremap <Leader>f :bfirst<CR>
 
 " Starts auto-correction
 map <F6> :setlocal spell! spelllang=en<CR>
