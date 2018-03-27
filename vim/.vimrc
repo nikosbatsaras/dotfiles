@@ -17,7 +17,7 @@ set laststatus=2              " Always show statusline
 set nocompatible              " Not compatible with Vi
 
 " Easier split resizing
-map <C-n> <C-w><
+map <C-v> <C-w><
 map <C-m> <C-w>>
 
 " Split commands
