@@ -17,7 +17,7 @@ set laststatus=2              " Always show statusline
 set nocompatible              " Not compatible with Vi
 
 " Easier split resizing
-map <C-v> <C-w><
+map <C-n> <C-w><
 map <C-m> <C-w>>
 
 " Split commands
@@ -36,8 +36,8 @@ nnoremap <Left>  :-tabmove<CR>
 
 " Search all files
 nnoremap gr :grep -r ./* -e ''<left>
-nnoremap <C-n> :cn<CR>
-nnoremap <C-p> :cp<CR>
+nnoremap <C-f> :cn<CR>
+nnoremap <C-b> :cp<CR>
 nnoremap <Leader>f :bfirst<CR>
 
 " Starts auto-correction
