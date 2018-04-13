@@ -9,10 +9,10 @@ then
 	git clone https://github.com/nickbatsaras/dotfiles.git ~/.dotfiles
 fi
 
-if [ "$dist" = Ubuntu ]
+if [ "$dist" = ubuntu ]
 then
 	install mutt
-elif [ "$dist" = Arch ]
+elif [ "$dist" = arch ]
 then
 	install neomutt
 fi

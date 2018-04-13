@@ -9,8 +9,10 @@ then
 	git clone https://github.com/nickbatsaras/dotfiles.git ~/.dotfiles
 fi
 
-install tmux
+install rxvt-unicode
 
-backup ~/.tmux.conf
+backup ~/.Xresources
 
-ln -s ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
+ln -s ~/.dotfiles/urxvt/.Xresources ~/.Xresources
+
+xrdb ~/.Xresources
