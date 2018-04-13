@@ -1,8 +1,8 @@
 #!/bin/bash
 
-dist=`lsb_release -is`
+dist=`source /etc/os-release; echo $ID`
 
-if [ "$dist" = Ubuntu ]
+if [ "$dist" = ubuntu ]
 then
 	function install {
 		if [ "$(which $1)" = "" ]
@@ -10,7 +10,7 @@ then
 			sudo apt install "$1"
 		fi
 	}
-elif [ "$dist" = Arch ]
+elif [ "$dist" = arch ]
 then
 	function install {
 		if [ "$(which $1)" = "" ]
