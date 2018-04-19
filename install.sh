@@ -2,23 +2,15 @@
 
 dist=`source /etc/os-release; echo $ID`
 
-if [ "$dist" = ubuntu ]
-then
-	function install {
-		if [ "$(which $1)" = "" ]
-		then
-			sudo apt install "$1"
-		fi
-	}
-elif [ "$dist" = arch ]
-then
-	function install {
-		if [ "$(which $1)" = "" ]
-		then
-			sudo pacman -S "$1"
-		fi
-	}
-fi
+install() {
+	if [ "$(which $1)" = "" ]
+	then
+		case $dist in
+			arch) sudo pacman -S "$1";;
+			ubuntu) sudo apt-get install "$1";;
+		esac
+	fi
+}
 
 backup() {
     if [ -f "$1" ] || [ -d "$1" ]

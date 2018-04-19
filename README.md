@@ -2,6 +2,7 @@
 ```
 - i3          The window manager
 - bash        The shell
+- rxvt        The terminal emulator
 - vim         The text editor
 - tmux        The terminal multiplexer
 - mpv         The video player
