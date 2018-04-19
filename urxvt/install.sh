@@ -10,6 +10,7 @@ then
 fi
 
 install rxvt-unicode
+install ttf-ubuntu-font-family
 
 backup ~/.Xresources
 
