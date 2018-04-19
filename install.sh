@@ -19,3 +19,10 @@ backup() {
         mv "$1" "$1_bak"
     fi
 }
+
+install git
+
+if [ ! -d ~/.dotfiles ]
+then
+	git clone https://github.com/nickbatsaras/dotfiles.git ~/.dotfiles
+fi
