@@ -20,9 +20,9 @@ backup() {
     fi
 }
 
+
+backup ~/.dotfiles
+
 install git
 
-if [ ! -d ~/.dotfiles ]
-then
-	git clone https://github.com/nickbatsaras/dotfiles.git ~/.dotfiles
-fi
+git clone https://github.com/nickbatsaras/dotfiles.git ~/.dotfiles
