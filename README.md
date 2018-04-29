@@ -5,6 +5,7 @@
 - rxvt        The terminal emulator
 - vim         The text editor
 - tmux        The terminal multiplexer
+- ranger      The file manager
 - mpv         The video player
 - mpd         The music player daemon
 - mpc         The command line mpd client

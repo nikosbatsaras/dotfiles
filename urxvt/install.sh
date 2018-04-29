@@ -2,9 +2,3 @@ eval "$(wget https://raw.githubusercontent.com/nickbatsaras/dotfiles/master/inst
 
 install rxvt-unicode
 install ttf-ubuntu-font-family
-
-backup ~/.Xresources
-
-ln -s ~/.dotfiles/urxvt/.Xresources ~/.Xresources
-
-xrdb ~/.Xresources
