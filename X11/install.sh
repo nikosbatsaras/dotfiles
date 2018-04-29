@@ -1,8 +1,9 @@
 eval "$(wget https://raw.githubusercontent.com/nickbatsaras/dotfiles/master/install.sh -O -)"
 
-install xorg-server
-install xorg-apps
-install xorg-xinit
+#install xorg-server
+#install xorg-xinit
+#install xorg-apps
+#install xdg-utils
 
 backup ~/.xinitrc
 backup ~/.Xresources
