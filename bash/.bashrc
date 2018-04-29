@@ -13,14 +13,20 @@ EDITOR=vim
 
 alias ls='ls --color=auto'
 alias ll='ls -l'
-alias la='ls -I . -I .. -a'
+alias la='ls -I . -I .. -al'
 
+alias open='xdg-open'
 alias music='ncmpcpp'
 alias email='neomutt'
+alias files='ranger'
 
-alias tls="tmux ls"
-alias session="tmux new -s"
-alias attach="tmux attach -t"
+alias setbg='feh --bg-fill'
+
+alias vi='vim'
+
+alias tls='tmux ls'
+alias session='tmux new -s'
+alias attach='tmux attach -t'
 
 export PATH
 export EDITOR
