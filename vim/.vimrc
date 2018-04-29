@@ -1,12 +1,8 @@
-silent! packadd!   onedark.vim  " Install onedark package
-silent! packadd! lightline.vim  " Install lightline package
+silent! packadd! onedark.vim    " Install onedark package
 
 syntax on                       " Enable syntax highlighting
 
-" Set statusline colorscheme
-let g:lightline = {'colorscheme': 'jellybeans',}
-
-silent! colorscheme onedark     " Set colorscheme
+colorscheme onedark             " Set colorscheme
 
 filetype plugin on              " Enable language-specific settings
 filetype indent on              " Enable language-dependent indenting
@@ -25,8 +21,14 @@ set laststatus=2                " Always show statusline
 set nocompatible                " Not compatible with Vi
 
 " Easier split resizing
+map + <C-w>+
+map - <C-w>-
 map <C-n> <C-w><
 map <C-m> <C-w>>
+
+" Center search
+nnoremap n nzz
+nnoremap N Nzz
 
 " Split commands
 nnoremap s  :split<Space>
@@ -52,7 +54,7 @@ nnoremap <Leader>f :bfirst<CR>
 map <F6> :setlocal spell! spelllang=en<CR>
 map <F7> :setlocal spell! spelllang=el<CR>
 
-" Auto-correct last misspelled word.
+" Auto-correct last misspelled word
 imap <C-l> <C-g>u<Esc>[s1z=`]a<c-g>u
 nmap <C-l> i<C-g>u<Esc>[s1z=`]a<c-g>u<Esc>
 
