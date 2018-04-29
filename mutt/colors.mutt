@@ -6,7 +6,7 @@ color index_number    red       default             # Message number
 color index_size      cyan      default             # Message size
 
 color indicator       white     color239            # Current line indicator
-color status          white     blue                # Status line
+color status          white     default             # Status line
 
 color hdrdefault      cyan      default             # Header line
 color attachment      yellow    default             # Attachment line
