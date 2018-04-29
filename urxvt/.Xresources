@@ -26,10 +26,14 @@ URxvt.keysym.C-S-Right: string:\033[1;6C
 #define base0D #61afef
 #define base0E #c678dd
 #define base0F #be5046
+#define base10 #000000
+
+#define background_opacity 80
 
 URxvt.foreground:   base05
 #ifdef background_opacity
-URxvt.background:   [background_opacity]base00
+URxvt.depth:        32
+URxvt.background:   [background_opacity]base10
 #else
 URxvt.background:   base00
 #endif
