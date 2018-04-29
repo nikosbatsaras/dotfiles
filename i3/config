@@ -144,10 +144,21 @@ bar {
         status_command i3status
 }
 
-new_window 1pixel
+default_border pixel 4
 
-bindsym $mod+Tab workspace next
+gaps inner 15
+gaps outer 15
+
+bindsym $mod+Tab       workspace next
 bindsym $mod+Shift+Tab workspace prev
 
 bindsym $mod+u scratchpad show
 bindsym $mod+Shift+u move scratchpad
+
+bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/screenshots'
+
+bindsym $mod+minus   exec pamixer --decrease 10
+bindsym $mod+equal   exec pamixer --increase 10
+bindsym $mod+Shift+m exec pamixer --toggle-mute
+
+exec --no-startup-id compton --xrender-sync-fence

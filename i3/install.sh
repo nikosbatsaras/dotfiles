@@ -1,6 +1,10 @@
 eval "$(wget https://raw.githubusercontent.com/nickbatsaras/dotfiles/master/install.sh -O -)"
 
 install i3
+install feh
+install scrot
+install pamixer
+install compton
 
 backup ~/.config/i3
 
