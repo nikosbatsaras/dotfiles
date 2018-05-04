@@ -13,11 +13,12 @@ install() {
 }
 
 backup() {
-    if [ -f "$1" ] || [ -d "$1" ]
-    then
-        echo "Backing-up: $1 -> $1_bak"
-        mv "$1" "$1_bak"
-    fi
+	timestamp=`date | sed s/\ /-/g`
+	if [ -f "$1" ] || [ -d "$1" ]
+	then
+		echo "Backing-up: $1 -> $1_BACKUP_$timestamp"
+		mv "$1" "$1_BACKUP_$timestamp"
+	fi
 }
 
 
