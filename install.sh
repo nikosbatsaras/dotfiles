@@ -22,8 +22,19 @@ backup() {
 }
 
 
-backup ~/.dotfiles
-
 install git
 
-git clone https://github.com/nickbatsaras/dotfiles.git ~/.dotfiles
+if [ -d ~/.dotfiles ]
+then
+	cd ~/.dotfiles
+
+	remoteurl=`git config --get remote.origin.url`
+
+	if [ ! "$remoteurl" = "https://github.com/nickbatsaras/dotfiles.git" ]
+	then
+		backup ~/.dotfiles
+		git clone https://github.com/nickbatsaras/dotfiles.git ~/.dotfiles
+	fi
+else
+		git clone https://github.com/nickbatsaras/dotfiles.git ~/.dotfiles
+fi
