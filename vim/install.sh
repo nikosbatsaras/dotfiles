@@ -16,7 +16,7 @@ git clone https://github.com/joshdick/onedark.vim.git
 
 ln -s ~/.dotfiles/vim/.vimrc ~/.vimrc
 
-theme_path="/home/$USER/.vim/pack/plugins/opt/onedark.vim/colors/onedark.vim"
+theme_path=~/.vim/pack/plugins/opt/onedark.vim/colors/onedark.vim
 
 sed -i 's/(has_key(a:highlight, "bg") ? a:highlight.bg.cterm : "NONE")/"NONE"/g' "$theme_path"
 
