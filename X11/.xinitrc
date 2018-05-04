@@ -1,6 +1,6 @@
 setxkbmap -option ctrl:nocaps
 setxkbmap -option grp:alt_shift_toggle us,el
 
-xrdb /home/$USER/.Xresources
+xrdb ~/.Xresources
 
 exec i3

@@ -14,6 +14,9 @@ mkdir ~/.vim/pack/plugins/start
 cd ~/.vim/pack/plugins/opt
 git clone https://github.com/joshdick/onedark.vim.git
 
+cd ~/.vim/pack/plugins/start
+git clone https://github.com/christoomey/vim-tmux-navigator.git
+
 ln -s ~/.dotfiles/vim/.vimrc ~/.vimrc
 
 theme_path=~/.vim/pack/plugins/opt/onedark.vim/colors/onedark.vim
