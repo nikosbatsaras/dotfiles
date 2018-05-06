@@ -5,6 +5,7 @@ install feh
 install scrot
 install pamixer
 install compton
+install pulseaudio
 
 backup ~/.config/i3
 
