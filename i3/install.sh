@@ -2,10 +2,12 @@ eval "$(wget https://raw.githubusercontent.com/nickbatsaras/dotfiles/master/inst
 
 install i3
 install feh
+install sxiv
 install scrot
 install pamixer
 install compton
 install pulseaudio
+install alsa-utils
 
 backup ~/.config/i3
 
