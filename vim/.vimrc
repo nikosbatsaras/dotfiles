@@ -55,6 +55,9 @@ nnoremap tc :tabclose<CR>
 nnoremap <Right> :+tabmove<CR>
 nnoremap <Left>  :-tabmove<CR>
 
+" Run make in the background
+nnoremap <Leader>m :silent execute 'make!' \| execute 'redraw!'<CR>
+
 " Search all files
 nnoremap gr :grep -r ./* -e ''<left>
 nnoremap <C-f> :cn<CR>
@@ -70,4 +73,4 @@ imap <C-l> <C-g>u<Esc>[s1z=`]a<c-g>u
 nmap <C-l> i<C-g>u<Esc>[s1z=`]a<c-g>u<Esc>
 
 " Reload config
-map <leader>s :source ~/.vimrc<CR>
+map <Leader>s :source ~/.vimrc<CR>
