@@ -4,16 +4,16 @@ install mpd
 install mpc
 
 backup ~/Music
-backup ~/.config/mpd
+backup ~/.mpd
 
 mkdir ~/Music
-mkdir ~/.config/mpd
-mkdir ~/.config/mpd/playlists
+mkdir ~/.mpd
+mkdir ~/.mpd/playlists
 
-touch ~/.config/mpd/log
-touch ~/.config/mpd/database
+touch ~/.mpd/log
+touch ~/.mpd/database
 
-ln -s ~/.dotfiles/mpd/mpd.conf ~/.config/mpd/mpd.conf
+ln -s ~/.dotfiles/mpd/mpd.conf ~/.mpd/mpd.conf
 
 sudo systemctl enable mpd.service
 sudo systemctl start  mpd.service
