@@ -69,8 +69,8 @@ map <F6> :setlocal spell! spelllang=en<CR>
 map <F7> :setlocal spell! spelllang=el<CR>
 
 " Auto-correct last misspelled word
-imap <C-l> <C-g>u<Esc>[s1z=`]a<c-g>u
-nmap <C-l> i<C-g>u<Esc>[s1z=`]a<c-g>u<Esc>
+imap <C-a> <C-g>u<Esc>[s1z=`]a<c-g>u
+nmap <C-a> i<C-g>u<Esc>[s1z=`]a<c-g>u<Esc>
 
 " Reload config
 map <Leader>s :source ~/.vimrc<CR>
