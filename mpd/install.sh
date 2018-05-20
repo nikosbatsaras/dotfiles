@@ -15,5 +15,5 @@ touch ~/.mpd/database
 
 ln -s ~/.dotfiles/mpd/mpd.conf ~/.mpd/mpd.conf
 
-sudo systemctl enable mpd.service
-sudo systemctl start  mpd.service
+systemctl enable --user mpd.service
+systemctl start  --user mpd.service
