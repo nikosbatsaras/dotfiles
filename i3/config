@@ -139,6 +139,10 @@ bindsym $mod+n resize shrink width 1 px or 1 ppt
 bindsym $mod+Shift+m resize grow   height 1 px or 1 ppt
 bindsym $mod+Shift+n resize shrink height 1 px or 1 ppt
 
+bindsym $mod+Control+n exec mpc next
+bindsym $mod+Control+p exec mpc prev
+bindsym $mod+Control+m exec mpc toggle
+
 bindsym $mod+Shift+plus  gaps inner current plus  5
 bindsym $mod+Shift+minus gaps inner current minus 5
 
@@ -152,6 +156,6 @@ bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures
 
 bindsym $mod+minus   exec pamixer --decrease 10
 bindsym $mod+equal   exec pamixer --increase 10
-#bindsym $mod+Shift+m exec pamixer --toggle-mute
+# bindsym $mod+Shift+m exec pamixer --toggle-mute
 
 exec --no-startup-id compton --xrender-sync-fence
