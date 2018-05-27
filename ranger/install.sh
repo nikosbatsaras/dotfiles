@@ -1,6 +1,7 @@
 eval "$(wget https://raw.githubusercontent.com/nickbatsaras/dotfiles/master/install.sh -O -)"
 
 install ranger
+install w3m
 
 backup ~/.config/ranger
 
