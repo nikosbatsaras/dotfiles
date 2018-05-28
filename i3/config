@@ -152,6 +152,8 @@ bindsym $mod+Shift+Tab workspace prev
 bindsym $mod+u scratchpad show
 bindsym $mod+Shift+u move scratchpad
 
+bindsym Mod1+Control+l exec /home/nbs/.dotfiles/i3/lock.sh
+
 bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/screenshots'
 
 bindsym $mod+minus   exec pamixer --decrease 10
