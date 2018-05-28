@@ -1,12 +1,9 @@
-if [ ! -d ~/.dotfiles ]
-then
-	git clone https://github.com/nickbatsaras/dotfiles.git ~/.dotfiles
-fi
-
-source ~/.dotfiles/install.sh
+eval "$(wget https://raw.githubusercontent.com/nickbatsaras/dotfiles/master/install.sh -O -)"
 
 backup ~/bin
 
 mkdir ~/bin
 
-ln -s ~/.dotfiles/bin/* ~/bin/
+ln -s ~/.dotfiles/bin/*.sh ~/bin/
+
+rm ~/bin/install.sh

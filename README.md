@@ -16,6 +16,7 @@
 - zathura     The pdf viewer
 - sxiv        The image viewer
 - mutt        The email client
+- rtv         The reddit client
 ```
 
 # To setup NeoMutt:
