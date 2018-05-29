@@ -19,6 +19,7 @@ alias open='xdg-open'
 alias music='ncmpcpp'
 alias email='neomutt'
 alias files='ranger'
+alias reddit='rtv --enable-media'
 
 alias setbg='feh --bg-fill'
 

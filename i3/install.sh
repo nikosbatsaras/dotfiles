@@ -15,5 +15,7 @@ backup ~/.config/i3
 
 mkdir ~/.config/i3
 
+if [ ! -d ~/bin ]; then mkdir ~/bin; fi
+
 ln -s ~/.dotfiles/i3/config  ~/.config/i3/config
 ln -s ~/.dotfiles/i3/lock.sh ~/bin/lock.sh
