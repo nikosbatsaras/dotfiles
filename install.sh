@@ -6,8 +6,8 @@ install() {
 	if [ "$(which $1)" = "" ]
 	then
 		case $dist in
-			arch) sudo pacman -S "$1";;
-			ubuntu) sudo apt-get install "$1";;
+			arch) sudo pacman -S "$1" --noconfirm;;
+			ubuntu) sudo apt-get -y install "$1";;
 		esac
 	fi
 }
