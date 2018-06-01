@@ -13,7 +13,7 @@ install imagemagick
 
 backup ~/.config/i3
 
-mkdir ~/.config/i3
+mkdir -p ~/.config/i3
 
 if [ ! -d ~/bin ]; then mkdir ~/bin; fi
 
