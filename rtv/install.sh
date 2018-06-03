@@ -9,7 +9,7 @@ sudo pip install rtv
 backup ~/.mailcap
 backup ~/.config/rtv
 
-mkdir  ~/.config/rtv
+mkdir -p ~/.config/rtv
 
 if [ ! -d ~/bin ]; then mkdir ~/bin; fi
 
