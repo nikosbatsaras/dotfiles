@@ -1,4 +1,5 @@
 silent! packadd! onedark.vim    " Install onedark package
+silent! packadd!    goyo.vim    " Install goyo package
 
 syntax on                       " Enable syntax highlighting
 
@@ -71,6 +72,9 @@ map <F7> :setlocal spell! spelllang=el<CR>
 " Auto-correct last misspelled word
 imap <C-a> <C-g>u<Esc>[s1z=`]a<c-g>u
 nmap <C-a> i<C-g>u<Esc>[s1z=`]a<c-g>u<Esc>
+
+" Toggle Goyo plugin
+map <Leader>g :Goyo<CR>
 
 " Reload config
 map <Leader>s :source ~/.vimrc<CR>

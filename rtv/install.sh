@@ -4,6 +4,7 @@ install python-pip
 install mpv
 install feh
 
+sudo pip install msgpack-python
 sudo pip install rtv
 
 backup ~/.mailcap

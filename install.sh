@@ -32,6 +32,7 @@ then
 
 	if [ ! "$remoteurl" = "https://github.com/nickbatsaras/dotfiles.git" ]
 	then
+		cd ..
 		backup ~/.dotfiles
 		git clone https://github.com/nickbatsaras/dotfiles.git ~/.dotfiles
 	fi
