@@ -1,14 +1,9 @@
 #!/bin/bash
 
-dist=`source /etc/os-release; echo $ID`
-
 install() {
 	if [ "$(which $1)" = "" ]
 	then
-		case $dist in
-			arch) sudo pacman -S "$1" --noconfirm;;
-			ubuntu) sudo apt-get -y install "$1";;
-		esac
+		sudo pacman -S "$1" --noconfirm;;
 	fi
 }
 

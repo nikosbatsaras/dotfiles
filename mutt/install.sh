@@ -1,12 +1,6 @@
 eval "$(wget https://raw.githubusercontent.com/nickbatsaras/dotfiles/master/install.sh -O -)"
 
-if [ "$dist" = ubuntu ]
-then
-	install mutt
-elif [ "$dist" = arch ]
-then
-	install neomutt
-fi
+install neomutt
 
 backup ~/.mutt
 backup ~/.muttrc

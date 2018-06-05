@@ -26,5 +26,5 @@ set my_pw2 = "`gpg -d ~/.mutt/acc2pw.gpg`"    # Uni account password
 
 source "$my_gmail"                            # Default account at startup
 
-# source ~/.dotfiles/mutt/colors.mutt         # Colors
+source ~/.dotfiles/mutt/colors.mutt           # Colors
 source ~/.dotfiles/mutt/keybinds.mutt         # Keybindings
