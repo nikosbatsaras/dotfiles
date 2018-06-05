@@ -3,7 +3,7 @@
 install() {
 	if [ "$(which $1)" = "" ]
 	then
-		sudo pacman -S "$1" --noconfirm;;
+		sudo pacman -S "$1" --noconfirm
 	fi
 }
 

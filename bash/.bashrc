@@ -21,8 +21,6 @@ alias email='neomutt'
 alias files='ranger'
 alias reddit='rtv --enable-media'
 
-alias setbg='feh --bg-fill'
-
 alias vi='vim'
 
 alias tls='tmux ls'
@@ -40,3 +38,10 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+function setbg() {
+	rm "/home/$USER/.dotfiles/wallpapers/wallpaper"/*
+	cp "$1" "/home/$USER/.dotfiles/wallpapers/wallpaper/"
+
+	feh --bg-fill "$1"
+}

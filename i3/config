@@ -165,3 +165,4 @@ bindsym $mod+equal   exec pamixer --increase 10
 # bindsym $mod+Shift+m exec pamixer --toggle-mute
 
 exec --no-startup-id compton --xrender-sync-fence
+exec --no-startup-id feh --bg-fill ~/.dotfiles/wallpapers/wallpaper/*
