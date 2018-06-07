@@ -59,22 +59,19 @@ nnoremap <Left>  :-tabmove<CR>
 " Run make in the background
 nnoremap <Leader>m :silent execute 'make!' \| execute 'redraw!'<CR>
 
-" Search all files
-nnoremap gr :grep -r ./* -e ''<left>
-nnoremap <C-f> :cn<CR>
-nnoremap <C-b> :cp<CR>
-nnoremap <Leader>f :bfirst<CR>
-
 " Starts auto-correction
 map <F6> :setlocal spell! spelllang=en<CR>
 map <F7> :setlocal spell! spelllang=el<CR>
 
 " Auto-correct last misspelled word
-imap <C-a> <C-g>u<Esc>[s1z=`]a<c-g>u
-nmap <C-a> i<C-g>u<Esc>[s1z=`]a<c-g>u<Esc>
+imap <C-a>  <C-g>u<Esc>[s1z=`]a<C-g>u
+nmap <C-a> i<C-g>u<Esc>[s1z=`]a<C-g>u<Esc>
 
 " Toggle Goyo plugin
 map <Leader>g :Goyo<CR>
+
+" Save/Write
+map <Leader>w :w<CR>
 
 " Reload config
 map <Leader>s :source ~/.vimrc<CR>
