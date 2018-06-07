@@ -17,6 +17,7 @@
 - sxiv        The image viewer
 - mutt        The email client
 - rtv         The reddit client
+- newsboat    The RSS reader
 ```
 
 # To setup NeoMutt:

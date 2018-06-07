@@ -1,0 +1,34 @@
+bind-key j   down
+bind-key k   up
+bind-key j   next articlelist
+bind-key k   prev articlelist
+bind-key J   next-feed articlelist
+bind-key K   prev-feed articlelist
+bind-key G   end
+bind-key g   home
+bind-key d   pagedown
+bind-key u   pageup
+bind-key l   open
+bind-key h   quit
+bind-key ^R  toggle-article-read
+bind-key n   next-unread
+bind-key N   prev-unread
+bind-key D   pb-download
+bind-key U   show-urls
+bind-key x   pb-delete
+
+color background         default   default
+color listnormal         color240  default    bold
+color listnormal_unread  color28   default    bold
+color listfocus          color240  color234   bold
+color listfocus_unread   color28   color234   bold
+color info               default   color53
+color article            default   default
+
+# highlights
+highlight article "^(Title):.*$"         blue   default
+highlight article "https?://[^ ]+"       red    default
+highlight article "\\[image\\ [0-9]+\\]" green  default
+
+# Open youtube videos in mpv
+macro m set browser "watch.sh %u youtube > /dev/null 2>&1 &"; open-in-browser ; set browser "elinks %u"
