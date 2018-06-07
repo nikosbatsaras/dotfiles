@@ -19,6 +19,7 @@ alias open='xdg-open'
 alias music='ncmpcpp'
 alias email='neomutt'
 alias files='ranger'
+alias news='newsboat'
 alias reddit='rtv --enable-media'
 
 alias vi='vim'
@@ -30,14 +31,7 @@ alias attach='tmux attach -t'
 export PATH
 export EDITOR
 
-# enable programmable completion features
-if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
-fi
+source /usr/share/bash-completion/bash_completion
 
 function setbg() {
 	rm "/home/$USER/.dotfiles/wallpapers/wallpaper"/*

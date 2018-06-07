@@ -17,5 +17,5 @@ if [ ! -d ~/bin ]; then mkdir ~/bin; fi
 ln -s ~/.dotfiles/rtv/.mailcap ~/.mailcap
 ln -s ~/.dotfiles/rtv/rtv.cfg  ~/.config/rtv/rtv.cfg
 
-ln -s ~/.dotfiles/rtv/reddit_watch.sh    ~/bin/reddit_watch.sh
-ln -s ~/.dotfiles/rtv/reddit_download.sh ~/bin/reddit_download.sh
+ln -s ~/.dotfiles/rtv/watch.sh    ~/bin/watch.sh
+ln -s ~/.dotfiles/rtv/download.sh ~/bin/download.sh
