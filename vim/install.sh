@@ -5,11 +5,8 @@ install vim
 backup ~/.vim
 backup ~/.vimrc
 
-mkdir ~/.vim
-mkdir ~/.vim/pack
-mkdir ~/.vim/pack/plugins
-mkdir ~/.vim/pack/plugins/opt
-mkdir ~/.vim/pack/plugins/start
+mkdir -p ~/.vim/pack/plugins/opt
+mkdir    ~/.vim/pack/plugins/start
 
 cd ~/.vim/pack/plugins/opt
 git clone https://github.com/joshdick/onedark.vim.git
