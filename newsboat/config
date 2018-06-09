@@ -31,7 +31,7 @@ highlight article "https?://[^ ]+"       red    default
 highlight article "\\[image\\ [0-9]+\\]" green  default
 
 auto-reload yes
-reload-time 60
+reload-time 15
 
 # Open youtube videos in mpv
 macro m set browser "media.sh -l %u -f youtube > /dev/null 2>&1 &"; open-in-browser ;"

@@ -28,6 +28,15 @@ alias tls='tmux ls'
 alias session='tmux new -s'
 alias attach='tmux attach -t'
 
+alias cvim='vim ~/.vimrc'
+alias ctmux='vim ~/.tmux.conf'
+alias cbash='vim ~/.bashrc'
+alias ci3='vim ~/.config/i3/config'
+alias cx='vim ~/.Xresources'
+alias cnews='vim ~/.newsboat/config'
+alias crtv='vim ~/.config/rtv/rtv.cfg'
+alias cmutt='vim ~/.muttrc'
+
 export PATH
 export EDITOR
 

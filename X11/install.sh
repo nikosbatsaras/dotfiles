@@ -5,6 +5,8 @@ eval "$(wget https://raw.githubusercontent.com/nickbatsaras/dotfiles/master/inst
 #install xorg-apps
 #install xdg-utils
 
+install ttf-inconsolata
+
 backup ~/.xinitrc
 backup ~/.Xresources
 
