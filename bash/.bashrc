@@ -20,6 +20,7 @@ alias music='ncmpcpp'
 alias email='neomutt'
 alias files='ranger'
 alias news='newsboat'
+alias irc='irssi'
 alias reddit='rtv --enable-media'
 
 alias vi='vim'

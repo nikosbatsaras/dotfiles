@@ -9,6 +9,7 @@ install compton
 install pulseaudio
 install alsa-utils
 install imagemagick
+install ttf-inconsolata
 
 backup ~/.config/i3
 

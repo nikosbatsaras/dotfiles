@@ -1,6 +1,7 @@
 bundle
 *.swp
 *.swo
+wallpapers/
 qutebrowser/quickmarks
 qutebrowser/qsettings
 qutebrowser/bookmarks
