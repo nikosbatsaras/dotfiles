@@ -172,9 +172,11 @@ bindsym $mod+minus   exec pamixer --decrease 10
 bindsym $mod+equal   exec pamixer --increase 10
 # bindsym $mod+Shift+m exec pamixer --toggle-mute
 
+exec --no-startup-id mpd
 exec --no-startup-id firefox
 exec --no-startup-id pcmanfm
 exec --no-startup-id redshift
+exec --no-startup-id syncthing -no-browser
 exec --no-startup-id urxvt -T "News" -e newsboat
 exec --no-startup-id compton --xrender-sync-fence
 exec --no-startup-id feh --bg-fill ~/.dotfiles/wallpapers/wallpaper/*

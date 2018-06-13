@@ -7,13 +7,11 @@ backup ~/Music
 backup ~/.mpd
 
 mkdir ~/Music
-mkdir ~/.mpd
-mkdir ~/.mpd/playlists
+mkdir -p ~/.mpd/playlists
 
 touch ~/.mpd/log
 touch ~/.mpd/database
 
 ln -s ~/.dotfiles/mpd/mpd.conf ~/.mpd/mpd.conf
 
-systemctl enable --user mpd.service
-systemctl start  --user mpd.service
+mpd

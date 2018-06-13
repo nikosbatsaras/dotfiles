@@ -19,6 +19,7 @@ install evince
 install redshift
 
 install pass
+install syncthing
 
 backup ~/.config/i3
 backup ~/.gtkrc-2.0
