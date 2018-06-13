@@ -134,14 +134,16 @@ gaps outer 15
 
 default_border pixel 4
 
-assign [class="Firefox"]    1
-assign [class="Pcmanfm"]    9
+assign [class="Firefox"]              1
+assign [class="Pcmanfm"]              8
+assign [class="URxvt" title="News"]   9
 
-for_window [class="mpv"]          floating enable
-for_window [class="feh"]          floating enable
-for_window [class="Sxiv"]         floating enable
-for_window [class="Evince"]       floating enable
-for_window [class="Pcmanfm"]      floating enable
+for_window [class="mpv"]                  floating enable
+for_window [class="feh"]                  floating enable
+for_window [class="Sxiv"]                 floating enable
+for_window [class="Evince"]               floating enable
+for_window [class="Pcmanfm"]              floating enable, resize grow left 80,  resize shrink right 80, resize shrink down 40, resize grow up 40
+for_window [class="URxvt" title="News"]   floating enable, resize grow left 200, resize grow right 80,   resize grow down 50,   resize grow up 130
 
 bindsym $mod+m       resize grow   width  10 px or 1 ppt
 bindsym $mod+n       resize shrink width  10 px or 1 ppt
@@ -173,5 +175,6 @@ bindsym $mod+equal   exec pamixer --increase 10
 exec --no-startup-id firefox
 exec --no-startup-id pcmanfm
 exec --no-startup-id redshift
+exec --no-startup-id urxvt -T "News" -e newsboat
 exec --no-startup-id compton --xrender-sync-fence
 exec --no-startup-id feh --bg-fill ~/.dotfiles/wallpapers/wallpaper/*
