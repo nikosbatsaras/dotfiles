@@ -5,11 +5,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-PATH+=:"$HOME/bin"
-
-PS1='[\u@\h \W]\$ '
-
-EDITOR=vim
+export PATH+=:"$HOME/bin"
+export PS1='[\u@\h \W]\$ '
+export EDITOR='vim'
 
 alias ls='ls --color=auto'
 alias ll='ls -l'
@@ -24,6 +22,7 @@ alias irc='irssi'
 alias reddit='rtv --enable-media'
 
 alias vi='vim'
+alias clr='clear'
 
 alias tls='tmux ls'
 alias session='tmux new -s'
@@ -37,9 +36,6 @@ alias cx='vim ~/.Xresources'
 alias cnews='vim ~/.newsboat/config'
 alias crtv='vim ~/.config/rtv/rtv.cfg'
 alias cmutt='vim ~/.muttrc'
-
-export PATH
-export EDITOR
 
 source /usr/share/bash-completion/bash_completion
 
