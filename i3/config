@@ -163,7 +163,7 @@ bindsym $mod+Shift+Tab workspace prev
 bindsym $mod+u scratchpad show
 bindsym $mod+Shift+u move scratchpad
 
-bindsym Mod1+Control+l exec lock.sh
+bindsym $mod+Control+l exec lock.sh
 bindsym $mod+Shift+d   exec media.sh -d
 
 bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/screenshots'
