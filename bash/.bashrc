@@ -24,6 +24,13 @@ alias reddit='rtv --enable-media'
 alias vi='vim'
 alias clr='clear'
 
+alias gs='git status'
+alias gc='git commit'
+alias ga='git add'
+alias gl='git log'
+alias gp='git push'
+alias gd='git diff'
+
 alias tls='tmux ls'
 alias session='tmux new -s'
 alias attach='tmux attach -t'
