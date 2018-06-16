@@ -126,7 +126,17 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Exit?' -b 'Yes' 'i3-msg exit
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+	colors {
+		separator  #AAAAAA
+		background #000000
+		statusline #FFFFFF
+		focused_workspace  #005faf #005faf #000000
+		inactive_workspace #000000 #000000 #ffffff
+		urgent_workspace   #870000 #870000 #ffffff
+	}
+
+	font xft:inconsolata:bold 9
+	status_command i3blocks
 }
 
 gaps inner 15
@@ -150,9 +160,9 @@ bindsym $mod+n       resize shrink width  10 px or 1 ppt
 bindsym $mod+Shift+m resize grow   height 10 px or 1 ppt
 bindsym $mod+Shift+n resize shrink height 10 px or 1 ppt
 
-bindsym $mod+Control+n exec mpc next
-bindsym $mod+Control+p exec mpc prev
-bindsym $mod+Control+m exec mpc toggle
+bindsym $mod+Control+n exec --no-startup-id mpc next
+bindsym $mod+Control+p exec --no-startup-id mpc prev
+bindsym $mod+Control+m exec --no-startup-id mpc toggle
 
 bindsym $mod+Shift+plus  gaps inner current plus  5
 bindsym $mod+Shift+minus gaps inner current minus 5
@@ -163,13 +173,13 @@ bindsym $mod+Shift+Tab workspace prev
 bindsym $mod+u scratchpad show
 bindsym $mod+Shift+u move scratchpad
 
-bindsym $mod+Control+l exec lock.sh
-bindsym $mod+Shift+d   exec media.sh -d
+bindsym $mod+Control+l exec --no-startup-id lock.sh
+bindsym $mod+Shift+d   exec --no-startup-id media.sh -d
 
-bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/screenshots'
+bindsym Print exec --no-startup-id scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/screenshots'
 
-bindsym $mod+minus   exec pamixer --decrease 10
-bindsym $mod+equal   exec pamixer --increase 10
+bindsym $mod+minus exec --no-startup-id pamixer --decrease 10
+bindsym $mod+equal exec --no-startup-id pamixer --increase 10
 # bindsym $mod+Shift+m exec pamixer --toggle-mute
 
 exec --no-startup-id mpd
