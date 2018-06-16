@@ -1,5 +1,5 @@
 # Screenshot
-![2018-04-29-1525006603_screenshot_1366x768](https://user-images.githubusercontent.com/23704715/39407129-0ab568dc-4bca-11e8-8719-a6df1730c429.jpg)
+![2018-06-16-1529167100_screenshot_1366x768](https://user-images.githubusercontent.com/23704715/41500577-0dba4a9a-719d-11e8-8971-7d20d85f452e.jpg)
 
 # Applications in use
 ```
@@ -18,18 +18,4 @@
 - mutt        The email client
 - rtv         The reddit client
 - newsboat    The RSS reader
-```
-
-# To setup NeoMutt:
-The way neomutt is setup right now, is to read the passwords from encrypted
-files in the filesystem. We use GnuPG to encrypt/decrypt.
-First, create a key-pair (if you don't have one already):
-```bash
-gpg --gen-key
-```
-Then, create a file (for each of the accounts) to hold the password in plain
-text (e.g acc1pw), encrypt it and make sure you delete it afterwards:
-```bash
-gpg -r "<recipient>" --encrypt ~/.mutt/acc1pw
-rm ~/.mutt/acc1pw
 ```
