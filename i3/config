@@ -146,7 +146,7 @@ bar {
 		urgent_workspace   #870000 #870000 #ffffff
 	}
 
-	font xft:inconsolata:bold 10
+	font xft:inconsolata:Bold:antialias=true 10
 	status_command i3blocks
 }
 
@@ -157,27 +157,27 @@ default_border pixel 4
 
 assign [class="Firefox"]              $ws1
 assign [class="Pcmanfm"]              $ws4
-assign [class="URxvt" title="Chat"]   $ws7
-assign [class="URxvt" title="Music"]  $ws8
-assign [class="URxvt" title="News"]   $ws9
+assign [class="URxvt" title="chat"]   $ws7
+assign [class="URxvt" title="music"]  $ws8
+assign [class="URxvt" title="news"]   $ws9
 
 for_window [class="mpv"]                  floating enable
 for_window [class="feh"]                  floating enable
 for_window [class="Sxiv"]                 floating enable
 for_window [class="Evince"]               floating enable
 for_window [class="Pcmanfm"]              floating enable, resize grow left 80,  resize shrink right 80, resize shrink down 40, resize grow up 40
-for_window [class="URxvt" title="Chat"]   floating enable, resize grow left 200, resize grow right 80,   resize grow down 50,   resize grow up 130
-for_window [class="URxvt" title="Music"]  floating enable, resize grow left 200, resize grow right 80,   resize grow down 50,   resize grow up 130
-for_window [class="URxvt" title="News"]   floating enable, resize grow left 200, resize grow right 80,   resize grow down 50,   resize grow up 130
+for_window [class="URxvt" title="chat"]   floating enable, resize grow left 200, resize grow right 80,   resize grow down 50,   resize grow up 130
+for_window [class="URxvt" title="music"]  floating enable, resize grow left 200, resize grow right 80,   resize grow down 50,   resize grow up 130
+for_window [class="URxvt" title="news"]   floating enable, resize grow left 200, resize grow right 80,   resize grow down 50,   resize grow up 130
 
 bindsym $mod+m       resize grow   width  10 px or 1 ppt
 bindsym $mod+n       resize shrink width  10 px or 1 ppt
 bindsym $mod+Shift+m resize grow   height 10 px or 1 ppt
 bindsym $mod+Shift+n resize shrink height 10 px or 1 ppt
 
-bindsym $mod+Control+n exec --no-startup-id mpc next
-bindsym $mod+Control+p exec --no-startup-id mpc prev
-bindsym $mod+Control+m exec --no-startup-id mpc toggle
+bindsym $mod+Control+f exec --no-startup-id mpc next
+bindsym $mod+Control+b exec --no-startup-id mpc prev
+bindsym $mod+Control+p exec --no-startup-id mpc toggle
 
 bindsym $mod+Shift+plus  gaps inner current plus  5
 bindsym $mod+Shift+minus gaps inner current minus 5
@@ -193,17 +193,17 @@ bindsym $mod+Shift+d   exec --no-startup-id media.sh -d
 
 bindsym Print exec --no-startup-id scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/screenshots'
 
-bindsym $mod+minus exec --no-startup-id pamixer --decrease 10
-bindsym $mod+equal exec --no-startup-id pamixer --increase 10
-# bindsym $mod+Shift+m exec pamixer --toggle-mute
+bindsym $mod+minus     exec --no-startup-id pamixer --decrease 10
+bindsym $mod+equal     exec --no-startup-id pamixer --increase 10
+bindsym $mod+Control+m exec --no-startup-id pamixer --toggle-mute
 
 exec --no-startup-id mpd
 exec --no-startup-id firefox
 exec --no-startup-id pcmanfm
 exec --no-startup-id redshift
 exec --no-startup-id syncthing -no-browser
-exec --no-startup-id urxvt -T "Chat" -e irssi
-exec --no-startup-id urxvt -T "Music" -e ncmpcpp
-exec --no-startup-id urxvt -T "News" -e newsboat
+exec --no-startup-id urxvt -T "chat" -e irssi
+exec --no-startup-id urxvt -T "music" -e ncmpcpp
+exec --no-startup-id urxvt -T "news" -e newsboat
 exec --no-startup-id compton --xrender-sync-fence
 exec --no-startup-id feh --bg-fill ~/.dotfiles/wallpapers/wallpaper/*
