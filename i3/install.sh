@@ -38,3 +38,8 @@ ln -s ~/.dotfiles/i3/.i3blocks.conf   ~/.i3blocks.conf
 ln -s ~/.dotfiles/i3/.gtkrc-2.0       ~/.gtkrc-2.0
 ln -s ~/.dotfiles/i3/settings.ini     ~/.config/gtk-3.0/settings.ini
 ln -s ~/.dotfiles/i3/redshift.conf    ~/.config/redshift.conf
+
+mkdir -p ~/.local/share/fonts
+cd ~/.local/share/fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
+
+sudo fc-cache -f -v
