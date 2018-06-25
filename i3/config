@@ -146,7 +146,7 @@ bar {
 		urgent_workspace   #870000 #870000 #ffffff
 	}
 
-	font xft:inconsolata:Bold:antialias=true 10
+	font xft:inconsolata:Bold:antialias=true 9
 	status_command i3blocks
 }
 
