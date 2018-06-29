@@ -146,8 +146,9 @@ bar {
 		urgent_workspace   #870000 #870000 #ffffff
 	}
 
-	font xft:inconsolata:Bold:antialias=true 9
+	font xft:inconsolata:Bold:antialias=true 10
 	status_command i3blocks
+	position top
 }
 
 gaps inner 15
