@@ -18,6 +18,7 @@ install pcmanfm
 install evince
 install redshift
 
+install acpi
 install pass
 install syncthing
 
