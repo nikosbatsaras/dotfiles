@@ -22,6 +22,10 @@ set nohlsearch                  " Disable search highlighting
 set laststatus=2                " Always show statusline
 set nocompatible                " Not compatible with Vi
 
+set noerrorbells
+set visualbell
+set t_vb=
+
 " Easier split resizing
 map + <C-w>+
 map - <C-w>-

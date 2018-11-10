@@ -1,4 +1,4 @@
-URxvt*font: xft:inconsolata:pixelsize=13.5:antialias=true:hinting=true
+URxvt.font: xft:inconsolata:pixelsize=18:antialias=true:hinting=true
 
 URxvt.perl-ext-common: font-size
 

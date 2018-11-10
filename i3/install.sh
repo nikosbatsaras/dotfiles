@@ -20,7 +20,6 @@ install redshift
 
 install acpi
 install pass
-install syncthing
 
 backup ~/.config/i3
 backup ~/.i3blocks.conf
