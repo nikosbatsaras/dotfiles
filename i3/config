@@ -202,9 +202,5 @@ exec --no-startup-id mpd
 exec --no-startup-id firefox
 exec --no-startup-id pcmanfm
 exec --no-startup-id redshift
-exec --no-startup-id syncthing -no-browser
-exec --no-startup-id urxvt -T "chat" -e irssi
-exec --no-startup-id urxvt -T "music" -e ncmpcpp
-exec --no-startup-id urxvt -T "news" -e newsboat
 exec --no-startup-id compton --xrender-sync-fence
 exec --no-startup-id feh --bg-fill ~/.dotfiles/wallpapers/wallpaper/*
