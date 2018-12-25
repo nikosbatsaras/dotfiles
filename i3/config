@@ -166,6 +166,7 @@ for_window [class="mpv"]                  floating enable
 for_window [class="feh"]                  floating enable
 for_window [class="Sxiv"]                 floating enable
 for_window [class="Evince"]               floating enable
+for_window [class="Matplotlib"]           floating enable
 for_window [class="Pcmanfm"]              floating enable, resize grow left 80,  resize shrink right 80, resize shrink down 40, resize grow up 40
 for_window [class="URxvt" title="chat"]   floating enable, resize grow left 200, resize grow right 80,   resize grow down 50,   resize grow up 130
 for_window [class="URxvt" title="music"]  floating enable, resize grow left 200, resize grow right 80,   resize grow down 50,   resize grow up 130
@@ -200,7 +201,6 @@ bindsym $mod+Control+m exec --no-startup-id pamixer --toggle-mute
 
 exec --no-startup-id mpd
 exec --no-startup-id firefox
-exec --no-startup-id pcmanfm
 exec --no-startup-id redshift
 exec --no-startup-id compton --xrender-sync-fence
 exec --no-startup-id feh --bg-fill ~/.dotfiles/wallpapers/wallpaper/*
