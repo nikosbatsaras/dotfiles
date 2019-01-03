@@ -152,12 +152,10 @@ bar {
 }
 
 gaps inner 15
-gaps outer 15
 
 default_border pixel 4
 
 assign [class="Firefox"]              $ws1
-assign [class="Pcmanfm"]              $ws4
 assign [class="URxvt" title="chat"]   $ws7
 assign [class="URxvt" title="music"]  $ws8
 assign [class="URxvt" title="news"]   $ws9
@@ -167,7 +165,6 @@ for_window [class="feh"]                  floating enable
 for_window [class="Sxiv"]                 floating enable
 for_window [class="Evince"]               floating enable
 for_window [class="Matplotlib"]           floating enable
-for_window [class="Pcmanfm"]              floating enable, resize grow left 80,  resize shrink right 80, resize shrink down 40, resize grow up 40
 for_window [class="URxvt" title="chat"]   floating enable, resize grow left 200, resize grow right 80,   resize grow down 50,   resize grow up 130
 for_window [class="URxvt" title="music"]  floating enable, resize grow left 200, resize grow right 80,   resize grow down 50,   resize grow up 130
 for_window [class="URxvt" title="news"]   floating enable, resize grow left 200, resize grow right 80,   resize grow down 50,   resize grow up 130
@@ -183,6 +180,8 @@ bindsym $mod+Control+p exec --no-startup-id mpc toggle
 
 bindsym $mod+Shift+plus  gaps inner current plus  5
 bindsym $mod+Shift+minus gaps inner current minus 5
+bindsym $mod+Shift+I     gaps inner current set   0
+bindsym $mod+Shift+T     gaps inner current set  15
 
 bindsym $mod+Tab       workspace next
 bindsym $mod+Shift+Tab workspace prev
