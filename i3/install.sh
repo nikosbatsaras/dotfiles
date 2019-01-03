@@ -14,8 +14,8 @@ install ttf-inconsolata
 install arc-gtk-theme
 install arc-icon-theme
 
-install pcmanfm
 install evince
+install nautilus
 install redshift
 
 install acpi
