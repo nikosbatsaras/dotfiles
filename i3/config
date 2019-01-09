@@ -156,6 +156,7 @@ gaps inner 15
 default_border pixel 4
 
 assign [class="Firefox"]              $ws1
+assign [class="Google-chrome"]        $ws1
 assign [class="URxvt" title="chat"]   $ws7
 assign [class="URxvt" title="music"]  $ws8
 assign [class="URxvt" title="news"]   $ws9
