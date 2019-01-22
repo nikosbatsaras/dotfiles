@@ -25,6 +25,8 @@ set noerrorbells
 set visualbell
 set t_vb=
 
+set ttimeoutlen=0
+
 " Easier split resizing
 map + <C-w>+
 map - <C-w>-
