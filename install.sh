@@ -25,12 +25,12 @@ then
 
 	remoteurl=`git config --get remote.origin.url`
 
-	if [ ! "$remoteurl" = "https://github.com/nickbatsaras/dotfiles.git" ]
+	if [ ! "$remoteurl" = "https://github.com/nikosbatsaras/dotfiles.git" ]
 	then
 		cd ..
 		backup ~/.dotfiles
-		git clone https://github.com/nickbatsaras/dotfiles.git ~/.dotfiles
+		git clone https://github.com/nikosbatsaras/dotfiles.git ~/.dotfiles
 	fi
 else
-		git clone https://github.com/nickbatsaras/dotfiles.git ~/.dotfiles
+		git clone https://github.com/nikosbatsaras/dotfiles.git ~/.dotfiles
 fi

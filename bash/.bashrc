@@ -46,6 +46,9 @@ alias cmutt='vim ~/.muttrc'
 
 source /usr/share/bash-completion/bash_completion
 
+alias sith6='ssh -A -t nikbats@shark ssh -A -t sith6'
+alias jedi4='ssh -A -t nikbats@shark ssh -A -t jedi4'
+
 function setbg() {
 	rm "/home/$USER/.dotfiles/wallpapers/wallpaper"/*
 	cp "$1" "/home/$USER/.dotfiles/wallpapers/wallpaper/"

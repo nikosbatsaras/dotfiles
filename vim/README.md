@@ -1,4 +1,4 @@
 # Installation
 ```bash
-bash -c "$(wget https://raw.githubusercontent.com/nickbatsaras/dotfiles/master/vim/install.sh -O -)"
+bash -c "$(wget https://raw.githubusercontent.com/nikosbatsaras/dotfiles/master/vim/install.sh -O -)"
 ```
