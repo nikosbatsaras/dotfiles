@@ -153,6 +153,9 @@ bar {
 
 gaps inner 15
 
+new_window none
+new_float  none
+
 default_border pixel 4
 
 assign [class="Firefox"]              $ws1
