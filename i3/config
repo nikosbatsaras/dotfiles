@@ -200,7 +200,8 @@ bindsym $mod+equal     exec --no-startup-id pamixer --increase 10
 bindsym $mod+Control+m exec --no-startup-id pamixer --toggle-mute
 
 exec --no-startup-id mpd
-exec --no-startup-id firefox
+# exec --no-startup-id firefox
 exec --no-startup-id redshift
 exec --no-startup-id compton --xrender-sync-fence
 exec --no-startup-id feh --bg-fill ~/.dotfiles/wallpapers/wallpaper/*
+exec --no-startup-id /usr/lib/notification-daemon-1.0/notification-daemon
