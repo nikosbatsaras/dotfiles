@@ -10,6 +10,7 @@ install pulseaudio
 install alsa-utils
 install imagemagick
 install ttf-inconsolata
+install notification-daemon
 
 install arc-gtk-theme
 install arc-icon-theme
