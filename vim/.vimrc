@@ -44,10 +44,6 @@ nnoremap <M-k> <C-W>k
 nnoremap <M-h> <C-W>h
 nnoremap <M-l> <C-W>l
 
-" Center search
-nnoremap n nzz
-nnoremap N Nzz
-
 " Split commands
 nnoremap s  :split<Space>
 nnoremap vs :vsplit<Space>
