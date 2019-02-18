@@ -199,11 +199,13 @@ bindsym $mod+Shift+d   exec --no-startup-id media.sh -d
 
 bindsym Print exec --no-startup-id scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/screenshots'
 
-bindsym $mod+minus     exec --no-startup-id pamixer --decrease 10 && pkill -RTMIN+2 i3blocks
-bindsym $mod+equal     exec --no-startup-id pamixer --increase 10 && pkill -RTMIN+2 i3blocks
-bindsym $mod+Control+m exec --no-startup-id pamixer --toggle-mute
+bindsym XF86MonBrightnessUp   exec --no-startup-id xbacklight + 10 && pkill -RTMIN+1 i3blocks
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight - 10 && pkill -RTMIN+1 i3blocks
 
-exec --no-startup-id mpd
+bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer --increase 10 && pkill -RTMIN+2 i3blocks
+bindsym XF86AudioLowerVolume exec --no-startup-id pamixer --decrease 10 && pkill -RTMIN+2 i3blocks
+bindsym XF86AudioMute        exec --no-startup-id pamixer --toggle-mute
+
 # exec --no-startup-id firefox
 exec --no-startup-id redshift
 exec --no-startup-id compton --xrender-sync-fence
