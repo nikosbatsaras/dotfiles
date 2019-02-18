@@ -169,6 +169,7 @@ for_window [class="feh"]                  floating enable
 for_window [class="Sxiv"]                 floating enable
 for_window [class="Evince"]               floating enable
 for_window [class="Matplotlib"]           floating enable
+for_window [class="Thunderbird"]          floating enable
 for_window [class="URxvt" title="chat"]   floating enable, resize grow left 200, resize grow right 80,   resize grow down 50,   resize grow up 130
 for_window [class="URxvt" title="music"]  floating enable, resize grow left 200, resize grow right 80,   resize grow down 50,   resize grow up 130
 for_window [class="URxvt" title="news"]   floating enable, resize grow left 200, resize grow right 80,   resize grow down 50,   resize grow up 130
@@ -198,8 +199,8 @@ bindsym $mod+Shift+d   exec --no-startup-id media.sh -d
 
 bindsym Print exec --no-startup-id scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/screenshots'
 
-bindsym $mod+minus     exec --no-startup-id pamixer --decrease 10
-bindsym $mod+equal     exec --no-startup-id pamixer --increase 10
+bindsym $mod+minus     exec --no-startup-id pamixer --decrease 10 && pkill -RTMIN+2 i3blocks
+bindsym $mod+equal     exec --no-startup-id pamixer --increase 10 && pkill -RTMIN+2 i3blocks
 bindsym $mod+Control+m exec --no-startup-id pamixer --toggle-mute
 
 exec --no-startup-id mpd
