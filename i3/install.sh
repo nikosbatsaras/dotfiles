@@ -10,6 +10,7 @@ install pulseaudio
 install alsa-utils
 install imagemagick
 install ttf-inconsolata
+install xorg-xbacklight
 install notification-daemon
 
 install evince
