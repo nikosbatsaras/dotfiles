@@ -21,10 +21,12 @@ set nohlsearch                  " Disable search highlighting
 set laststatus=2                " Always show statusline
 set nocompatible                " Not compatible with Vi
 
+" Disable sounds/bells
 set noerrorbells
 set visualbell
 set t_vb=
 
+" ESC quits immediately
 set ttimeoutlen=0
 
 " Easier split resizing
@@ -32,21 +34,6 @@ map + <C-w>+
 map - <C-w>-
 map <C-n> <C-w><
 map <C-m> <C-w>>
-
-" Easier split navigation
-execute "set <M-j>=\ej"
-execute "set <M-k>=\ek"
-execute "set <M-h>=\eh"
-execute "set <M-l>=\el"
-
-nnoremap <M-j> <C-W>j
-nnoremap <M-k> <C-W>k
-nnoremap <M-h> <C-W>h
-nnoremap <M-l> <C-W>l
-
-" Split commands
-nnoremap s  :split<Space>
-nnoremap vs :vsplit<Space>
 
 " Tab navigation commands
 nnoremap >  :tabnext<CR>
@@ -58,9 +45,6 @@ nnoremap tc :tabclose<CR>
 nnoremap <Right> :+tabmove<CR>
 nnoremap <Left>  :-tabmove<CR>
 
-" Run make in the background
-nnoremap <Leader>m :silent execute 'make!' \| execute 'redraw!'<CR>
-
 " Starts auto-correction
 map <F6> :setlocal spell! spelllang=en<CR>
 map <F7> :setlocal spell! spelllang=el<CR>
@@ -69,8 +53,5 @@ map <F7> :setlocal spell! spelllang=el<CR>
 imap <C-a>  <C-g>u<Esc>[s1z=`]a<C-g>u
 nmap <C-a> i<C-g>u<Esc>[s1z=`]a<C-g>u<Esc>
 
-" Save/Write
-map <Leader>w :w<CR>
-
-" Reload config
-map <Leader>s :source ~/.vimrc<CR>
+" Run make in the background
+nnoremap <Leader>m :silent execute 'make!' \| execute 'redraw!'<CR>
