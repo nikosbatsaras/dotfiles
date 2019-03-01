@@ -197,6 +197,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight - 10 && pkill -RTM
 bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer --increase 10 && pkill -RTMIN+2 i3blocks
 bindsym XF86AudioLowerVolume exec --no-startup-id pamixer --decrease 10 && pkill -RTMIN+2 i3blocks
 bindsym XF86AudioMute        exec --no-startup-id pamixer --toggle-mute
+bindsym XF86AudioMicMute     exec --no-startup-id amixer set Capture toggle
 
 exec --no-startup-id compton --xrender-sync-fence
 exec --no-startup-id feh --bg-fill ~/.dotfiles/wallpapers/wallpaper/*
