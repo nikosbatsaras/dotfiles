@@ -158,13 +158,15 @@ new_float  none
 
 default_border pixel 4
 
-for_window [class="mpv"]                       floating enable
-for_window [class="feh"]                       floating enable
-for_window [class="Sxiv"]                      floating enable
-for_window [class="Evince"]                    floating enable
-for_window [class="Matplotlib"]                floating enable
-for_window [class="Thunderbird"]               floating enable
-for_window [class="System-config-printer.py"]  floating enable
+for_window [class="mpv"]                        floating enable
+for_window [class="feh"]                        floating enable
+for_window [class="Sxiv"]                       floating enable
+for_window [class="Evince"]                     floating enable
+for_window [class="Matplotlib"]                 floating enable
+for_window [class="System-config-printer.py"]   floating enable
+
+for_window [title="About Mozilla Firefox"]      floating enable
+for_window [window_role="Msgcompose"]           floating enable
 
 bindsym $mod+m       resize grow   width  10 px or 1 ppt
 bindsym $mod+n       resize shrink width  10 px or 1 ppt
