@@ -15,7 +15,7 @@ ln -s ~/.dotfiles/vim/.vimrc ~/.vimrc
 
 theme_path=~/.vim/pack/plugins/opt/onedark.vim/colors/onedark.vim
 
-sed -i 's/(has_key(a:highlight, "bg") ? a:highlight.bg.cterm : "NONE")/"NONE"/g' "$theme_path"
+sed -i 's/(has_key(s:highlight, "bg") ? s:highlight.bg.cterm : "NONE")/"NONE"/g' "$theme_path"
 
 echo '
 " Window
