@@ -2,7 +2,7 @@ eval "$(wget https://raw.githubusercontent.com/nikosbatsaras/dotfiles/master/ins
 
 install i3
 install feh
-install sxiv
+install acpi
 install scrot
 install pamixer
 install compton
@@ -13,13 +13,6 @@ install ttf-inconsolata
 install xorg-xbacklight
 install notification-daemon
 
-install evince
-install nautilus
-install redshift
-
-install acpi
-install pass
-
 backup ~/.config/i3
 backup ~/.i3blocks.conf
 
@@ -27,11 +20,9 @@ mkdir -p ~/.config/i3
 
 if [ ! -d ~/bin ]; then mkdir ~/bin; fi
 
-ln -s ~/.dotfiles/i3/config           ~/.config/i3/config
-ln -s ~/.dotfiles/i3/lock.sh          ~/bin/lock.sh
-ln -s ~/.dotfiles/i3/.i3blocks.conf   ~/.i3blocks.conf
-
-ln -s ~/.dotfiles/i3/redshift.conf    ~/.config/redshift.conf
+ln -s ~/.dotfiles/i3/config          ~/.config/i3/config
+ln -s ~/.dotfiles/i3/lock.sh         ~/bin/lock.sh
+ln -s ~/.dotfiles/i3/.i3blocks.conf  ~/.i3blocks.conf
 
 git clone https://github.com/nikosbatsaras/st.git
 cd st && make && sudo make install && cd ..
