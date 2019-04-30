@@ -163,6 +163,7 @@ for_window [class="feh"]                        floating enable
 for_window [class="Sxiv"]                       floating enable
 for_window [class="Evince"]                     floating enable
 for_window [class="Matplotlib"]                 floating enable
+for_window [class="Nm-connection-editor"]       floating enable
 for_window [class="System-config-printer.py"]   floating enable
 
 for_window [title="Browser Console"]            floating enable
