@@ -25,10 +25,11 @@ alias vi='vim'
 alias clr='clear'
 
 alias gs='git status'
-alias gc='git commit'
+alias gc='git commit -m'
 alias ga='git add'
 alias gl='git log'
 alias gp='git push'
+alias gu='git pull'
 alias gd='git diff'
 
 alias tls='tmux ls'
