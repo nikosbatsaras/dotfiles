@@ -1,8 +1,4 @@
-silent! packadd! onedark.vim    " Install onedark package
-
 syntax on                       " Enable syntax highlighting
-
-colorscheme onedark             " Set colorscheme
 
 filetype plugin on              " Enable language-specific settings
 filetype indent on              " Enable language-dependent indenting
@@ -25,6 +21,9 @@ set nocompatible                " Not compatible with Vi
 set noerrorbells
 set visualbell
 set t_vb=
+
+" Backspace works as expected
+set backspace=indent,eol,start
 
 " ESC quits immediately
 set ttimeoutlen=0
