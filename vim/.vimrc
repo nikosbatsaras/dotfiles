@@ -41,8 +41,8 @@ nnoremap te :tabedit<Space>
 nnoremap tf :tabfind<Space>
 nnoremap tc :tabclose<CR>
 
-nnoremap <Right> :+tabmove<CR>
-nnoremap <Left>  :-tabmove<CR>
+nnoremap <Right> :tabmove +1<CR>
+nnoremap <Left>  :tabmove -1<CR>
 
 " Starts auto-correction
 map <F6> :setlocal spell! spelllang=en<CR>
