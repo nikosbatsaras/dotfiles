@@ -6,6 +6,7 @@ filetype indent on              " Enable language-dependent indenting
 let mapleader = " "             " Change <Leader> key to Space
 
 set path+=**                    " Enable recursive search for :find
+set ruler                       " Show line and column numbers in status bar
 set autoindent                  " Enable auto-indentation
 set ignorecase                  " Make search case-insensitive
 set incsearch                   " Start searching before pressing Enter
